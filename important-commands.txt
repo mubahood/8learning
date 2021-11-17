@@ -1,0 +1,27 @@
+php artisan make:component Alert --inline
+
+php artisan migrate
+
+php artisan make:migration create_courses_table
+php artisan make:migration create_course_categories_table
+
+Encore\Admin\Auth\Database\Administrator::class,
+php artisan admin:make FormSr4Controller --model=App\FormSr4
+
+php artisan admin:controller --model=App\FormSr4
+php artisan admin:make FormSr4Controller --model=App\FormSr4
+
+ 
+php artisan admin:make CourseCategoryController --model=App\\Models\\CourseCategory
+
+php artisan make:factory TeacherFactory
+
+
+php artisan make:model MyClass
+php artisan make:model Student
+php artisan make:model Teacher
+php artisan make:model Subject
+php artisan make:model Exam
+php artisan make:model GeneralExam
+php artisan make:model CourseCategory
+php artisan make:model Course
