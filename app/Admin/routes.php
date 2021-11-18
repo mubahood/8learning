@@ -13,5 +13,7 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('course-categories', CourseCategoryController::class);
+    $router->resource('courses', CourseController::class);
+    $router->resource('settings', UserController::class);
 
 });

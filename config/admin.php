@@ -157,8 +157,8 @@ return [
 
         // Image and file upload path under the disk above.
         'directory' => [
-            'image' => 'images',
-            'file'  => 'files',
+            'image' => '/',
+            'file'  => '/',
         ],
     ],
 
@@ -223,7 +223,7 @@ return [
          * or specific method to path like: get:admin/auth/logs.
          */
         'except' => [
-            env('ADMIN_ROUTE_PREFIX', 'admin').'/auth/logs*',
+            env('ADMIN_ROUTE_PREFIX', 'admin') . '/auth/logs*',
         ],
     ],
 
@@ -348,9 +348,7 @@ return [
     'minify_assets' => [
 
         // Assets will not be minified.
-        'excepts' => [
-
-        ],
+        'excepts' => [],
 
     ],
 
@@ -405,6 +403,13 @@ return [
     |
     */
     'extensions' => [
+        'summernote' => [
 
+            //Set to false if you want to disable this extension
+            'enable' => true,
+            'config' => [
+                'height' => 80,
+            ]
+        ]
     ],
 ];

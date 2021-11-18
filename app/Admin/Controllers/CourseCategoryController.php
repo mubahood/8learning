@@ -67,7 +67,7 @@ class CourseCategoryController extends AdminController
 
         $form->text('name', __('Name'));
         $form->image('thumbnail', __('Thumbnail'));
-        $form->textarea('details', __('Details'));
+        $form->summernote('details', __('Details'));
 
         return $form;
     }
