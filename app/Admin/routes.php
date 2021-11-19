@@ -15,5 +15,6 @@ Route::group([
     $router->resource('course-categories', CourseCategoryController::class);
     $router->resource('courses', CourseController::class);
     $router->resource('settings', UserController::class);
+    $router->resource('participants', ParticipantController::class);
 
 });
