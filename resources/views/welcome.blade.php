@@ -1,453 +1,984 @@
-@php
-    use App\Models\Utils;
-    use App\Models\TrafficRecord;
-    use App\Models\Participant;
-    Utils::start_session();
-    if(isset($_GET['ref'])){
-        $ref = trim($_GET['ref']);
-        if(strlen($ref)>1){
-            $init_ref = true;
-            if(isset($_SESSION['ref'])){
-                if($_SESSION['ref'] == 'none'){
-                    $init_ref = true;
-                }else{
-                    $init_ref = false;
-                }
-            }
-            if($init_ref){
-                $tra = new TrafficRecord();
-                $tra->ref = $ref;
-                if($tra->save()){
-                    $_SESSION['ref'] = $ref;
-                }
-            } 
-        }
-    }
-    
-    if(!isset($_SESSION['ref'])){
-        $_SESSION['ref'] = 'none';
-    }
+@extends('layouts.layout-main')
+@section('main-content')
+    <!-- Hero section with layer parallax gfx -->
+    <section class="position-relative py-5">
 
-    if(isset($_GET['clear'])){
-        unset($_SESSION['done']);
-        $_SESSION['done'] = false;
-        header("Location: ".url("/"));
-        die();
-    }
+        <!-- Gradient BG -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-primary opacity-10"></div>
 
-    if(!isset($_SESSION['done'])){
-        $_SESSION['done'] = false;
-    }
+        <!-- Content -->
+        <div class="container position-relative zindex-2 py-lg-4">
+            <div class="row">
+                <div class="col-lg-5 d-flex flex-column pt-lg-4 pt-xl-5">
+                    <h5 class="my-2">Welcome!</h5>
+                    <h1 class="display-3 mb-4">Learn <span class="text-primary">IT Online</span> with No Limits
+                    </h1>
+                    <p class="fs-lg mb-5">Enjoy our great selection of IT courses. Choose from more than 25K online
+                        video courses and become an IT expert now!</p>
 
-    if(isset($_POST['email'])){
-        $email = trim($_POST['email']);
-        if(strlen($email)>3){
-            $Participant = new Participant();
-            $Participant->name = $_POST['name'];
-            $Participant->email = $_POST['email'];
-            $Participant->whatsapp = $_POST['whatsapp'];
-            $Participant->country = $_POST['country'];
-            $Participant->message = $_POST['message'];
-            $Participant->ref = $_SESSION['ref'];
+                    <!-- Desktop form -->
+                    <form class="d-none d-sm-flex mb-5">
+                        <div class="input-group d-block d-sm-flex input-group-lg me-3">
+                            <input type="text" class="form-control w-50" placeholder="Search courses...">
+                            <select class="form-select w-50">
+                                <option value="" selected disabled>Categories</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Mobile Development">Mobile Development</option>
+                                <option value="Programming">Programming</option>
+                                <option value="Game Development">Game Development</option>
+                                <option value="Software Testing">Software Testing</option>
+                                <option value="Software Engineering">Software Engineering</option>
+                                <option value="Network & Security">Network &amp; Security</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-icon btn-primary btn-lg">
+                            <i class="bx bx-search"></i>
+                        </button>
+                    </form>
 
-            if(strlen($Participant->email)<2){
-                dd("Email too short!");
-            }
-            $val = Participant::where('email',$Participant->email)->first();
-            if($val != null){
-                $_SESSION['done'] = true;
-                dd("This  email is already registered.");
-            }
+                    <!-- Mobile form -->
+                    <form class="d-sm-none mb-5">
+                        <input type="text" class="form-control form-control-lg mb-2" placeholder="Search courses...">
+                        <select class="form-select form-select-lg mb-2">
+                            <option value="" selected disabled>Categories</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Mobile Development">Mobile Development</option>
+                            <option value="Programming">Programming</option>
+                            <option value="Game Development">Game Development</option>
+                            <option value="Software Testing">Software Testing</option>
+                            <option value="Software Engineering">Software Engineering</option>
+                            <option value="Network & Security">Network &amp; Security</option>
+                        </select>
+                        <button type="submit" class="btn btn-icon btn-primary btn-lg w-100 d-sm-none">
+                            <i class="bx bx-search"></i>
+                        </button>
+                    </form>
+                    <div class="d-flex align-items-center mt-auto mb-3 mb-lg-0 pb-4 pb-lg-0 pb-xl-5">
+                        <div class="d-flex me-3">
+                            <div class="d-flex align-items-center justify-content-center bg-light rounded-circle"
+                                style="width: 52px; height: 52px;">
+                                <img src="assets/img/avatar/08.jpg" class="rounded-circle" width="48" alt="Avatar">
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center bg-light rounded-circle ms-n3"
+                                style="width: 52px; height: 52px;">
+                                <img src="assets/img/avatar/15.jpg" class="rounded-circle" width="48" alt="Avatar">
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center bg-light rounded-circle ms-n3"
+                                style="width: 52px; height: 52px;">
+                                <img src="assets/img/avatar/16.jpg" class="rounded-circle" width="48" alt="Avatar">
+                            </div>
+                        </div>
+                        <span class="fs-sm"><span class="text-primary fw-semibold">10K+</span> students are already
+                            with us</span>
+                    </div>
+                </div>
+                <div class="col-lg-7">
 
-            if($Participant->save()){
-                $_SESSION['done'] = true;
-                $_SESSION['msg'] = "You have successfully registered for the conference!, 
-                We are going to contact you and give you
-                more details through your whastapp number and email. THANK YOU!";
-                header("Location: ".url("/"));
-                die();
-            }else{
-                dd("Something went wrong. Please try again.");
-            }
-        }
-    }
-
-@endphp<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Web programming workshop - online</title>
-  <meta content="8Learning presents a 60 Minutes workshop that will give you a very clear path to learn
-  web-programming from zero! in African Environment Setup" name="description">
-
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="{{url("/")}}" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-
-      </a>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#team">SPEAKERS</a></li> 
-          <li><a class="getstarted scrollto " href="#contact">REGISTER FOR WORKSHOP NOW!</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 d-flex flex-column justify-content-center">
-            @if (isset($_SESSION['msg']))
-            @php
-                $_SESSION['msg'] = null; 
-            @endphp
-            <div class="alert alert-success mt-5" >
-                <b>Congs!</b><br>
-                {{$_SESSION['msg']}}
+                    <!-- Parallax gfx -->
+                    <div class="parallax mx-auto me-lg-0" style="max-width: 648px;">
+                        <div class="parallax-layer" data-depth="0.1">
+                            <img src="assets/img/landing/online-courses/hero/layer01.png" alt="Layer">
+                        </div>
+                        <div class="parallax-layer" data-depth="0.13">
+                            <img src="assets/img/landing/online-courses/hero/layer02.png" alt="Layer">
+                        </div>
+                        <div class="parallax-layer zindex-5" data-depth="-0.12">
+                            <img src="assets/img/landing/online-courses/hero/layer03.png" alt="Layer">
+                        </div>
+                        <div class="parallax-layer zindex-3" data-depth="0.27">
+                            <img src="assets/img/landing/online-courses/hero/layer04.png" alt="Layer">
+                        </div>
+                        <div class="parallax-layer zindex-1" data-depth="-0.18">
+                            <img src="assets/img/landing/online-courses/hero/layer05.png" alt="Layer">
+                        </div>
+                        <div class="parallax-layer zindex-1" data-depth="0.1">
+                            <img src="assets/img/landing/online-courses/hero/layer06.png" alt="Layer">
+                        </div>
+                    </div>
+                </div>
             </div>
-            @endif
-          <h1 data-aos="fade-up">Web programming for dummies</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">
-            Among a very few <span class="text-primary">freelance skills in Africa</span> that you can teach yourself
-            anytime, anywhere and start earning from them
-            regardless to your <span class="text-primary"></span>age</span>, <span class="text-primary">gender</span> or
-            <span class="text-primary">academic qualifications</span> is computer programming.
-          </h2>
-          <br>
-          <h2 data-aos="fade-up" data-aos-delay="400">
-            Research has it, Very many Ugandans and Africans at large, have found it challenging to discover a clear
-            path to take to attain such technological skills.
-          </h2>
-          <br>
-
-          <h2 data-aos="fade-up" data-aos-delay="400">
-            Eight Learning Institute of Technology and Management brings you a strictly <span class="text-primary">60 Minutes workshop</span> that will give
-            you a very clear path to learn
-            web-programming from zero! in <span class="text-primary">African Environment Setup</span>.
-            <br>
-            <br>
-            DATE: --/--/---- : --:-- PM (GTM+3)
-          </h2>
-
-
-          <div data-aos="fade-up" data-aos-delay="600">
-            <div class="text-center text-lg-start">
-              <a href="#contact"
-                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span class="d-none d-md-block">REGISTER FOR WORKSHOP NOW</span>
-                <span class="d-block d-md-none">REGISTER NOW</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <br>
-          <h2 data-aos="fade-up " data-aos-delay="400">
-            Sign Up for the online conference now! – to be added on a list of African Youths who will be oriented
-            clearly on how they can learn and earn from web programming, regardless to their age, gender or academic
-            qualifications. <a href="#contact">SIGN UP NOW</a>
-          </h2>
         </div>
-        <div class="col-lg-5 hero-img mt-5 d-none d-md-block" data-aos="zoom-out" data-aos-delay="200">
-          {{-- <img src="assets/img/static_web.svg" class="img-fluid" alt=""> --}}
-          <img src="assets/img/dummy.png" class="img-fluid" alt="">
+    </section>
+
+
+    <!-- Popular courses -->
+    <section class="container mt-2 mt-sm-3 py-md-3 py-lg-5">
+        <div class="row py-5">
+            <div class="col-lg-3 col-md-4">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs flex-nowrap overflow-auto flex-md-column pb-2 pb-md-0 mb-3 mb-md-5" role="tablist">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-inline-block text-nowrap active" role="tab"
+                            aria-selected="true">Web Development</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
+                            aria-selected="false">Data Science</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
+                            aria-selected="false">Mobile Development</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
+                            aria-selected="false">Programming</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
+                            aria-selected="false">Game Development</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
+                            aria-selected="false">Software Testing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
+                            aria-selected="false">Software Engineering</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
+                            aria-selected="false">Network &amp; Security</a>
+                    </li>
+                </ul>
+                <a href="portfolio-courses.html" class="btn btn-outline-primary btn-lg d-none d-md-inline-flex">
+                    See all courses
+                    <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                </a>
+            </div>
+            <div class="col-lg-9 col-md-8">
+
+                <!-- Title + prev/next buttons -->
+                <div class="d-flex align-items-center justify-content-between pb-4 mb-3">
+                    <h2 class="h1 mb-0 me-3">Popular Courses</h2>
+                    <div class="d-flex">
+                        <button type="button" id="popular-prev" class="btn btn-prev btn-icon btn-sm me-2">
+                            <i class="bx bx-chevron-left"></i>
+                        </button>
+                        <button type="button" id="popular-next" class="btn btn-next btn-icon btn-sm ms-2">
+                            <i class="bx bx-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Courses slider -->
+                <div class="swiper swiper-nav-onhover mx-n2"
+                    data-swiper-options='{
+    "slidesPerView": 1,
+    "spaceBetween": 8,
+    "pagination": {
+      "el": ".swiper-pagination",
+      "clickable": true
+    },
+    "navigation": {
+      "prevEl": "#popular-prev",
+      "nextEl": "#popular-next"
+    },
+    "breakpoints": {
+      "560": {
+        "slidesPerView": 2
+      },
+      "768": {
+        "slidesPerView": 1
+      },
+      "850": {
+        "slidesPerView": 2
+      },
+      "1200": {
+        "slidesPerView": 3
+      }
+    }
+  }'>
+                    <div class="swiper-wrapper">
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto pb-3">
+                            <article class="card h-100 border-0 shadow-sm mx-2">
+                                <div class="position-relative">
+                                    <a href="portfolio-single-course.html"
+                                        class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
+                                    <span class="badge bg-success position-absolute top-0 start-0 zindex-2 mt-3 ms-3">Best
+                                        Seller</span>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                    <img src="assets/img/portfolio/courses/01.jpg" class="card-img-top" alt="Image">
+                                </div>
+                                <div class="card-body pb-3">
+                                    <h3 class="h5 mb-2">
+                                        <a href="portfolio-single-course.html">Fullstack Web Developer Course from
+                                            Scratch</a>
+                                    </h3>
+                                    <p class="fs-sm mb-2">By Albert Flores</p>
+                                    <p class="fs-lg fw-semibold text-primary mb-0">$12.50</p>
+                                </div>
+                                <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
+                                    <div class="d-flex align-items-center me-4">
+                                        <i class="bx bx-time fs-xl me-1"></i> 220 hours
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bx bx-like fs-xl me-1"></i> 94% (4.2K)
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto pb-3">
+                            <article class="card h-100 border-0 shadow-sm mx-2">
+                                <div class="position-relative">
+                                    <a href="portfolio-single-course.html"
+                                        class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                    <img src="assets/img/portfolio/courses/02.jpg" class="card-img-top" alt="Image">
+                                </div>
+                                <div class="card-body pb-3">
+                                    <h3 class="h5 mb-2">
+                                        <a href="portfolio-single-course.html">HTML, CSS, JavaScript Web
+                                            Developer</a>
+                                    </h3>
+                                    <p class="fs-sm mb-2">By Jenny Wilson &amp; Marvin McKinney</p>
+                                    <p class="fs-lg fw-semibold text-primary mb-0">$15.99</p>
+                                </div>
+                                <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
+                                    <div class="d-flex align-items-center me-4">
+                                        <i class="bx bx-time fs-xl me-1"></i> 160 hours
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bx bx-like fs-xl me-1"></i> 92% (3.1K)
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto pb-3">
+                            <article class="card h-100 border-0 shadow-sm mx-2">
+                                <div class="position-relative">
+                                    <a href="portfolio-single-course.html"
+                                        class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
+                                    <span
+                                        class="badge bg-danger position-absolute top-0 start-0 zindex-2 mt-3 ms-3">Sale!</span>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                    <img src="assets/img/portfolio/courses/03.jpg" class="card-img-top" alt="Image">
+                                </div>
+                                <div class="card-body pb-3">
+                                    <h3 class="h5 mb-2">
+                                        <a href="portfolio-single-course.html">HTML, CSS, JavaScript Web
+                                            Developer</a>
+                                    </h3>
+                                    <p class="fs-sm mb-2">By Robert Fox</p>
+                                    <p class="text-muted mb-0"><span
+                                            class="fs-lg fw-semibold text-danger me-2">$9.99</span><del>$44.99</del>
+                                    </p>
+                                </div>
+                                <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
+                                    <div class="d-flex align-items-center me-4">
+                                        <i class="bx bx-time fs-xl me-1"></i> 210 hours
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bx bx-like fs-xl me-1"></i> 98% (2.7K)
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto pb-3">
+                            <article class="card h-100 border-0 shadow-sm mx-2">
+                                <div class="position-relative">
+                                    <a href="portfolio-single-course.html"
+                                        class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                    <img src="assets/img/portfolio/courses/05.jpg" class="card-img-top" alt="Image">
+                                </div>
+                                <div class="card-body pb-3">
+                                    <h3 class="h5 mb-2">
+                                        <a href="portfolio-single-course.html">Data Science &amp; Machine Learning
+                                            with Python</a>
+                                    </h3>
+                                    <p class="fs-sm mb-2">By Esther Howard</p>
+                                    <p class="fs-lg fw-semibold text-primary mb-0">$13.99</p>
+                                </div>
+                                <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
+                                    <div class="d-flex align-items-center me-4">
+                                        <i class="bx bx-time fs-xl me-1"></i> 170 hours
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bx bx-like fs-xl me-1"></i> 96% (3.8K)
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto pb-3">
+                            <article class="card h-100 border-0 shadow-sm mx-2">
+                                <div class="position-relative">
+                                    <a href="portfolio-single-course.html"
+                                        class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                    <img src="assets/img/portfolio/courses/08.jpg" class="card-img-top" alt="Image">
+                                </div>
+                                <div class="card-body pb-3">
+                                    <h3 class="h5 mb-2">
+                                        <a href="portfolio-single-course.html">The Ultimate Guide to Unity Game
+                                            Development</a>
+                                    </h3>
+                                    <p class="fs-sm mb-2">By Albert Flores</p>
+                                    <p class="fs-lg fw-semibold text-primary mb-0">$29.99</p>
+                                </div>
+                                <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
+                                    <div class="d-flex align-items-center me-4">
+                                        <i class="bx bx-time fs-xl me-1"></i> 250 hours
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bx bx-like fs-xl me-1"></i> 95% (5.4K)
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Pagination (bullets) -->
+                    <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+                </div>
+                <a href="portfolio-courses.html" class="btn btn-outline-primary btn-lg w-100 d-md-none mt-3">
+                    See all courses
+                    <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-
-  </section><!-- End Hero -->
-
-  <main id="main">
+    </section>
 
 
-
-
-
-
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <p>SPEAKERS</p>
-        </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/1.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+    <!-- How it works (Steps) -->
+    <section class="container pt-4 pt-lg-0 pb-4 pb-lg-5">
+        <h2 class="h1 text-center pb-3 pb-md-0 mb-md-5">How Does It Work?</h2>
+        <div class="steps">
+            <div class="step pt-0 pt-md-3 pb-5">
+                <div class="step-number">
+                    <div class="step-number-inner">1</div>
                 </div>
-              </div>
-              <div class="member-info">
-                <h4>Mr. Tusiime Bob</h4>
-                <span>Lorem ipsum dolor</span>
-                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
-                  exercitationem iure minima enim corporis et voluptate.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/1.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                <div class="step-body d-flex align-items-center ps-xl-5">
+                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
+                        data-rellax-speed="-0.3" data-disable-parallax-down="lg">
+                        <img src="assets/img/landing/online-courses/steps/01-dark.svg" class="d-dark-mode-none"
+                            width="306" alt="Illustration">
+                        <img src="assets/img/landing/online-courses/steps/01-light.svg" class="d-none d-dark-mode-block"
+                            width="306" alt="Illustration">
+                    </div>
+                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.4"
+                        data-disable-parallax-down="lg">
+                        <h3 class="h4">Find what fascinates you &amp; choose your course</h3>
+                        <p class="mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at
+                            suspendisse gravida hendrerit scelerisque tempus placerat.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="member-info">
-                <h4>Mr. Isaac Mbabazi</h4>
-                <span>Lorem ipsum dolor</span>
-                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis.
-                  Voluptate sed quas reiciendis animi neque sapiente.</p>
-              </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/2.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+            <div class="step pt-0 pt-md-4 pb-5">
+                <div class="step-number">
+                    <div class="step-number-inner">2</div>
                 </div>
-              </div>
-              <div class="member-info">
-                <h4>Mr. Muhindo Mubarak</h4>
-                <span>Software Developer</span>
-                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut
-                  architecto porro aspernatur molestiae modi.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/3.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                <div class="step-body d-flex align-items-center ps-xl-5">
+                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
+                        data-rellax-speed="-0.5" data-disable-parallax-down="lg">
+                        <img src="assets/img/landing/online-courses/steps/02-dark.svg" class="d-dark-mode-none"
+                            width="306" alt="Illustration">
+                        <img src="assets/img/landing/online-courses/steps/02-light.svg" class="d-none d-dark-mode-block"
+                            width="306" alt="Illustration">
+                    </div>
+                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.5"
+                        data-disable-parallax-down="lg">
+                        <h3 class="h4">Learn by doing</h3>
+                        <p class="mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum
+                            adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer ac nunc dapibus.
+                        </p>
+                    </div>
                 </div>
-              </div>
-              <div class="member-info">
-                <h4>Prof. Jude T. Lubega</h4>
-                <span>Vice-Chancellor of Nkumba University</span>
-                <p>Jude Lubega is a professor of Computer Science and currently serves as the Deputy Vice Chancellor of
-                  Uganda Technology and Management University. The Deputy Vice-Chancellor deputizes the Vice Chancellor.
-                </p>
-              </div>
             </div>
-          </div>
-
+            <div class="step pt-0 pt-md-4 pb-5">
+                <div class="step-number">
+                    <div class="step-number-inner">3</div>
+                </div>
+                <div class="step-body d-flex align-items-center ps-xl-5">
+                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
+                        data-rellax-speed="-0.3" data-disable-parallax-down="lg">
+                        <img src="assets/img/landing/online-courses/steps/03-dark.svg" class="d-dark-mode-none"
+                            width="306" alt="Illustration">
+                        <img src="assets/img/landing/online-courses/steps/03-light.svg" class="d-none d-dark-mode-block"
+                            width="306" alt="Illustration">
+                    </div>
+                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.4"
+                        data-disable-parallax-down="lg">
+                        <h3 class="h4">Get instant expert feedback</h3>
+                        <p class="mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec
+                            ultrices mi faucibus est. Magna ullamcorper potenti elementum ultricies auctor nec volutpat
+                            augue.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="step pt-0 pt-md-4 pb-5">
+                <div class="step-number">
+                    <div class="step-number-inner">4</div>
+                </div>
+                <div class="step-body d-flex align-items-center ps-xl-5">
+                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
+                        data-rellax-speed="-0.5" data-disable-parallax-down="lg">
+                        <img src="assets/img/landing/online-courses/steps/04-dark.svg" class="d-dark-mode-none"
+                            width="306" alt="Illustration">
+                        <img src="assets/img/landing/online-courses/steps/04-light.svg" class="d-none d-dark-mode-block"
+                            width="306" alt="Illustration">
+                    </div>
+                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.6"
+                        data-disable-parallax-down="lg">
+                        <h3 class="h4">Put your learning into practice &amp; find your dream job</h3>
+                        <p class="mb-0">Sed fermentum ut nibh duis. Dolor pretium arcu, tincidunt ultrices tristique
+                            arcu cursus massa gravida tortor nulla, mollis id pretium.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
-
-    </section><!-- End Team Section -->
+    </section>
 
 
+    <!-- What you get (Icon boxes) -->
+    <section class="container pt-1 pt-xl-3 pb-5">
+        <h2 class="h1 text-center pb-3 pb-md-0 mb-md-5">What You Get</h2>
+        <div class="swiper swiper-nav-onhover mt-n3 mx-n2"
+            data-swiper-options='{
+"slidesPerView": 1,
+"spaceBetween": 8,
+"pagination": {
+  "el": ".swiper-pagination",
+  "clickable": true
+},
+"breakpoints": {
+  "600": {
+    "slidesPerView": 2
+  },
+  "1000": {
+    "slidesPerView": 3
+  }
+}
+}'>
+            <div class="swiper-wrapper">
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <p>REGISTER FOR WORKSHOP</p>
-          <br>
-          <h2>Fill the form bellow to be added on list of participants who will attend the workshop.</h2>
-        </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-
-            <div class="row gy-4">
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-geo-alt"></i>
-                  <h3>Address</h3>
-                  <p>Magdalene Lane, Opposite Ndere <br>
-                    Cultural Centre, Kisaasi – Ntinda</p>
+                <!-- Item -->
+                <div class="swiper-slide h-auto py-3">
+                    <div class="card card-hover h-100 mx-2">
+                        <div class="card-body">
+                            <div class="d-table position-relative p-3 mb-4">
+                                <img src="assets/img/landing/online-courses/icons/01.svg"
+                                    class="position-relative zindex-2" width="32" alt="Icon">
+                                <span
+                                    class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
+                            </div>
+                            <h3 class="h5 pb-1 mb-2">25K+ Online Video Courses</h3>
+                            <p class="mb-0">Leo condimentum dignissim venenatis sit dignissim vel. Adipiscing
+                                tristique dictum vitae elementum neque.</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-telephone"></i>
-                  <h3>Call Us</h3>
-                  <p>P.O. BOX 36859, Kampala <br>
-                    +414 – 666 -784 | 0778-167-775</p>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto py-3">
+                    <div class="card card-hover h-100 mx-2">
+                        <div class="card-body">
+                            <div class="d-table position-relative p-3 mb-4">
+                                <img src="assets/img/landing/online-courses/icons/02.svg"
+                                    class="position-relative zindex-2" width="32" alt="Icon">
+                                <span
+                                    class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
+                            </div>
+                            <h3 class="h5 pb-1 mb-2">Mentor-Based Learning</h3>
+                            <p class="mb-0">Ac dapibus lacus, malesuada ridiculus donec condimentum nunc vestibulum.
+                                Mi feugiat tellus faucibus fermentum mattis ultrices.</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>info@8technologies.net<br> info@8learning.org</p>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto py-3">
+                    <div class="card card-hover h-100 mx-2">
+                        <div class="card-body">
+                            <div class="d-table position-relative p-3 mb-4">
+                                <img src="assets/img/landing/online-courses/icons/03.svg"
+                                    class="position-relative zindex-2" width="32" alt="Icon">
+                                <span
+                                    class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
+                            </div>
+                            <h3 class="h5 pb-1 mb-2">Lifetime Access</h3>
+                            <p class="mb-0">Donec interdum risus convallis tristique quis elit. Sapien turpis enim,
+                                viverra cursus facilisis dignissim condimentum.</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-clock"></i>
-                  <h3>Open Hours</h3>
-                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
-                </div>
-              </div>
             </div>
 
-          </div>
-
-          <div class="col-lg-6">
-
-            @if ($_SESSION['done'])
-                <div class="alert alert-success">
-                    <p>You have already submited your registration form and we received it successfully!</p>
-                    <p> Would you like to clear history and access the form again? </p>
-
-                    <a class="btn btn-success" href="{{url("/?clear=1")}}">CLEAR HISTORY</a>
-                </div>
-            @endif
-
-
-            @if (!$_SESSION['done'])
-            <form action="/" method="post" class="php-email-form">
-                @csrf
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                  <small class="text-muted">E.g John Doe</small>
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                  <small class="text-muted">E.g john@mail.com</small>
-                </div>
-
-                <div class="col-md-6">
-                  <input type="text" class="form-control" name="whatsapp" placeholder="Whatsapp number" required>
-                  <small class="text-muted">E.g +256 780 112233. - We will use it to send the conference link and remider.</small>
-                </div>
-
-                <div class="col-md-6">
-                  <input type="text" class="form-control" name="country" placeholder="Your country" required>
-                  <small class="text-muted">Please tell us your country.</small>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control"  name="message" rows="3" placeholder="Any message?"></textarea>
-                  <small class="text-muted">This is message field is optional.</small>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">ADD ME ON THE LIST</button>
-                </div>
-
-              </div>
-            </form>
-            @endif
-          </div>
-
+            <!-- Pagination (bullets) -->
+            <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
         </div>
-
-      </div>
-
-    </section><!-- End Contact Section -->
+    </section>
 
 
-  
+    <!-- Testimonials -->
+    <section class="container pt-md-2 pb-5">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card h-100 border-0 overflow-hidden px-md-4">
+                    <span
+                        class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
+                    <div
+                        class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4">
+                        <h2 class="h1 text-center text-md-start p-lg-4">What Our Students Say About Online Courses
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="card border-0 shadow-sm p-4 p-xxl-5">
+                    <div class="d-flex justify-content-between pb-4 mb-2">
+                        <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none">
+                            <i class="bx bxs-quote-left"></i>
+                        </span>
+                        <div class="d-flex">
+                            <button type="button" id="testimonials-prev" class="btn btn-prev btn-icon btn-sm me-2">
+                                <i class="bx bx-chevron-left"></i>
+                            </button>
+                            <button type="button" id="testimonials-next" class="btn btn-next btn-icon btn-sm ms-2">
+                                <i class="bx bx-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
 
-  </main><!-- End #main -->
+                    <!-- Slider -->
+                    <div class="swiper mx-0 mb-md-n2 mb-xxl-n3"
+                        data-swiper-options='{
+      "spaceBetween": 24,
+      "loop": true,
+      "pagination": {
+        "el": ".swiper-pagination",
+        "clickable": true
+      },
+      "navigation": {
+        "prevEl": "#testimonials-prev",
+        "nextEl": "#testimonials-next"
+      }
+    }'>
+                        <div class="swiper-wrapper">
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+                            <!-- Item -->
+                            <div class="swiper-slide h-auto">
+                                <figure class="card h-100 position-relative border-0 bg-transparent">
+                                    <blockquote class="card-body p-0 mb-0">
+                                        <p class="fs-lg mb-0">Vestibulum nunc lectus auctor quis. Natoque lectus tortor
+                                            lacus, eu. Nunc feugiat nisl maecenas nulla hac morbi. Vitae, donec
+                                            facilisis sed nunc netus. Venenatis posuere faucibus enim est. Vel dignissim
+                                            morbi blandit
+                                            morbi tellus. Arcu ullamcorper quis enim.</p>
+                                    </blockquote>
+                                    <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                                        <img src="assets/img/avatar/13.jpg" width="60" class="rounded-circle"
+                                            alt="Ralph Edwards">
+                                        <div class="ps-3">
+                                            <h6 class="fw-semibold lh-base mb-0">Ralph Edwards</h6>
+                                            <span class="fs-sm text-muted">Head of Marketing at Lorem Ltd. </span>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="swiper-slide h-auto">
+                                <figure class="card h-100 position-relative border-0 bg-transparent">
+                                    <blockquote class="card-body p-0 mb-0">
+                                        <p class="fs-lg mb-0">Mi semper risus ultricies orci pulvinar in at enim orci.
+                                            Quis facilisis nunc pellentesque in ullamcorper sit. Lorem blandit arcu
+                                            sapien, senectus libero, amet dapibus cursus quam. Eget pellentesque eu
+                                            purus volutpat
+                                            adipiscing malesuada. Purus nisi, tortor vel lacus.</p>
+                                    </blockquote>
+                                    <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                                        <img src="assets/img/avatar/14.jpg" width="60" class="rounded-circle"
+                                            alt="Annette Black">
+                                        <div class="ps-3">
+                                            <h6 class="fw-semibold lh-base mb-0">Annette Black</h6>
+                                            <span class="fs-sm text-muted">Strategic Advisor at Company LLC</span>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="swiper-slide h-auto">
+                                <figure class="card h-100 position-relative border-0 bg-transparent">
+                                    <blockquote class="card-body p-0 mb-0">
+                                        <p class="fs-lg mb-0">Ac at sed sit senectus massa. Massa ante amet ultrices
+                                            magna porta tempor. Aliquet diam in et magna ultricies mi at. Lectus enim,
+                                            vel enim egestas nam pellentesque et leo. Elit mi faucibus laoreet aliquam
+                                            pellentesque
+                                            sed aliquet integer massa. Orci leo tortor ornare.
+                                        </p>
+                                    </blockquote>
+                                    <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                                        <img src="assets/img/avatar/11.jpg" width="60" class="rounded-circle"
+                                            alt="Darrell Steward">
+                                        <div class="ps-3">
+                                            <h6 class="fw-semibold lh-base mb-0">Darrell Steward</h6>
+                                            <span class="fs-sm text-muted">Project Manager at Ipsum Ltd.</span>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <!-- Pagination (bullets) -->
+                        <div class="swiper-pagination position-relative mt-5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
+    <!-- Brands (Carousel) -->
+    <section class="container mt-2 pt-3 pt-lg-5 pb-5">
+        <h2 class="text-center pb-md-2">Trusted by Leading Universities &amp; Companies</h2>
+        <div class="swiper mx-n2"
+            data-swiper-options='{
+"slidesPerView": 2,
+"pagination": {
+  "el": ".swiper-pagination",
+  "clickable": true
+},
+"breakpoints": {
+  "500": {
+    "slidesPerView": 3,
+    "spaceBetween": 8
+  },
+  "650": {
+    "slidesPerView": 4,
+    "spaceBetween": 8
+  },
+  "900": {
+    "slidesPerView": 5,
+    "spaceBetween": 8
+  },
+  "1100": {
+    "slidesPerView": 6,
+    "spaceBetween": 8
+  }
+}
+}'>
+            <div class="swiper-wrapper">
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>8learning</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits"> 
-        Learn more about <a target="_blank" href="https://8learning.org/">Eight Learning Institute of Technology, Business and Management</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+                <!-- Item -->
+                <div class="swiper-slide py-3">
+                    <a href="#" class="card card-body card-hover px-2 mx-2">
+                        <img src="assets/img/brands/01.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                    </a>
+                </div>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+                <!-- Item -->
+                <div class="swiper-slide py-3">
+                    <a href="#" class="card card-body card-hover px-2 mx-2">
+                        <img src="assets/img/brands/02.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                    </a>
+                </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script> 
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+                <!-- Item -->
+                <div class="swiper-slide py-3">
+                    <a href="#" class="card card-body card-hover px-2 mx-2">
+                        <img src="assets/img/brands/03.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                    </a>
+                </div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+                <!-- Item -->
+                <div class="swiper-slide py-3">
+                    <a href="#" class="card card-body card-hover px-2 mx-2">
+                        <img src="assets/img/brands/04.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                    </a>
+                </div>
 
-</body>
+                <!-- Item -->
+                <div class="swiper-slide py-3">
+                    <a href="#" class="card card-body card-hover px-2 mx-2">
+                        <img src="assets/img/brands/05.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                    </a>
+                </div>
 
-</html>
+                <!-- Item -->
+                <div class="swiper-slide py-3">
+                    <a href="#" class="card card-body card-hover px-2 mx-2">
+                        <img src="assets/img/brands/06.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pagination (bullets) -->
+            <div class="swiper-pagination position-relative pt-2 mt-4"></div>
+        </div>
+    </section>
+
+
+    <!-- FAQ (Accordion) -->
+    <section class="container pt-1 pt-lg-3">
+        <div class="position-relative bg-primary rounded-3 overflow-hidden px-3 px-sm-4 px-md-0 py-5">
+
+            <!-- Parallax patterns -->
+            <div class="rellax position-absolute top-0 start-0 w-100 h-100 d-none d-lg-block" data-rellax-percentage="0.5"
+                data-rellax-speed="1.75">
+                <img src="assets/img/landing/online-courses/pattern-1.svg"
+                    class="position-absolute top-0 start-100 translate-middle ms-n4" alt="Pattern">
+                <img src="assets/img/landing/online-courses/pattern-2.svg"
+                    class="position-absolute top-50 start-0 mt-n5 ms-n5" alt="Pattern">
+                <img src="assets/img/landing/online-courses/pattern-3.svg"
+                    class="position-absolute top-100 start-100 translate-middle ms-n5 mt-n5" alt="Pattern">
+            </div>
+
+            <div class="row justify-content-center position-relative zindex-2 py-lg-4">
+                <div class="col-xl-8 col-lg-9 col-md-10 py-2">
+                    <h2 class="h1 text-light text-center mt-n2 mt-lg-0 mb-4 mb-lg-5">Frequently Asked Questions
+                    </h2>
+                    <div class="accordion" id="faq">
+
+                        <!-- Item -->
+                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button shadow-none rounded-3" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#q-1" aria-expanded="true"
+                                    aria-controls="q-1">What if I don't have any professional background?</button>
+                            </h3>
+                            <div class="accordion-collapse collapse show" id="q-1" data-bs-parent="#faq">
+                                <div class="accordion-body fs-sm pt-0">
+                                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam
+                                        arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat
+                                        lobortis arcu velit. Nibh pharetra fermentum duis accumsan
+                                        lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim,
+                                        arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam
+                                        quam tristique tincidunt suspendisse ut consequat.</p>
+                                    <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et
+                                        lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor
+                                        vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit
+                                        facilisi. Dignissim amet adipiscing massa integer.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#q-2" aria-expanded="false"
+                                    aria-controls="q-2">How is this different from other courses on the
+                                    market?</button>
+                            </h3>
+                            <div class="accordion-collapse collapse" id="q-2" data-bs-parent="#faq">
+                                <div class="accordion-body fs-sm pt-0">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in facilisis nibh.
+                                        Vestibulum ac porttitor sapien. Curabitur laoreet malesuada gravida. Phasellus
+                                        vehicula vestibulum consequat. Curabitur feugiat eget
+                                        sem vitae laoreet. Fusce porttitor finibus tellus, quis condimentum nibh.
+                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                                        curae; Vivamus vehicula malesuada magna at viverra. Fusce
+                                        non est eget libero convallis fringilla suspendisse.</p>
+                                    <p>Nunc dolor velit, interdum finibus bibendum vel, mattis a magna. Mauris mollis
+                                        sapien ac mi aliquet varius. Proin nec est nibh. Dignissim amet adipiscing massa
+                                        integer.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#q-3" aria-expanded="false"
+                                    aria-controls="q-3">How much time does it take to do my homework per week? What
+                                    if I don't like it?</button>
+                            </h3>
+                            <div class="accordion-collapse collapse" id="q-3" data-bs-parent="#faq">
+                                <div class="accordion-body fs-sm pt-0">
+                                    <p>Suspendisse viverra volutpat eros. Curabitur in scelerisque lacus, quis fringilla
+                                        sem. Nunc rutrum vel magna et ullamcorper. Sed consectetur augue vitae ligula
+                                        consectetur, eu dapibus justo molestie. Phasellus sit amet
+                                        metus magna. Sed tincidunt tempus felis vitae commodo. Etiam lobortis justo in
+                                        elit pretium, sit amet aliquet tellus euismod. Curabitur in purus sed turpis
+                                        aliquet pretium. Nunc ut magna tempus, iaculis sem id,
+                                        vulputate ipsum. Etiam fermentum malesuada quam, in tempus purus pulvinar at.
+                                        Vestibulum auctor congue pharetra. Class aptent taciti sociosqu ad litora
+                                        torquent per conubia nostra, per inceptos himenaeos. Nulla
+                                        facilisi. Nunc dolor velit, interdum finibus bibendum vel, mattis a magna.
+                                        Mauris mollis sapien ac mi aliquet varius. Proin nec est nibh. In hac habitasse
+                                        platea dictumst. Nullam porta risus vitae lectus pellentesque
+                                        interdum. Proin ac leo fermentum, volutpat odio ut, lacinia erat. Suspendisse
+                                        potenti. Praesent vitae faucibus lectus. Sed tincidunt at ex id maximus. Morbi
+                                        tristique ullamcorper velit, non cursus libero eleifend
+                                        quis. Aliquam aliquam odio dui.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#q-4" aria-expanded="false"
+                                    aria-controls="q-4">Is there any kind of certificate of completion?</button>
+                            </h3>
+                            <div class="accordion-collapse collapse" id="q-4" data-bs-parent="#faq">
+                                <div class="accordion-body fs-sm pt-0">
+                                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam
+                                        arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat
+                                        lobortis arcu velit. Nibh pharetra fermentum duis accumsan
+                                        lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim,
+                                        arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam
+                                        quam tristique tincidunt suspendisse ut consequat.</p>
+                                    <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et
+                                        lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor
+                                        vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit
+                                        facilisi. Dignissim amet adipiscing massa integer.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#q-5" aria-expanded="false"
+                                    aria-controls="q-5">YouTube is full of free tutorials, videos and courses. Why
+                                    should I take any courses here?</button>
+                            </h3>
+                            <div class="accordion-collapse collapse" id="q-5" data-bs-parent="#faq">
+                                <div class="accordion-body fs-sm pt-0">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in facilisis nibh.
+                                        Vestibulum ac porttitor sapien. Curabitur laoreet malesuada gravida. Phasellus
+                                        vehicula vestibulum consequat. Curabitur feugiat eget
+                                        sem vitae laoreet. Fusce porttitor finibus tellus, quis condimentum nibh.
+                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                                        curae; Vivamus vehicula malesuada magna at viverra. Fusce
+                                        non est eget libero convallis fringilla suspendisse.</p>
+                                    <p>Nunc dolor velit, interdum finibus bibendum vel, mattis a magna. Mauris mollis
+                                        sapien ac mi aliquet varius. Proin nec est nibh. Dignissim amet adipiscing massa
+                                        integer.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="accordion-item border-0 rounded-3 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#q-6" aria-expanded="false"
+                                    aria-controls="q-6">What happens if I forget or lose my password?</button>
+                            </h3>
+                            <div class="accordion-collapse collapse" id="q-6" data-bs-parent="#faq">
+                                <div class="accordion-body fs-sm pt-0">
+                                    <p>Suspendisse viverra volutpat eros. Curabitur in scelerisque lacus, quis fringilla
+                                        sem. Nunc rutrum vel magna et ullamcorper. Sed consectetur augue vitae ligula
+                                        consectetur, eu dapibus justo molestie. Phasellus sit amet
+                                        metus magna. Sed tincidunt tempus felis vitae commodo. Etiam lobortis justo in
+                                        elit pretium, sit amet aliquet tellus euismod. Curabitur in purus sed turpis
+                                        aliquet pretium. Nunc ut magna tempus, iaculis sem id,
+                                        vulputate ipsum. Etiam fermentum malesuada quam, in tempus purus pulvinar at.
+                                        Vestibulum auctor congue pharetra. Class aptent taciti sociosqu ad litora
+                                        torquent per conubia nostra, per inceptos himenaeos. Nulla
+                                        facilisi. Nunc dolor velit, interdum finibus bibendum vel, mattis a magna.
+                                        Mauris mollis sapien ac mi aliquet varius. Proin nec est nibh. In hac habitasse
+                                        platea dictumst. Nullam porta risus vitae lectus pellentesque
+                                        interdum. Proin ac leo fermentum, volutpat odio ut, lacinia erat. Suspendisse
+                                        potenti. Praesent vitae faucibus lectus. Sed tincidunt at ex id maximus. Morbi
+                                        tristique ullamcorper velit, non cursus libero eleifend
+                                        quis. Aliquam aliquam odio dui.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sign up form -->
+    <section class="bg-secondary pb-lg-5" style="margin-top: -240px; padding-top: 300px;">
+        <div class="container pt-2 pt-md-3 pt-lg-5 pb-5">
+            <h2 class="h1 text-center pb-2 mb-4 mb-lg-5">Ready to Kick-Start Your Career?<br>Start Learning Today
+            </h2>
+            <div class="row pb-3">
+                <div class="col-xl-7 col-md-6">
+                    <div class="d-flex flex-column w-100 h-100 rounded-3 bg-position-center bg-repeat-0 bg-size-cover"
+                        style="background-image: url(assets/img/landing/online-courses/signup-img.jpg);"></div>
+                </div>
+                <div class="col-xl-5 col-md-6">
+                    <div class="card border-0 p-lg-4">
+                        <div class="card-body">
+                            <h3 class="pb-3 pb-lg-4">Sign up and get <span class="text-danger">20% off</span> for your
+                                first course!</h3>
+                            <form class="needs-validation mb-4 pb-2 pb-lg-0 mb-lg-5" novalidate>
+                                <div class="position-relative mb-4">
+                                    <label for="email" class="form-label fs-base">Email address</label>
+                                    <input type="email" id="email" class="form-control form-control-lg" required>
+                                    <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a
+                                        valid email address.</div>
+                                </div>
+                                <div class="mb-4 pt-1 pb-2">
+                                    <label for="password" class="form-label fs-base">Password</label>
+                                    <div class="password-toggle">
+                                        <input type="password" id="password" class="form-control form-control-lg"
+                                            required>
+                                        <label class="password-toggle-btn" aria-label="Show/hide password">
+                                            <input class="password-toggle-check" type="checkbox">
+                                            <span class="password-toggle-indicator"></span>
+                                        </label>
+                                        <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a
+                                            valid email address.</div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg shadow-primary">Create free
+                                    account</button>
+                            </form>
+                            <h6 class="mb-4">Or sign up using:</h6>
+                            <div class="d-flex">
+                                <a href="#" class="btn btn-icon btn-secondary btn-google me-2">
+                                    <i class="bx bxl-google"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-facebook ms-1 me-2">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin ms-1 me-2">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-github ms-1">
+                                    <i class="bx bxl-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
