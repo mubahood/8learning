@@ -8,12 +8,17 @@ if (!isset($header_style)) {
 
 @if ($header_style == 1)
     <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
-    @else
+    @elseif($header_style == 2)
         <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+        @else
+            <header class="header navbar navbar-expand-lg bg-light border-bottom border-light shadow-sm fixed-top">
 @endif
 
+
+
+
 <div class="container px-3">
-    <a href="index-2.html" class="navbar-brand pe-3">
+    <a href="{{ url('/') }}" class="navbar-brand pe-3">
         <img src="assets/img/logo.svg" width="47" alt="Silicon"> Silicon
     </a>
     <div id="navbarNav" class="offcanvas offcanvas-end">
@@ -115,9 +120,18 @@ if (!isset($header_style)) {
             </ul>
         </div>
         <div class="offcanvas-header border-top">
-            <a href="{{ url('register') }}" class="btn btn-primary w-100" rel="noopener">
-                <i class="bx bx-cart fs-4 lh-1 me-1"></i> &nbsp;ENROLL NOW
-            </a>
+
+            @guest
+                <a href="{{ url('register') }}" class="btn btn-primary w-100" rel="noopener">
+                    <i class="bx bx-cart fs-4 lh-1 me-1"></i> &nbsp;ENROLL NOW
+                </a>
+            @endguest
+            @auth
+                <a href="{{ url('dashboard') }}" class="btn btn-primary w-100" rel="noopener">
+                    <i class="bx bx-cart fs-4 lh-1 me-1"></i> &nbsp;MY DASHBOARD
+                </a>
+            @endauth
+
         </div>
     </div>
     <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
@@ -129,9 +143,20 @@ if (!isset($header_style)) {
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a href="{{ url('register') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
-        rel="noopener">
-        <i class="bx bx-cart fs-5 lh-1 me-1"></i> &nbsp;ENROLL NOW
-    </a>
+    @guest
+        <a href="{{ url('register') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
+            rel="noopener">
+            <i class="bx bx-cart fs-5 lh-1 me-1"></i> &nbsp;ENROLL NOW
+        </a>
+    @endguest
+
+    @auth
+        <a href="{{ url('dashboard') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
+            rel="noopener">
+            <i class="bx bx-cart fs-5 lh-1 me-1"></i> &nbsp;MY DASHBOARD
+        </a>
+
+    @endauth
+
 </div>
 </header>
