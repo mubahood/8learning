@@ -28,6 +28,6 @@ Route::get('/account-details', [AccountController::class, 'account_details'])
     ->middleware(Authenticate::class);
 
 Route::post('/account-details', [AccountController::class, 'account_details_post'])
-    ->middleware(RedirectIfAuthenticated::class);
+    ->middleware(Authenticate::class);
 
 Route::get('/logout', [AccountController::class, 'logout']);

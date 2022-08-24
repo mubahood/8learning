@@ -89,9 +89,8 @@ class AccountController extends BaseController
     public function account_details_post(Request $r)
     {
 
-
         if (Validator::make($_POST, [
-            'email' => 'required|email',
+            'username' => 'required|email',
         ])->fails()) {
             return back()
                 ->withErrors(['email' => 'Enter a valid email address.'])
@@ -105,12 +104,19 @@ class AccountController extends BaseController
                 ->withErrors(['name' => 'Name is required.'])
                 ->withInput();
         }
- 
 
+
+        $u = Auth::user();
+        $acc = Administrator::find($u->id);
+        echo "<pre>";
+        print_
+        if ($acc == null) {
+            die("account not found");
+        }
         die("Romina");
 
 
- 
+
 
         return back()
             ->withErrors(['password' => 'Wrong email or password.'])

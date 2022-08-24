@@ -19,7 +19,9 @@
                     <div class="col-md-8 offset-lg-1 pb-5 mb-2 mb-lg-4 pt-md-5 mt-n3 mt-md-0">
                         <div class="ps-md-3 ps-lg-0 mt-md-2 py-md-4">
                             <h1 class="h2 pt-xl-1 pb-3">Account Details</h1>
-                            <form method="POST" class="needs-validation pb-3 pb-lg-4" novalidate>
+                            <form method="POST" action="account-details" class="needs-validation pb-3 pb-lg-4" novalidate>
+
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="row pb-2">
                                     <div class="col-sm-6 mb-4">
                                         @include('components.input-text', [
