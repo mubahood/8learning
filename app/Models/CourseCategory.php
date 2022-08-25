@@ -9,6 +9,10 @@ class CourseCategory extends Model
 {
     use HasFactory;
 
+    public static function parents()
+    {
+        return CourseCategory::where(['parent_id' => null])->get();
+    }
     public function courses()
     {
         return $this->hasMany(Course::class);

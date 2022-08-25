@@ -23,7 +23,7 @@ class CourseController extends AdminController
      *
      * @var string
      */
-    protected $title = 'Course';
+    protected $title = 'Courses';
 
     /**
      * Make a grid builder.
@@ -35,8 +35,7 @@ class CourseController extends AdminController
         $grid = new Grid(new Course());
 
         $grid->column('id', __('Id'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('created_at', __('Created'));
         $grid->column('administrator_id', __('Administrator id'));
         $grid->column('course_category_id', __('Course category id'));
         $grid->column('name', __('Name'));
@@ -94,127 +93,11 @@ class CourseController extends AdminController
     protected function form()
     {
 
-        Utils::start_session();
         $form = new Form(new Course());
-        $step = 1;
-        $temp_step = 0;
-        $this_url = $_SERVER['REQUEST_URI'] . "?step=";
-        if ($form->isEditing()) {
-            $id = request()->route()->parameters['course'];
-            $this_url = admin_url('courses/' . $id . '/edit?step=');
-        };
 
-        if (isset($_GET['step'])) {
-            if ($form->isEditing()) {
-                $temp_step = (int)($_GET['step']);
-                if (($temp_step < 1) || ($temp_step > 4)) {
-                    $temp_step = 1;
-                }
-                $_SESSION['step'] = $temp_step;
+        $form->tab('Basic info', function ($form) {
 
-                $id = request()->route()->parameters['course'];
-
-                $this_url_1 = admin_url('courses/' . $id . '/edit');
-                header("Location: " . $this_url_1);
-                die();
-            }
-        }
-
-        if (isset($_SESSION['step'])) {
-            if (((int)($_SESSION['step'])) > 0) {
-                $step = (int)($_SESSION['step']);
-            }
-        }
-
-
-
-
-
-
-        $active_1 = '  ';
-        $active_2 = '  ';
-        $active_3 = '  ';
-        $active_4 = '  ';
-
-        if ($step == 1) {
-            $active_1 = " bg-primary ";
-        } else if ($step == 2) {
-            $active_2 = " bg-primary ";
-        } else if ($step == 3) {
-            $active_3 = " bg-primary ";
-        } else if ($step == 4) {
-            $active_4 = " bg-primary ";
-        }
-
-
-
-        $steps = '<p class="text-center ">JUMP TO <a  class=" ' . $active_1 . ' " onclick="window.location.replace(\'' . $this_url . '1\')" href="#">STEP 1</a>';
-
-        $model = new Course();
-        $form->saved(function ($form) {
-            if (isset(request()->route()->parameters['course'])) {
-                $id = request()->route()->parameters['course'];
-                $model = $form->model()->find($id);
-                if (!$model) {
-                    dd("Coruse not found");
-                }
-
-                $this_url = admin_url('courses/' . $id . '/edit?step=');
-                if (count($model->course_chapters) < 1) {
-                    return redirect($this_url . "2");
-                }
-
-                if (($model->course_topics == null) || (count($model->course_topics) < 1)) {
-                    return redirect($this_url . "3");
-                }
-
-                if (($model->visibility == null) || ($model->visibility == 0)) {
-                    return redirect($this_url . "4");
-                }
-
-                return redirect(admin_url('courses/' . $id . '/edit'));
-            }
-        });
-
-
-
-
-        if ($form->isEditing()) {
-            $id = request()->route()->parameters['course'];
-            $model = $form->model()->find($id);
-            if (!$model) {
-                dd("Course not found");
-            }
-
-            $steps .= ' | <a class=" ' . $active_2 . ' " onclick="window.location.replace(\'' . $this_url . '2\')" href="#">STEP 2</a>';
-            if (count($model->course_chapters) < 1) {
-            } else {
-                $steps .= ' | <a class=" ' . $active_3 . ' " onclick="window.location.replace(\'' . $this_url . '3\')" href="#">STEP 3</a>';
-            }
-
-            if (($model->course_topics != null) && count($model->course_topics) > 0) {
-                
-                $steps .= ' | <a class=" ' . $active_4 . ' " onclick="window.location.replace(\'' . $this_url . '4\')" href="#">STEP 4</a>';
-            }
-        }
-
-        $steps .= "</p>";
-        if ($step == 1) {
-            $form->setTitle("Creating new course");
-            $form->html('<h2 class="text-center">STEP 1/4</h2><h3 class="text-center">Course Basic information</h3>' . $steps);
-            $form->divider();
-            $form->setWidth(6, 4);
-
-            if ($form->isCreating()) {
-                $form->hidden('visibility', __('Course visibility'))
-                    ->default(0)
-                    ->required();
-
-                $form->hidden('step', __('Course visibility'))
-                    ->default(2)
-                    ->required();
-            }
-
+            $form->setTitle("Creating course");
 
             $users = [];
             foreach (Administrator::all() as $key => $value) {
@@ -243,7 +126,6 @@ class CourseController extends AdminController
                 ->required();
             $form->text('name', __('Course Name'))->required()->default("HTML for web beginners");
 
-            /*
 
             $form->text('price', __('Course Price (in UGX)'))->required()->attribute('type', 'number');
             $form->text('total_hours', __('Course total time (in Hours)'))->required()->attribute('type', 'number');
@@ -263,23 +145,21 @@ class CourseController extends AdminController
                 ])
                 ->required();
             $form->tags('tags', __('Tags'));
-            $form->summernote('details', 'Course details')->required();*/
-        }
+            $form->summernote('details', 'Course details')->required();
+        });
 
-        if ($step == 2) {
-            $form->html('<h2 class="text-center">STEP 2/4</h2><h3 class="text-center">Adding course chapters</h3>' . $steps);
-            $form->divider();
+
+
+        $form->tab('Course chapters', function ($form) {
             $form->setWidth(6, 4);
             $form->html("<h4>Click on NEW to add course chapters</h4>");
             $form->hasMany('course_chapters', __(''), function (NestedForm $form) {
                 $form->text('name', __('Course Chapter name'))->required();
             });
-        }
+        });
 
-        if ($step == 3) {
-            $form->html('<h2 class="text-center">STEP 3/4</h2><h3 class="text-center">Course Topics</h3>' . $steps);
+        $form->tab('Chapter Topics', function ($form) {
             $form->setWidth(6, 4);
-            $form->divider();
             $form->hasMany('course_topics', __('Click on NEW to add course topic'), function (NestedForm $form) {
                 $id = request()->route()->parameters['course'];
                 $model = Course::find($id);
@@ -306,11 +186,10 @@ class CourseController extends AdminController
                 $form->multipleFile('files', __('Other files'));
                 $form->summernote('description', __('Notes'));
             });
-        }
+        });
 
-        if ($step == 4) {
-            $form->html('<h2 class="text-center">STEP 3/4</h2><h3 class="text-center">Course chapter</h3>' . $steps);
-            $form->divider();
+        $form->tab('Chapter Topics', function ($form) {
+
             $form->setWidth(6, 4);
             $form->radio('visibility', __('Course visibility'))
                 ->options([
@@ -319,7 +198,9 @@ class CourseController extends AdminController
                 ])
                 ->default(0)
                 ->required();
-        }
+        });
+
+
 
 
         $form->tools(function (Form\Tools $tools) {
@@ -328,19 +209,11 @@ class CourseController extends AdminController
             $tools->disableView();
         });
 
-        $form->footer(function ($footer) {
-            $footer->disableReset();
-            $footer->disableViewCheck();
-            $footer->disableCreatingCheck();
-        });
+        $form->disableReset();
+        $form->disableViewCheck();
+        $form->disableCreatingCheck();
 
-        $script = <<<'EOT'
-                window.addEventListener('DOMContentLoaded', (event) => { 
-                    $(".after-submit").attr("checked",true);
-                });
 
-        EOT;
-        Admin::script($script);
 
         return $form;
     }

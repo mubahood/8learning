@@ -15,7 +15,7 @@ class CourseCategoryController extends AdminController
      *
      * @var string
      */
-    protected $title = 'CourseCategory';
+    protected $title = 'Course categories';
 
     /**
      * Make a grid builder.
@@ -65,9 +65,15 @@ class CourseCategoryController extends AdminController
     {
         $form = new Form(new CourseCategory());
 
-        $form->text('name', __('Name'));
-        $form->image('thumbnail', __('Thumbnail'));
-        $form->summernote('details', __('Details'));
+        $form->select('parent_id', __('Parent'))
+            ->options(CourseCategory::parents()->pluck('name', 'id'));
+        $form->text('name', __('Name'))
+            ->rules('required');
+
+        $form->image('thumbnail', __('Thumbnail'))
+            ->rules('required');
+        $form->summernote('details', __('Details'))
+            ->rules('required');
 
         return $form;
     }

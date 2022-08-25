@@ -1,16 +1,17 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\MainController;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Route;
 
 
 
-Route::match(['get', 'post'], '/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [MainController::class, 'index'])->name('home');
 Route::get('/register', [AccountController::class, 'register'])->name('register');
+
 Route::get('/login', [AccountController::class, 'login'])->name('login')
     ->middleware(RedirectIfAuthenticated::class);
 

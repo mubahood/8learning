@@ -14,7 +14,7 @@ class CourseChapter extends Model
         return $this->belongsTo(Course::class);
     }
 
-    public function course_topics()
+    public function course_topics() 
     {
         return $this->hasMany(CourseTopic::class);
     }
