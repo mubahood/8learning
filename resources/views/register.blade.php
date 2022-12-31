@@ -16,10 +16,10 @@
                 <!-- Sign up form -->
                 <div class="container d-flex flex-wrap justify-content-center justify-content-xl-start h-100 pt-5">
                     <div class="w-100 align-self-end pt-1 pt-md-4 pb-4" style="max-width: 526px;">
-                        <h1 class="text-center text-xl-start">Create Account</h1>
-                        <p class="text-center text-xl-start pb-3 mb-3">Already have an account? <a
-                                href="login">Sign in here.</a></p>
-                        <form class="needs-validation" method="POST" novalidate>
+                        <h1 class="text-center text-xl-start">Joining IUIU Alumni Association</h1>
+                        <p class="text-center text-xl-start pb-3 mb-3">Already registred an account? <a href="login">Login
+                                in here</a></p>
+                        <form class="needs-validation" method="POST" action="{{ admin_url('auth/login') }}"  novalidate>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="row">
                                 <div class="col-sm-6 mb-3">
@@ -51,13 +51,6 @@
                                         'type' => 'password',
                                         'label' => 'Confirm password',
                                     ])
-                                </div>
-                            </div>
-                            <div class="mb-4">
-                                <div class="form-check">
-                                    <input type="checkbox" id="terms" class="form-check-input">
-                                    <label for="terms" class="form-check-label fs-base">I agree to <a
-                                            href="javascript:;">Terms &amp; Conditions</a></label>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary shadow-primary btn-lg w-100">Sign up</button>

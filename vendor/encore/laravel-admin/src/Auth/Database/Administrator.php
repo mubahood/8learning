@@ -2,6 +2,9 @@
 
 namespace Encore\Admin\Auth\Database;
 
+use App\Models\Campus;
+use App\Models\UserHasProgram;
+use Carbon\Carbon;
 use Encore\Admin\Traits\DefaultDatetimeFormat;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
@@ -20,7 +23,7 @@ class Administrator extends Model implements AuthenticatableContract
     use HasPermissions;
     use DefaultDatetimeFormat;
 
-    protected $fillable = ['username', 'password', 'name', 'avatar'];
+    protected $fillable = ['username', 'password', 'name', 'avatar', 'created_at_text'];
 
     /**
      * Create a new Eloquent model instance.
@@ -37,6 +40,31 @@ class Administrator extends Model implements AuthenticatableContract
 
         parent::__construct($attributes);
     }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        self::creating(function ($m) {
+            $m->name = $m->first_name . " " . $m->last_name;
+        });
+        self::updating(function ($m) {
+            $m->complete_profile = 0;
+            if (
+                $m->first_name != null &&
+                $m->first_name != null &&
+                $m->country != null &&
+                $m->sex != null &&
+                strlen($m->first_name) > 2 &&
+                strlen($m->sex) > 2 &&
+                strlen($m->country)
+            ) {
+                $m->complete_profile = 1;
+            }
+            $m->name = $m->first_name . " " . $m->last_name;
+        });
+    }
+
 
     /**
      * Get avatar attribute.
@@ -57,9 +85,37 @@ class Administrator extends Model implements AuthenticatableContract
             return Storage::disk(config('admin.upload.disk'))->url($avatar);
         }
 
-        $default = config('admin.default_avatar') ?: '/vendor/laravel-admin/AdminLTE/dist/img/user2-160x160.jpg';
+        $default = config('admin.default_avatar') ?: '/assets/images/user.jpg';
 
         return admin_asset($default);
+    }
+
+
+    public function programs()
+    {
+        return $this->hasMany(UserHasProgram::class, 'user_id');
+    }
+
+
+    public function campus()
+    {
+        return $this->belongsTo(Campus::class, 'campus_id');
+    }
+
+    public function getCreatedAtTextAttribute($name)
+    {
+        return Carbon::parse($this->created_at)->diffForHumans();
+    }
+    public function getNameAttribute($name)
+    {
+
+
+        if ($name == null) {
+            if (strlen($name) < 3) {
+                $name = $this->first_name . " " . $this->last_name;
+            }
+        }
+        return $name;
     }
 
     /**

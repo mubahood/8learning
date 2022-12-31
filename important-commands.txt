@@ -1,4 +1,4 @@
-php artisan make:component Alert --inline
+lsphp artisan make:component Alert --inline
 
 php artisan migrate
 
@@ -18,6 +18,7 @@ php artisan admin:make FormSr4Controller --model=App\FormSr4
  
 php artisan admin:make CourseController --model=App\\Models\\Course
 php artisan admin:make ParticipantController --model=App\\Models\\Participant
+php artisan admin:make MembersController --model=App\Models\User
 
 php artisan make:factory TeacherFactory
 
@@ -35,4 +36,8 @@ php artisan make:model CourseTopic
 php artisan make:model Utils
 php artisan make:model TrafficRecord
 php artisan make:model Participant
+php artisan make:model Campus
+php artisan make:model UserHasProgram
+php artisan make:model Users
+php artisan make:model User
 

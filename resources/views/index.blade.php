@@ -1,789 +1,287 @@
 @extends('layouts.layout-main')
 @section('main-content')
-    <!-- Hero section with layer parallax gfx -->
-    <section class="position-relative py-5">
-
-        <!-- Gradient BG -->
-        <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-primary opacity-10"></div>
-
-        <!-- Content -->
-        <div class="container position-relative zindex-2 py-lg-4">
-            <div class="row">
-                <div class="col-lg-5 d-flex flex-column pt-lg-4 pt-xl-5">
-                    <h5 class="my-2">Welcome!</h5>
-                    <h1 class="display-3 mb-4">Learn <span class="text-primary">IT Online</span> with No Limits
-                    </h1>
-                    <p class="fs-lg mb-5">Enjoy our great selection of IT courses. Choose from more than 25K online
-                        video courses and become an IT expert now!</p>
-
-                    <!-- Desktop form -->
-                    <form class="d-none d-sm-flex mb-5">
-                        <div class="input-group d-block d-sm-flex input-group-lg me-3">
-                            <input type="text" class="form-control w-50" placeholder="Search courses...">
-                            <select class="form-select w-50">
-                                <option value="" selected disabled>Categories</option>
-                                <option value="Web Development">Web Development</option>
-                                <option value="Mobile Development">Mobile Development</option>
-                                <option value="Programming">Programming</option>
-                                <option value="Game Development">Game Development</option>
-                                <option value="Software Testing">Software Testing</option>
-                                <option value="Software Engineering">Software Engineering</option>
-                                <option value="Network & Security">Network &amp; Security</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-icon btn-primary btn-lg">
-                            <i class="bx bx-search"></i>
-                        </button>
-                    </form>
-
-                    <!-- Mobile form -->
-                    <form class="d-sm-none mb-5">
-                        <input type="text" class="form-control form-control-lg mb-2" placeholder="Search courses...">
-                        <select class="form-select form-select-lg mb-2">
-                            <option value="" selected disabled>Categories</option>
-                            <option value="Web Development">Web Development</option>
-                            <option value="Mobile Development">Mobile Development</option>
-                            <option value="Programming">Programming</option>
-                            <option value="Game Development">Game Development</option>
-                            <option value="Software Testing">Software Testing</option>
-                            <option value="Software Engineering">Software Engineering</option>
-                            <option value="Network & Security">Network &amp; Security</option>
-                        </select>
-                        <button type="submit" class="btn btn-icon btn-primary btn-lg w-100 d-sm-none">
-                            <i class="bx bx-search"></i>
-                        </button>
-                    </form>
-                    <div class="d-flex align-items-center mt-auto mb-3 mb-lg-0 pb-4 pb-lg-0 pb-xl-5">
-                        <div class="d-flex me-3">
-                            <div class="d-flex align-items-center justify-content-center bg-light rounded-circle"
-                                style="width: 52px; height: 52px;">
-                                <img src="assets/img/avatar/08.jpg" class="rounded-circle" width="48" alt="Avatar">
-                            </div>
-                            <div class="d-flex align-items-center justify-content-center bg-light rounded-circle ms-n3"
-                                style="width: 52px; height: 52px;">
-                                <img src="assets/img/avatar/15.jpg" class="rounded-circle" width="48" alt="Avatar">
-                            </div>
-                            <div class="d-flex align-items-center justify-content-center bg-light rounded-circle ms-n3"
-                                style="width: 52px; height: 52px;">
-                                <img src="assets/img/avatar/16.jpg" class="rounded-circle" width="48" alt="Avatar">
-                            </div>
-                        </div>
-                        <span class="fs-sm"><span class="text-primary fw-semibold">10K+</span> students are already
-                            with us</span>
-                    </div>
+    <!-- Hero -->
+    <section class="position-relative pt-md-3 pt-lg-5 mb-md-3 mb-lg-5">
+        <div class="container position-relative zindex-5 pt-5">
+            <div class="row mt-4 pt-5">
+                <div class="col-xl-4 col-lg-5 text-center text-lg-start pb-3 pb-md-4 pb-lg-0">
+                    <h1 class="fs-xl text-uppercase">Welcome to</h1>
+                    <h2 class="display-4 pb-md-2 pb-lg-1" style="font-size: 3rem; line-height: 3rem;">Islamic University in
+                        Uganda - Alumni Association</h2>
+                    <p class="fs-lg">Haven't joined yet? <a href="#" class="fw-medium">Click here.</a></p>
                 </div>
-                <div class="col-lg-7">
-
-                    <!-- Parallax gfx -->
-                    <div class="parallax mx-auto me-lg-0" style="max-width: 648px;">
-                        <div class="parallax-layer" data-depth="0.1">
-                            <img src="assets/img/landing/online-courses/hero/layer01.png" alt="Layer">
-                        </div>
-                        <div class="parallax-layer" data-depth="0.13">
-                            <img src="assets/img/landing/online-courses/hero/layer02.png" alt="Layer">
-                        </div>
-                        <div class="parallax-layer zindex-5" data-depth="-0.12">
-                            <img src="assets/img/landing/online-courses/hero/layer03.png" alt="Layer">
-                        </div>
-                        <div class="parallax-layer zindex-3" data-depth="0.27">
-                            <img src="assets/img/landing/online-courses/hero/layer04.png" alt="Layer">
-                        </div>
-                        <div class="parallax-layer zindex-1" data-depth="-0.18">
-                            <img src="assets/img/landing/online-courses/hero/layer05.png" alt="Layer">
-                        </div>
-                        <div class="parallax-layer zindex-1" data-depth="0.1">
-                            <img src="assets/img/landing/online-courses/hero/layer06.png" alt="Layer">
+                <div class="col-xl-5 col-lg-6 offset-xl-1 position-relative zindex-5 mb-5 mb-lg-0">
+                    <div class="rellax card bg-primary border-0 shadow-primary py-2 p-sm-4 p-lg-5" data-rellax-speed="-1"
+                        data-disable-parallax-down="lg">
+                        <div class="card-body p-lg-3">
+                            <h2 class="text-light pb-1 pb-md-3">Chairman’s Message</h2>
+                            <p class="fs-lg text-light pb-2 pb-md-0 mb-4 mb-md-5">
+                                It is my distinct honour and privilege to welcome you to the IUIU Alumni Association
+                                website.
+                                If you are a graduate of IUIU and you are yet to become a member of this Association. <br> I
+                                earnestly invite you to do so - it's easy and inexpensive...</p>
+                            <a href="#" class="btn btn-light btn-lg">
+                                Read full message
+                                <i class="bx bx-right-arrow-alt lh-1 fs-4 ms-2 me-n2"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="d-none d-lg-block" style="margin-top: -165px;"></div>
+            <div class="row align-items-end">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="assets/images/chairperson.JPG" class="rellax rounded-3" alt="Image"
+                        data-rellax-speed="1.35" data-disable-parallax-down="md">
+                </div>
+                <div class="col-lg-6 d-flex flex-column flex-md-row align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ps-xl-5 mb-4 mb-md-0">
+                        <div class="btn btn-icon btn-secondary btn-lg pe-none rounded d-lg-none d-xl-inline-flex">
+                            <i class="bx bx-time text-primary fs-3"></i>
+                        </div>
+                        <ul class="list-unstyled ps-3 ps-lg-0 ps-xl-3 mb-0">
+                            <li><strong class="text-dark">UPCOMING EVENT:</strong> IUIU Alumni Dinner</li>
+                            <li><strong class="text-dark">10th Feb, 2023:</strong> IUIU Female's campus</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-lg shadow-primary">BOOK A TICKET</a>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-lg-block position-absolute top-0 end-0 w-50 d-flex flex-column ps-3"
+            style="height: calc(100% - 108px);">
+            <div class="w-100 h-100 overflow-hidden bg-position-center bg-repeat-0 bg-size-cover"
+                style="background-image: url(assets/images/youths/{{ rand(1, 10) }}.JPG); border-bottom-left-radius: .5rem;">
             </div>
         </div>
     </section>
 
 
-    <!-- Popular courses -->
-    <section class="container mt-2 mt-sm-3 py-md-3 py-lg-5">
-        <div class="row py-5">
-            <div class="col-lg-3 col-md-4">
 
-                <!-- Nav tabs -->  
-                <ul class="nav nav-tabs flex-nowrap overflow-auto flex-md-column pb-2 pb-md-0 mb-3 mb-md-5" role="tablist">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link d-inline-block text-nowrap active" role="tab"
-                            aria-selected="true">Web Development</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Data Science</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Mobile Development</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Programming</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Game Development</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Software Testing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Software Engineering</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Network &amp; Security</a>
-                    </li>
-                </ul>
-                <a href="portfolio-courses.html" class="btn btn-outline-primary btn-lg d-none d-md-inline-flex">
-                    See all courses
-                    <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
-                </a>
+
+    <!-- Video showreel -->
+    <section class="container text-center pb-5 mb-3 mb-md-4 mb-lg-5 mt-md-5">
+        <h2 class="h1 pt-1 mb-4">About IUIU-Alumni Association</h2>
+        <div class="row justify-content-center mb-md-2 mb-lg-5">
+            <div class="col-lg-6 col-md-8">
+                <p class="fs-lg text-lead ">The Islamic University In Uganda Alumni Association (IUIU-AA) was formally
+                    registered with the Uganda Registration Serveices Bureau (URSB) on August 12th, 2020 Kampala.</p>
+                <p class="fs-lg text-lead mt-2">
+                    IUIU-AA seeks to create a platform for discussion and practical solutions that benefit the members and
+                    our great University.</p>
+                <p class="fs-lg text-lead mt-2">Furthermore, promote fellowship among IUIU graduates, assist members to
+                    develop careers prospects and maintain a database of IUIU Alumni at national and international levels.
+                </p>
+                <p class="fs-lg text-lead mt-2 ">As a network that unites IUIU Alumni under one umbrella, we look forward to
+                    promoting the interests, welfare and educational aims of IUIU and the University.</p>
             </div>
-            <div class="col-lg-9 col-md-8">
 
-                <!-- Title + prev/next buttons -->
-                <div class="d-flex align-items-center justify-content-between pb-4 mb-3">
-                    <h2 class="h1 mb-0 me-3">Popular Courses</h2>
-                    <div class="d-flex">
-                        <button type="button" id="popular-prev" class="btn btn-prev btn-icon btn-sm me-2">
-                            <i class="bx bx-chevron-left"></i>
-                        </button>
-                        <button type="button" id="popular-next" class="btn btn-next btn-icon btn-sm ms-2">
-                            <i class="bx bx-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
 
-                <!-- Courses slider -->
-                <div class="swiper swiper-nav-onhover mx-n2"
+            <!-- Benefits (features) -->
+            <div class="mt-3 mb-5 pt-lg-5 bg-secondary rounded" id="benefits">
+                <div class="swiper pt-3"
                     data-swiper-options='{
-    "slidesPerView": 1,
-    "spaceBetween": 8,
-    "pagination": {
-      "el": ".swiper-pagination",
-      "clickable": true
-    },
-    "navigation": {
-      "prevEl": "#popular-prev",
-      "nextEl": "#popular-next"
-    },
-    "breakpoints": {
-      "560": {
-        "slidesPerView": 2
-      },
-      "768": {
-        "slidesPerView": 1
-      },
-      "850": {
-        "slidesPerView": 2
-      },
-      "1200": {
-        "slidesPerView": 3
-      }
-    }
-  }'>
-                    <div class="swiper-wrapper">
- 
-                        @foreach ($top_courses as $item)
-                            
+          "slidesPerView": 1,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "991": {
+              "slidesPerView": 3
+            }
+          }
+        }'>
+                    <div class="swiper-wrapper pt-4">
 
                         <!-- Item -->
-                        <div class="swiper-slide h-auto pb-3">
-                            <article class="card h-100 border-0 shadow-sm mx-2">
-                                <div class="position-relative">
-                                    <a href="portfolio-single-course.html"
-                                        class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
-                                    <span class="badge bg-success position-absolute top-0 start-0 zindex-2 mt-3 ms-3">Best
-                                        Seller</span>
-                                    <a href="#"
-                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3"
-                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
-                                        <i class="bx bx-bookmark"></i>
-                                    </a>
-                                    <img src="assets/img/portfolio/courses/01.jpg" class="card-img-top" alt="Image">
-                                </div>
-                                <div class="card-body pb-3">
-                                    <h3 class="h5 mb-2">
-                                        <a href="portfolio-single-course.html">{{$item->name}}</a>
-                                    </h3>
-                                    <p class="fs-sm mb-2">By Albert Flores</p>
-                                    <p class="fs-lg fw-semibold text-primary mb-0">$12.50</p>
-                                </div>
-                                <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
-                                    <div class="d-flex align-items-center me-4">
-                                        <i class="bx bx-time fs-xl me-1"></i> 220 hours
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bx bx-like fs-xl me-1"></i> 94% (4.2K)
-                                    </div>
-                                </div>
-                            </article>
+                        <div class="swiper-slide border-end-lg px-2">
+                            <div class="text-center">
+                                <img src="assets/img/landing/digital-agency/icons/idea.svg" width="48" alt="Bulb icon"
+                                    class="d-block mb-4 mx-auto">
+                                <h4 class="mb-2 pb-1">Our Vision</h4>
+                                <p class="mx-auto" style="max-width: 336px;">Unity and Development.<br><br><br><br></p>
+                            </div>
                         </div>
- 
-                        @endforeach
+
+                        <!-- Item -->
+                        <div class="swiper-slide border-end-lg px-2">
+                            <div class="text-center">
+                                <img src="assets/img/landing/digital-agency/icons/award.svg" width="48" alt="Award icon"
+                                    class="d-block mb-4 mx-auto">
+                                <h4 class="mb-2 pb-1">Our Mission</h4>
+                                <p class="mx-auto" style="max-width: 336px;">To create fellowship among IUIU Alumni under
+                                    one umbrella and offer practical solutions that benefit members and the Alma mater
+                                    through rigorous networking.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="swiper-slide px-2">
+                            <div class="text-center">
+                                <img src="assets/img/landing/digital-agency/icons/team.svg" width="48" alt="Team icon"
+                                    class="d-block mb-4 mx-auto">
+                                <h4 class="mb-2 pb-1">Our Core Values</h4>
+                                <p class="mx-auto" style="max-width: 336px;">Integrity, Diversity, Creativity & coexistence.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Pagination (bullets) -->
                     <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
                 </div>
-                <a href="portfolio-courses.html" class="btn btn-outline-primary btn-lg w-100 d-md-none mt-3">
-                    See all courses
-                    <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+            </div>
+
+        </div>
+        <div class="position-relative rounded-3 overflow-hidden mb-lg-3">
+            <div
+                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
+                <a href="../external.html?link=https://youtu.be/yGxEamdlHB4"
+                    class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
+                    <i class="bx bx-play"></i>
                 </a>
             </div>
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+            <img src="assets/images/iuiuaa.jpg" alt="Cover image">
         </div>
     </section>
 
 
-    <!-- How it works (Steps) -->
-    <section class="container pt-4 pt-lg-0 pb-4 pb-lg-5">
-        <h2 class="h1 text-center pb-3 pb-md-0 mb-md-5">How Does It Work?</h2>
-        <div class="steps">
-            <div class="step pt-0 pt-md-3 pb-5">
-                <div class="step-number">
-                    <div class="step-number-inner">1</div>
-                </div>
-                <div class="step-body d-flex align-items-center ps-xl-5">
-                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
-                        data-rellax-speed="-0.3" data-disable-parallax-down="lg">
-                        <img src="assets/img/landing/online-courses/steps/01-dark.svg" class="d-dark-mode-none"
-                            width="306" alt="Illustration">
-                        <img src="assets/img/landing/online-courses/steps/01-light.svg" class="d-none d-dark-mode-block"
-                            width="306" alt="Illustration">
-                    </div>
-                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.4"
-                        data-disable-parallax-down="lg">
-                        <h3 class="h4">Find what fascinates you &amp; choose your course</h3>
-                        <p class="mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at
-                            suspendisse gravida hendrerit scelerisque tempus placerat.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="step pt-0 pt-md-4 pb-5">
-                <div class="step-number">
-                    <div class="step-number-inner">2</div>
-                </div>
-                <div class="step-body d-flex align-items-center ps-xl-5">
-                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
-                        data-rellax-speed="-0.5" data-disable-parallax-down="lg">
-                        <img src="assets/img/landing/online-courses/steps/02-dark.svg" class="d-dark-mode-none"
-                            width="306" alt="Illustration">
-                        <img src="assets/img/landing/online-courses/steps/02-light.svg" class="d-none d-dark-mode-block"
-                            width="306" alt="Illustration">
-                    </div>
-                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.5"
-                        data-disable-parallax-down="lg">
-                        <h3 class="h4">Learn by doing</h3>
-                        <p class="mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum
-                            adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer ac nunc dapibus.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="step pt-0 pt-md-4 pb-5">
-                <div class="step-number">
-                    <div class="step-number-inner">3</div>
-                </div>
-                <div class="step-body d-flex align-items-center ps-xl-5">
-                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
-                        data-rellax-speed="-0.3" data-disable-parallax-down="lg">
-                        <img src="assets/img/landing/online-courses/steps/03-dark.svg" class="d-dark-mode-none"
-                            width="306" alt="Illustration">
-                        <img src="assets/img/landing/online-courses/steps/03-light.svg" class="d-none d-dark-mode-block"
-                            width="306" alt="Illustration">
-                    </div>
-                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.4"
-                        data-disable-parallax-down="lg">
-                        <h3 class="h4">Get instant expert feedback</h3>
-                        <p class="mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec
-                            ultrices mi faucibus est. Magna ullamcorper potenti elementum ultricies auctor nec volutpat
-                            augue.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="step pt-0 pt-md-4 pb-5">
-                <div class="step-number">
-                    <div class="step-number-inner">4</div>
-                </div>
-                <div class="step-body d-flex align-items-center ps-xl-5">
-                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
-                        data-rellax-speed="-0.5" data-disable-parallax-down="lg">
-                        <img src="assets/img/landing/online-courses/steps/04-dark.svg" class="d-dark-mode-none"
-                            width="306" alt="Illustration">
-                        <img src="assets/img/landing/online-courses/steps/04-light.svg" class="d-none d-dark-mode-block"
-                            width="306" alt="Illustration">
-                    </div>
-                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.6"
-                        data-disable-parallax-down="lg">
-                        <h3 class="h4">Put your learning into practice &amp; find your dream job</h3>
-                        <p class="mb-0">Sed fermentum ut nibh duis. Dolor pretium arcu, tincidunt ultrices tristique
-                            arcu cursus massa gravida tortor nulla, mollis id pretium.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
-    <!-- What you get (Icon boxes) -->
-    <section class="container pt-1 pt-xl-3 pb-5">
-        <h2 class="h1 text-center pb-3 pb-md-0 mb-md-5">What You Get</h2>
-        <div class="swiper swiper-nav-onhover mt-n3 mx-n2"
-            data-swiper-options='{
-"slidesPerView": 1,
-"spaceBetween": 8,
-"pagination": {
-  "el": ".swiper-pagination",
-  "clickable": true
-},
-"breakpoints": {
-  "600": {
-    "slidesPerView": 2
-  },
-  "1000": {
-    "slidesPerView": 3
-  }
-}
-}'>
-            <div class="swiper-wrapper">
-
-                <!-- Item -->
-                <div class="swiper-slide h-auto py-3">
-                    <div class="card card-hover h-100 mx-2">
-                        <div class="card-body">
-                            <div class="d-table position-relative p-3 mb-4">
-                                <img src="assets/img/landing/online-courses/icons/01.svg"
-                                    class="position-relative zindex-2" width="32" alt="Icon">
-                                <span
-                                    class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
-                            </div>
-                            <h3 class="h5 pb-1 mb-2">25K+ Online Video Courses</h3>
-                            <p class="mb-0">Leo condimentum dignissim venenatis sit dignissim vel. Adipiscing
-                                tristique dictum vitae elementum neque.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide h-auto py-3">
-                    <div class="card card-hover h-100 mx-2">
-                        <div class="card-body">
-                            <div class="d-table position-relative p-3 mb-4">
-                                <img src="assets/img/landing/online-courses/icons/02.svg"
-                                    class="position-relative zindex-2" width="32" alt="Icon">
-                                <span
-                                    class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
-                            </div>
-                            <h3 class="h5 pb-1 mb-2">Mentor-Based Learning</h3>
-                            <p class="mb-0">Ac dapibus lacus, malesuada ridiculus donec condimentum nunc vestibulum.
-                                Mi feugiat tellus faucibus fermentum mattis ultrices.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide h-auto py-3">
-                    <div class="card card-hover h-100 mx-2">
-                        <div class="card-body">
-                            <div class="d-table position-relative p-3 mb-4">
-                                <img src="assets/img/landing/online-courses/icons/03.svg"
-                                    class="position-relative zindex-2" width="32" alt="Icon">
-                                <span
-                                    class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
-                            </div>
-                            <h3 class="h5 pb-1 mb-2">Lifetime Access</h3>
-                            <p class="mb-0">Donec interdum risus convallis tristique quis elit. Sapien turpis enim,
-                                viverra cursus facilisis dignissim condimentum.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pagination (bullets) -->
-            <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
-        </div>
-    </section>
 
 
-    <!-- Testimonials -->
-    <section class="container pt-md-2 pb-5">
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Services -->
+    <section class="container pb-5 mb-md-2 mb-lg-5">
         <div class="row">
-            <div class="col-md-5">
-                <div class="card h-100 border-0 overflow-hidden px-md-4">
-                    <span
-                        class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
-                    <div
-                        class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4">
-                        <h2 class="h1 text-center text-md-start p-lg-4">What Our Students Say About Online Courses
-                        </h2>
-                    </div>
-                </div>
+            <div class="col-lg-4 text-center text-lg-start pb-3 pb-lg-0 mb-4 mb-lg-0">
+                <h2 class="h1 mb-lg-4">Discover IUIU-AA Services</h2>
+                <p class="pb-4 mb-0 mb-lg-3">
+                    IUIU-AA Membership enables you to enjoy being a part of the IUIU Alumni community and related fellowship
+                    in various forms. Take advantage of the opportunity that this association offers to all Alumni of IUIU,
+                    our dear alma mater, to give our loving attention and support that she deserves for achieving greater
+                    glory and world class status.</p>
+                <a href="#" class="btn btn-primary shadow-primary btn-lg">All services</a>
             </div>
-            <div class="col-md-7">
-                <div class="card border-0 shadow-sm p-4 p-xxl-5">
-                    <div class="d-flex justify-content-between pb-4 mb-2">
-                        <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none">
-                            <i class="bx bxs-quote-left"></i>
-                        </span>
-                        <div class="d-flex">
-                            <button type="button" id="testimonials-prev" class="btn btn-prev btn-icon btn-sm me-2">
-                                <i class="bx bx-chevron-left"></i>
-                            </button>
-                            <button type="button" id="testimonials-next" class="btn btn-next btn-icon btn-sm ms-2">
-                                <i class="bx bx-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Slider -->
-                    <div class="swiper mx-0 mb-md-n2 mb-xxl-n3"
-                        data-swiper-options='{
-      "spaceBetween": 24,
-      "loop": true,
-      "pagination": {
-        "el": ".swiper-pagination",
-        "clickable": true
-      },
-      "navigation": {
-        "prevEl": "#testimonials-prev",
-        "nextEl": "#testimonials-next"
-      }
-    }'>
-                        <div class="swiper-wrapper">
-
-                            <!-- Item -->
-                            <div class="swiper-slide h-auto">
-                                <figure class="card h-100 position-relative border-0 bg-transparent">
-                                    <blockquote class="card-body p-0 mb-0">
-                                        <p class="fs-lg mb-0">Vestibulum nunc lectus auctor quis. Natoque lectus tortor
-                                            lacus, eu. Nunc feugiat nisl maecenas nulla hac morbi. Vitae, donec
-                                            facilisis sed nunc netus. Venenatis posuere faucibus enim est. Vel dignissim
-                                            morbi blandit
-                                            morbi tellus. Arcu ullamcorper quis enim.</p>
-                                    </blockquote>
-                                    <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
-                                        <img src="assets/img/avatar/13.jpg" width="60" class="rounded-circle"
-                                            alt="Ralph Edwards">
-                                        <div class="ps-3">
-                                            <h6 class="fw-semibold lh-base mb-0">Ralph Edwards</h6>
-                                            <span class="fs-sm text-muted">Head of Marketing at Lorem Ltd. </span>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-
-                            <!-- Item -->
-                            <div class="swiper-slide h-auto">
-                                <figure class="card h-100 position-relative border-0 bg-transparent">
-                                    <blockquote class="card-body p-0 mb-0">
-                                        <p class="fs-lg mb-0">Mi semper risus ultricies orci pulvinar in at enim orci.
-                                            Quis facilisis nunc pellentesque in ullamcorper sit. Lorem blandit arcu
-                                            sapien, senectus libero, amet dapibus cursus quam. Eget pellentesque eu
-                                            purus volutpat
-                                            adipiscing malesuada. Purus nisi, tortor vel lacus.</p>
-                                    </blockquote>
-                                    <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
-                                        <img src="assets/img/avatar/14.jpg" width="60" class="rounded-circle"
-                                            alt="Annette Black">
-                                        <div class="ps-3">
-                                            <h6 class="fw-semibold lh-base mb-0">Annette Black</h6>
-                                            <span class="fs-sm text-muted">Strategic Advisor at Company LLC</span>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-
-                            <!-- Item -->
-                            <div class="swiper-slide h-auto">
-                                <figure class="card h-100 position-relative border-0 bg-transparent">
-                                    <blockquote class="card-body p-0 mb-0">
-                                        <p class="fs-lg mb-0">Ac at sed sit senectus massa. Massa ante amet ultrices
-                                            magna porta tempor. Aliquet diam in et magna ultricies mi at. Lectus enim,
-                                            vel enim egestas nam pellentesque et leo. Elit mi faucibus laoreet aliquam
-                                            pellentesque
-                                            sed aliquet integer massa. Orci leo tortor ornare.
-                                        </p>
-                                    </blockquote>
-                                    <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
-                                        <img src="assets/img/avatar/11.jpg" width="60" class="rounded-circle"
-                                            alt="Darrell Steward">
-                                        <div class="ps-3">
-                                            <h6 class="fw-semibold lh-base mb-0">Darrell Steward</h6>
-                                            <span class="fs-sm text-muted">Project Manager at Ipsum Ltd.</span>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-
-                        <!-- Pagination (bullets) -->
-                        <div class="swiper-pagination position-relative mt-5"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Brands (Carousel) -->
-    <section class="container mt-2 pt-3 pt-lg-5 pb-5">
-        <h2 class="text-center pb-md-2">Trusted by Leading Universities &amp; Companies</h2>
-        <div class="swiper mx-n2"
-            data-swiper-options='{
-"slidesPerView": 2,
-"pagination": {
-  "el": ".swiper-pagination",
-  "clickable": true
-},
-"breakpoints": {
-  "500": {
-    "slidesPerView": 3,
-    "spaceBetween": 8
-  },
-  "650": {
-    "slidesPerView": 4,
-    "spaceBetween": 8
-  },
-  "900": {
-    "slidesPerView": 5,
-    "spaceBetween": 8
-  },
-  "1100": {
-    "slidesPerView": 6,
-    "spaceBetween": 8
-  }
-}
-}'>
-            <div class="swiper-wrapper">
-
-                <!-- Item -->
-                <div class="swiper-slide py-3">
-                    <a href="#" class="card card-body card-hover px-2 mx-2">
-                        <img src="assets/img/brands/01.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-                    </a>
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide py-3">
-                    <a href="#" class="card card-body card-hover px-2 mx-2">
-                        <img src="assets/img/brands/02.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-                    </a>
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide py-3">
-                    <a href="#" class="card card-body card-hover px-2 mx-2">
-                        <img src="assets/img/brands/03.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-                    </a>
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide py-3">
-                    <a href="#" class="card card-body card-hover px-2 mx-2">
-                        <img src="assets/img/brands/04.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-                    </a>
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide py-3">
-                    <a href="#" class="card card-body card-hover px-2 mx-2">
-                        <img src="assets/img/brands/05.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-                    </a>
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide py-3">
-                    <a href="#" class="card card-body card-hover px-2 mx-2">
-                        <img src="assets/img/brands/06.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Pagination (bullets) -->
-            <div class="swiper-pagination position-relative pt-2 mt-4"></div>
-        </div>
-    </section>
-
-
-    <!-- FAQ (Accordion) -->
-    <section class="container pt-1 pt-lg-3">
-        <div class="position-relative bg-primary rounded-3 overflow-hidden px-3 px-sm-4 px-md-0 py-5">
-
-            <!-- Parallax patterns -->
-            <div class="rellax position-absolute top-0 start-0 w-100 h-100 d-none d-lg-block" data-rellax-percentage="0.5"
-                data-rellax-speed="1.75">
-                <img src="assets/img/landing/online-courses/pattern-1.svg"
-                    class="position-absolute top-0 start-100 translate-middle ms-n4" alt="Pattern">
-                <img src="assets/img/landing/online-courses/pattern-2.svg"
-                    class="position-absolute top-50 start-0 mt-n5 ms-n5" alt="Pattern">
-                <img src="assets/img/landing/online-courses/pattern-3.svg"
-                    class="position-absolute top-100 start-100 translate-middle ms-n5 mt-n5" alt="Pattern">
-            </div>
-
-            <div class="row justify-content-center position-relative zindex-2 py-lg-4">
-                <div class="col-xl-8 col-lg-9 col-md-10 py-2">
-                    <h2 class="h1 text-light text-center mt-n2 mt-lg-0 mb-4 mb-lg-5">Frequently Asked Questions
-                    </h2>
-                    <div class="accordion" id="faq">
-
-                        <!-- Item -->
-                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button shadow-none rounded-3" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q-1" aria-expanded="true"
-                                    aria-controls="q-1">What if I don't have any professional background?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse show" id="q-1" data-bs-parent="#faq">
-                                <div class="accordion-body fs-sm pt-0">
-                                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam
-                                        arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat
-                                        lobortis arcu velit. Nibh pharetra fermentum duis accumsan
-                                        lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim,
-                                        arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam
-                                        quam tristique tincidunt suspendisse ut consequat.</p>
-                                    <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et
-                                        lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor
-                                        vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit
-                                        facilisi. Dignissim amet adipiscing massa integer.</p>
+            <div class="col-xl-7 col-lg-8 offset-xl-1">
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col">
+                        <div class="card card-hover bg-secondary border-0 mb-4">
+                            <div class="card-body d-flex align-items-start">
+                                <div class="flex-shrink-0 bg-light rounded-3 p-0">
+                                    <img src="assets/images/icon-check.png" width="50" alt="Icon">
+                                </div>
+                                <div class="ps-4">
+                                    <h3 class="h5 pb-2 mb-1">RECONNECT</h3>
+                                    <p class="pb-2 mb-1 ">Reconnect with your friends, classmates, OBs and OGs.</p>
+                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                        Join now
+                                        <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Item -->
-                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q-2" aria-expanded="false"
-                                    aria-controls="q-2">How is this different from other courses on the
-                                    market?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="q-2" data-bs-parent="#faq">
-                                <div class="accordion-body fs-sm pt-0">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in facilisis nibh.
-                                        Vestibulum ac porttitor sapien. Curabitur laoreet malesuada gravida. Phasellus
-                                        vehicula vestibulum consequat. Curabitur feugiat eget
-                                        sem vitae laoreet. Fusce porttitor finibus tellus, quis condimentum nibh.
-                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                                        curae; Vivamus vehicula malesuada magna at viverra. Fusce
-                                        non est eget libero convallis fringilla suspendisse.</p>
-                                    <p>Nunc dolor velit, interdum finibus bibendum vel, mattis a magna. Mauris mollis
-                                        sapien ac mi aliquet varius. Proin nec est nibh. Dignissim amet adipiscing massa
-                                        integer.</p>
+                        <div class="card card-hover bg-secondary border-0 mb-4">
+                            <div class="card-body d-flex align-items-start">
+                                <div class="flex-shrink-0 bg-light rounded-3 p-0">
+                                    <img src="assets/images/icon-check.png" width="50" alt="Icon">
+                                </div>
+                                <div class="ps-4">
+                                    <h3 class="h5 pb-2 mb-1">PROFILE</h3>
+                                    <p class="pb-2 mb-1">Create your profile and showcase your skills, capabilities,
+                                        qualifications and experience.</p>
+                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                        Join now
+                                        <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
+                        <div class="card card-hover bg-secondary border-0 mb-4">
+                            <div class="card-body d-flex align-items-start">
+                                <div class="flex-shrink-0 bg-light rounded-3 p-0">
+                                    <img src="assets/images/icon-check.png" width="50" alt="Icon">
+                                </div>
+                                <div class="ps-4">
+                                    <h3 class="h5 pb-2 mb-1">GIVE BACK</h3>
+                                    <p class="pb-2 mb-1">Give Back to your alma mater and your alumni association by
+                                        participating in a fundraising event and donations.
 
-                        <!-- Item -->
-                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q-3" aria-expanded="false"
-                                    aria-controls="q-3">How much time does it take to do my homework per week? What
-                                    if I don't like it?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="q-3" data-bs-parent="#faq">
-                                <div class="accordion-body fs-sm pt-0">
-                                    <p>Suspendisse viverra volutpat eros. Curabitur in scelerisque lacus, quis fringilla
-                                        sem. Nunc rutrum vel magna et ullamcorper. Sed consectetur augue vitae ligula
-                                        consectetur, eu dapibus justo molestie. Phasellus sit amet
-                                        metus magna. Sed tincidunt tempus felis vitae commodo. Etiam lobortis justo in
-                                        elit pretium, sit amet aliquet tellus euismod. Curabitur in purus sed turpis
-                                        aliquet pretium. Nunc ut magna tempus, iaculis sem id,
-                                        vulputate ipsum. Etiam fermentum malesuada quam, in tempus purus pulvinar at.
-                                        Vestibulum auctor congue pharetra. Class aptent taciti sociosqu ad litora
-                                        torquent per conubia nostra, per inceptos himenaeos. Nulla
-                                        facilisi. Nunc dolor velit, interdum finibus bibendum vel, mattis a magna.
-                                        Mauris mollis sapien ac mi aliquet varius. Proin nec est nibh. In hac habitasse
-                                        platea dictumst. Nullam porta risus vitae lectus pellentesque
-                                        interdum. Proin ac leo fermentum, volutpat odio ut, lacinia erat. Suspendisse
-                                        potenti. Praesent vitae faucibus lectus. Sed tincidunt at ex id maximus. Morbi
-                                        tristique ullamcorper velit, non cursus libero eleifend
-                                        quis. Aliquam aliquam odio dui.
+
+
                                     </p>
+                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                        Join now
+                                        <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Item -->
-                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q-4" aria-expanded="false"
-                                    aria-controls="q-4">Is there any kind of certificate of completion?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="q-4" data-bs-parent="#faq">
-                                <div class="accordion-body fs-sm pt-0">
-                                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam
-                                        arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat
-                                        lobortis arcu velit. Nibh pharetra fermentum duis accumsan
-                                        lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim,
-                                        arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam
-                                        quam tristique tincidunt suspendisse ut consequat.</p>
-                                    <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et
-                                        lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor
-                                        vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit
-                                        facilisi. Dignissim amet adipiscing massa integer.</p>
+                    </div>
+                    <div class="col">
+                        <div class="card card-hover bg-secondary border-0 mb-4">
+                            <div class="card-body d-flex align-items-start">
+                                <div class="flex-shrink-0 bg-light rounded-3 p-0">
+                                    <img src="assets/images/icon-check.png" width="50" alt="Icon">
+                                </div>
+                                <div class="ps-4">
+                                    <h3 class="h5 pb-2 mb-1">GET IN TOUCH</h3>
+                                    <p class="pb-2 mb-1">Stay updated with feeds about scholarships, job openings and
+                                        announcements.</p>
+                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                        Join now
+                                        <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Item -->
-                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q-5" aria-expanded="false"
-                                    aria-controls="q-5">YouTube is full of free tutorials, videos and courses. Why
-                                    should I take any courses here?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="q-5" data-bs-parent="#faq">
-                                <div class="accordion-body fs-sm pt-0">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in facilisis nibh.
-                                        Vestibulum ac porttitor sapien. Curabitur laoreet malesuada gravida. Phasellus
-                                        vehicula vestibulum consequat. Curabitur feugiat eget
-                                        sem vitae laoreet. Fusce porttitor finibus tellus, quis condimentum nibh.
-                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                                        curae; Vivamus vehicula malesuada magna at viverra. Fusce
-                                        non est eget libero convallis fringilla suspendisse.</p>
-                                    <p>Nunc dolor velit, interdum finibus bibendum vel, mattis a magna. Mauris mollis
-                                        sapien ac mi aliquet varius. Proin nec est nibh. Dignissim amet adipiscing massa
-                                        integer.</p>
+                        <div class="card card-hover bg-secondary border-0 mb-4">
+                            <div class="card-body d-flex align-items-start">
+                                <div class="flex-shrink-0 bg-light rounded-3 p-0">
+                                    <img src="assets/images/icon-check.png" width="50" alt="Icon">
+                                </div>
+                                <div class="ps-4">
+                                    <h3 class="h5 pb-2 mb-1">INQUIRIES</h3>
+                                    <p class="pb-2 mb-1">Make inquiry for job openings, adverts and advance your
+                                        professional network.</p>
+                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                        Join now
+                                        <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
+                        <div class="card card-hover bg-secondary border-0 mb-4">
+                            <div class="card-body d-flex align-items-start">
+                                <div class="flex-shrink-0 bg-light rounded-3 p-0">
+                                    <img src="assets/images/icon-check.png" width="50" alt="Icon">
+                                </div>
+                                <div class="ps-4">
+                                    <h3 class="h5 pb-2 mb-1">MENTORSHIP</h3>
+                                    <p class="pb-2 mb-1">Mentor others by telling your success story or by reading other
+                                        Alumni success stories.
 
-                        <!-- Item -->
-                        <div class="accordion-item border-0 rounded-3 shadow-sm">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q-6" aria-expanded="false"
-                                    aria-controls="q-6">What happens if I forget or lose my password?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="q-6" data-bs-parent="#faq">
-                                <div class="accordion-body fs-sm pt-0">
-                                    <p>Suspendisse viverra volutpat eros. Curabitur in scelerisque lacus, quis fringilla
-                                        sem. Nunc rutrum vel magna et ullamcorper. Sed consectetur augue vitae ligula
-                                        consectetur, eu dapibus justo molestie. Phasellus sit amet
-                                        metus magna. Sed tincidunt tempus felis vitae commodo. Etiam lobortis justo in
-                                        elit pretium, sit amet aliquet tellus euismod. Curabitur in purus sed turpis
-                                        aliquet pretium. Nunc ut magna tempus, iaculis sem id,
-                                        vulputate ipsum. Etiam fermentum malesuada quam, in tempus purus pulvinar at.
-                                        Vestibulum auctor congue pharetra. Class aptent taciti sociosqu ad litora
-                                        torquent per conubia nostra, per inceptos himenaeos. Nulla
-                                        facilisi. Nunc dolor velit, interdum finibus bibendum vel, mattis a magna.
-                                        Mauris mollis sapien ac mi aliquet varius. Proin nec est nibh. In hac habitasse
-                                        platea dictumst. Nullam porta risus vitae lectus pellentesque
-                                        interdum. Proin ac leo fermentum, volutpat odio ut, lacinia erat. Suspendisse
-                                        potenti. Praesent vitae faucibus lectus. Sed tincidunt at ex id maximus. Morbi
-                                        tristique ullamcorper velit, non cursus libero eleifend
-                                        quis. Aliquam aliquam odio dui.
                                     </p>
+                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                        Join now
+                                        <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -794,60 +292,889 @@
     </section>
 
 
-    <!-- Sign up form -->
-    <section class="bg-secondary pb-lg-5" style="margin-top: -240px; padding-top: 300px;">
-        <div class="container pt-2 pt-md-3 pt-lg-5 pb-5">
-            <h2 class="h1 text-center pb-2 mb-4 mb-lg-5">Ready to Kick-Start Your Career?<br>Start Learning Today
-            </h2>
-            <div class="row pb-3">
-                <div class="col-xl-7 col-md-6">
-                    <div class="d-flex flex-column w-100 h-100 rounded-3 bg-position-center bg-repeat-0 bg-size-cover"
-                        style="background-image: url(assets/img/landing/online-courses/signup-img.jpg);"></div>
-                </div>
-                <div class="col-xl-5 col-md-6">
-                    <div class="card border-0 p-lg-4">
-                        <div class="card-body">
-                            <h3 class="pb-3 pb-lg-4">Sign up and get <span class="text-danger">20% off</span> for your
-                                first course!</h3>
-                            <form class="needs-validation mb-4 pb-2 pb-lg-0 mb-lg-5" novalidate>
-                                <div class="position-relative mb-4">
-                                    <label for="email" class="form-label fs-base">Email address</label>
-                                    <input type="email" id="email" class="form-control form-control-lg" required>
-                                    <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a
-                                        valid email address.</div>
-                                </div>
-                                <div class="mb-4 pt-1 pb-2">
-                                    <label for="password" class="form-label fs-base">Password</label>
-                                    <div class="password-toggle">
-                                        <input type="password" id="password" class="form-control form-control-lg"
-                                            required>
-                                        <label class="password-toggle-btn" aria-label="Show/hide password">
-                                            <input class="password-toggle-check" type="checkbox">
-                                            <span class="password-toggle-indicator"></span>
-                                        </label>
-                                        <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a
-                                            valid email address.</div>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-lg shadow-primary">Create free
-                                    account</button>
-                            </form>
-                            <h6 class="mb-4">Or sign up using:</h6>
-                            <div class="d-flex">
-                                <a href="#" class="btn btn-icon btn-secondary btn-google me-2">
-                                    <i class="bx bxl-google"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-facebook ms-1 me-2">
+
+
+    <!-- Team -->
+    <section class="container pt-xl-2 pb-5 mb-md-3 mb-lg-5">
+        <div
+            class="d-md-flex align-items-center justify-content-between text-center text-md-start pb-1 pb-lg-0 mb-4 mb-lg-5">
+            <h2 class="h1 mb-md-0">Forward-Thinking People Like You Already Joined</h2>
+            <a href="#" class="btn btn-outline-primary">
+                Join now
+                <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
+            </a>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+            <!-- Item -->
+            <div class="col">
+                <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                        <img src="assets/img/team/16.jpg" class="rounded-3" alt="Dr. Ronald Richards">
+                        <div
+                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                            <span
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                            <div class="position-relative d-flex zindex-2">
+                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
                                     <i class="bx bxl-facebook"></i>
                                 </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin ms-1 me-2">
+                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
                                     <i class="bx bxl-linkedin"></i>
                                 </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-github ms-1">
-                                    <i class="bx bxl-github"></i>
+                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
+                                    <i class="bx bxl-twitter"></i>
                                 </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Ronald Richards</h3>
+                        <p class="fs-sm mb-2">Neurosurgeon</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="text-nowrap me-1">
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                            </div>
+                            <span class="fs-xs text-muted">(19 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+                <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                        <img src="assets/img/team/17.jpg" class="rounded-3" alt="Dr. Esther Howard">
+                        <div
+                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                            <span
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                            <div class="position-relative d-flex zindex-2">
+                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Esther Howard</h3>
+                        <p class="fs-sm mb-2">Therapist</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="text-nowrap me-1">
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                            </div>
+                            <span class="fs-xs text-muted">(4 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+                <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                        <img src="assets/img/team/18.jpg" class="rounded-3" alt="Dr. Jerome Bell">
+                        <div
+                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                            <span
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                            <div class="position-relative d-flex zindex-2">
+                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Jerome Bell</h3>
+                        <p class="fs-sm mb-2">Anesthesiologist</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="text-nowrap me-1">
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bx-star text-muted fs-sm opacity-75"></i>
+                            </div>
+                            <span class="fs-xs text-muted">(12 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+                <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                        <img src="assets/img/team/19.jpg" class="rounded-3" alt="Dr. Ralph Edwards">
+                        <div
+                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                            <span
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                            <div class="position-relative d-flex zindex-2">
+                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Ralph Edwards</h3>
+                        <p class="fs-sm mb-2">Surgeon</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="text-nowrap me-1">
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                            </div>
+                            <span class="fs-xs text-muted">(8 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+                <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                        <img src="assets/img/team/20.jpg" class="rounded-3" alt="Dr. Darrell Steward">
+                        <div
+                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                            <span
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                            <div class="position-relative d-flex zindex-2">
+                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Darrell Steward</h3>
+                        <p class="fs-sm mb-2">Cardiologist</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="text-nowrap me-1">
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bx-star text-muted fs-sm opacity-75"></i>
+                            </div>
+                            <span class="fs-xs text-muted">(14 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+                <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                        <img src="assets/img/team/21.jpg" class="rounded-3" alt="Dr. Annette Black">
+                        <div
+                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                            <span
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                            <div class="position-relative d-flex zindex-2">
+                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Annette Black</h3>
+                        <p class="fs-sm mb-2">Pediatrician</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="text-nowrap me-1">
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bx-star text-muted fs-sm opacity-75"></i>
+                            </div>
+                            <span class="fs-xs text-muted">(10 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+                <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                        <img src="assets/img/team/22.jpg" class="rounded-3" alt="Dr. Dianne Russell">
+                        <div
+                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                            <span
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                            <div class="position-relative d-flex zindex-2">
+                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Dianne Russell</h3>
+                        <p class="fs-sm mb-2">Dentist</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="text-nowrap me-1">
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                            </div>
+                            <span class="fs-xs text-muted">(5 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+                <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                        <img src="assets/img/team/23.jpg" class="rounded-3" alt="Dr. Courtney Henry">
+                        <div
+                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                            <span
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                            <div class="position-relative d-flex zindex-2">
+                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Courtney Henry</h3>
+                        <p class="fs-sm mb-2">Gynecologist</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="text-nowrap me-1">
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                                <i class="bx bxs-star text-warning fs-sm"></i>
+                            </div>
+                            <span class="fs-xs text-muted">(16 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Testimonials (Carousel) -->
+    <section class="bg-secondary py-5 mb-2 mb-md-4 mb-lg-5">
+        <div class="container pt-lg-4 mt-1">
+            <h2 class="h1 text-center pb-3 pb-md-4 pb-xl-5">IUIU Alumni - Public Messages</h2>
+        </div>
+        <div class="pb-lg-3 px-2 px-sm-0">
+            <div class="swiper"
+                data-swiper-options='{
+            "slidesPerView": 1,
+            "centeredSlides": true,
+            "spaceBetween": 8,
+            "loop": true,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "breakpoints": {
+              "500": {
+                "slidesPerView": 2,
+                "spaceBetween": 24
+              },
+              "1000": {
+                "slidesPerView": 4,
+                "spaceBetween": 24
+              },
+              "1500": {
+                "slidesPerView": 6,
+                "spaceBetween": 24
+              }
+            }
+          }'>
+                <div class="swiper-wrapper">
+
+                    <!-- Item -->
+                    <div class="swiper-slide h-auto pt-4">
+                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                                <span
+                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                                    <i class="bx bxs-quote-left"></i>
+                                </span>
+                                <blockquote class="card-body pb-3 mb-0">
+                                    <p class="mb-0">Id mollis consectetur congue egestas egestas suspendisse blandit
+                                        justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
+                                </blockquote>
+                                <div class="card-footer border-0 text-nowrap pt-0">
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bx-star text-muted opacity-75"></i>
+                                    <i class="bx bx-star text-muted opacity-75"></i>
+                                </div>
+                            </div>
+                            <figcaption class="d-flex align-items-center ps-4 pt-4">
+                                <img src="assets/img/avatar/30.jpg" width="48" class="rounded" alt="Fannie Summers">
+                                <div class="ps-3">
+                                    <h6 class="fs-sm fw-semibold mb-0">Fannie Summers</h6>
+                                    <span class="fs-xs text-muted">Medical Center patient</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide h-auto pt-4">
+                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                                <span
+                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                                    <i class="bx bxs-quote-left"></i>
+                                </span>
+                                <blockquote class="card-body pb-3 mb-0">
+                                    <p class="mb-0">Phasellus luctus nisi id orci condimentum, at cursus nisl vestibulum.
+                                        Orci varius natoque penatibus et magnis dis parturient montes.</p>
+                                </blockquote>
+                                <div class="card-footer border-0 text-nowrap pt-0">
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                </div>
+                            </div>
+                            <figcaption class="d-flex align-items-center ps-4 pt-4">
+                                <img src="assets/img/avatar/32.jpg" width="48" class="rounded" alt="Robert Fox">
+                                <div class="ps-3">
+                                    <h6 class="fs-sm fw-semibold mb-0">Robert Fox</h6>
+                                    <span class="fs-xs text-muted">Medical Center patient</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide h-auto pt-4">
+                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                                <span
+                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                                    <i class="bx bxs-quote-left"></i>
+                                </span>
+                                <blockquote class="card-body pb-3 mb-0">
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum
+                                        odio, bibendum ornare mi at, efficitur urna.</p>
+                                </blockquote>
+                                <div class="card-footer border-0 text-nowrap pt-0">
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bx-star text-muted opacity-75"></i>
+                                </div>
+                            </div>
+                            <figcaption class="d-flex align-items-center ps-4 pt-4">
+                                <img src="assets/img/avatar/31.jpg" width="48" class="rounded" alt="Annette Black">
+                                <div class="ps-3">
+                                    <h6 class="fs-sm fw-semibold mb-0">Annette Black</h6>
+                                    <span class="fs-xs text-muted">Medical Center patient</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide h-auto pt-4">
+                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                                <span
+                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                                    <i class="bx bxs-quote-left"></i>
+                                </span>
+                                <blockquote class="card-body pb-3 mb-0">
+                                    <p class="mb-0">Etiam augue ante, imperdiet et nunc sed, bibendum faucibus est.
+                                        Suspendisse egestas facilisis erat eu eleifend.</p>
+                                </blockquote>
+                                <div class="card-footer border-0 text-nowrap pt-0">
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bx-star text-muted opacity-75"></i>
+                                    <i class="bx bx-star text-muted opacity-75"></i>
+                                </div>
+                            </div>
+                            <figcaption class="d-flex align-items-center ps-4 pt-4">
+                                <img src="assets/img/avatar/34.jpg" width="48" class="rounded" alt="Jerome Bell">
+                                <div class="ps-3">
+                                    <h6 class="fs-sm fw-semibold mb-0">Jerome Bell</h6>
+                                    <span class="fs-xs text-muted">Medical Center patient</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide h-auto pt-4">
+                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                                <span
+                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                                    <i class="bx bxs-quote-left"></i>
+                                </span>
+                                <blockquote class="card-body pb-3 mb-0">
+                                    <p class="mb-0">Pellentesque finibus congue egestas egestas suspendisse blandit
+                                        justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
+                                </blockquote>
+                                <div class="card-footer border-0 text-nowrap pt-0">
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bx-star text-muted opacity-75"></i>
+                                </div>
+                            </div>
+                            <figcaption class="d-flex align-items-center ps-4 pt-4">
+                                <img src="assets/img/avatar/35.jpg" width="48" class="rounded" alt="Albert Flores">
+                                <div class="ps-3">
+                                    <h6 class="fs-sm fw-semibold mb-0">Albert Flores</h6>
+                                    <span class="fs-xs text-muted">Medical Center patient</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide h-auto pt-4">
+                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                                <span
+                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                                    <i class="bx bxs-quote-left"></i>
+                                </span>
+                                <blockquote class="card-body pb-3 mb-0">
+                                    <p class="mb-0">Nulla volutpat consectetur congue egestas egestas uni suspendisse
+                                        blandit parturient.</p>
+                                </blockquote>
+                                <div class="card-footer border-0 text-nowrap pt-0">
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                </div>
+                            </div>
+                            <figcaption class="d-flex align-items-center ps-4 pt-4">
+                                <img src="assets/img/avatar/33.jpg" width="48" class="rounded" alt="Jenny Wilson">
+                                <div class="ps-3">
+                                    <h6 class="fs-sm fw-semibold mb-0">Jenny Wilson</h6>
+                                    <span class="fs-xs text-muted">Medical Center patient</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide h-auto pt-4">
+                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                                <span
+                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                                    <i class="bx bxs-quote-left"></i>
+                                </span>
+                                <blockquote class="card-body pb-3 mb-0">
+                                    <p class="mb-0">Vivamus iaculis facilisis pretium. Pellentesque vitae mi odio. Donec
+                                        imperdiet pellentesque ipsum quis pharetra. Nullam dolor sem.</p>
+                                </blockquote>
+                                <div class="card-footer border-0 text-nowrap pt-0">
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bxs-star text-warning"></i>
+                                    <i class="bx bx-star text-muted opacity-75"></i>
+                                </div>
+                            </div>
+                            <figcaption class="d-flex align-items-center ps-4 pt-4">
+                                <img src="assets/img/avatar/37.jpg" width="48" class="rounded"
+                                    alt="Cameron Williamson">
+                                <div class="ps-3">
+                                    <h6 class="fs-sm fw-semibold mb-0">Cameron Williamson</h6>
+                                    <span class="fs-xs text-muted">Medical Center patient</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Pagination (bullets) -->
+                <div class="swiper-pagination position-relative pt-1 pt-sm-3 mt-5"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Latest news -->
+    <section class="container py-5 mb-1 mb-md-4 mb-lg-5">
+        <h2 class="h1 text-center pt-1 pb-4 mb-1 mb-lg-3">Latest News &amp; Healthy Tips</h2>
+        <div class="position-relative px-xl-5">
+
+            <!-- Slider prev/next buttons -->
+            <button type="button" id="prev-news"
+                class="btn btn-prev btn-icon btn-sm position-absolute top-50 start-0 translate-middle-y d-none d-xl-inline-flex">
+                <i class="bx bx-chevron-left"></i>
+            </button>
+            <button type="button" id="next-news"
+                class="btn btn-next btn-icon btn-sm position-absolute top-50 end-0 translate-middle-y d-none d-xl-inline-flex">
+                <i class="bx bx-chevron-right"></i>
+            </button>
+
+            <!-- Slider -->
+            <div class="px-xl-2">
+                <div class="swiper mx-n2"
+                    data-swiper-options='{
+              "slidesPerView": 1,
+              "loop": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+              },
+              "navigation": {
+                "prevEl": "#prev-news",
+                "nextEl": "#next-news"
+              },
+              "breakpoints": {
+                "500": {
+                  "slidesPerView": 2
+                },
+                "1000": {
+                  "slidesPerView": 3
+                }
+              }
+            }'>
+                    <div class="swiper-wrapper">
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto pb-3">
+                            <article class="card h-100 border-0 shadow-sm mx-2">
+                                <div class="position-relative">
+                                    <a href="#" class="position-absolute top-0 start-0 w-100 h-100"
+                                        aria-label="Read more"></a>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                    <img src="assets/img/landing/medical/news/01.jpg" class="card-img-top"
+                                        alt="Image">
+                                </div>
+                                <div class="card-body pb-4">
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <a href="#"
+                                            class="badge fs-sm text-nav bg-secondary text-decoration-none">Diseases</a>
+                                        <span class="fs-sm text-muted">12 hours ago</span>
+                                    </div>
+                                    <h3 class="h5 mb-0">
+                                        <a href="#">Updates on COVID-19 vaccination efforts in your area</a>
+                                    </h3>
+                                </div>
+                                <div class="card-footer py-4">
+                                    <a href="#" class="d-flex align-items-center text-decoration-none">
+                                        <img src="assets/img/avatar/36.jpg" class="rounded" width="48"
+                                            alt="Avatar">
+                                        <div class="ps-3">
+                                            <h6 class="fs-base fw-semibold mb-0">Ralph Edwards</h6>
+                                            <span class="fs-sm text-muted">MBBS, MD Gynaecology</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto pb-3">
+                            <article class="card h-100 border-0 shadow-sm mx-2">
+                                <div class="position-relative">
+                                    <a href="#" class="position-absolute top-0 start-0 w-100 h-100"
+                                        aria-label="Read more"></a>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                    <img src="assets/img/landing/medical/news/02.jpg" class="card-img-top"
+                                        alt="Image">
+                                </div>
+                                <div class="card-body pb-4">
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <a href="#"
+                                            class="badge fs-sm text-nav bg-secondary text-decoration-none">Healthy Tips</a>
+                                        <span class="fs-sm text-muted">1 day ago</span>
+                                    </div>
+                                    <h3 class="h5 mb-0">
+                                        <a href="#">New drug to halt dementia after multiple head injuries</a>
+                                    </h3>
+                                </div>
+                                <div class="card-footer py-4">
+                                    <a href="#" class="d-flex align-items-center text-decoration-none">
+                                        <img src="assets/img/avatar/37.jpg" class="rounded" width="48"
+                                            alt="Avatar">
+                                        <div class="ps-3">
+                                            <h6 class="fs-base fw-semibold mb-0">Jenny Wilson</h6>
+                                            <span class="fs-sm text-muted">Ph.D. Physiology</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto pb-3">
+                            <article class="card h-100 border-0 shadow-sm mx-2">
+                                <div class="position-relative">
+                                    <a href="#" class="position-absolute top-0 start-0 w-100 h-100"
+                                        aria-label="Read more"></a>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                    <img src="assets/img/landing/medical/news/03.jpg" class="card-img-top"
+                                        alt="Image">
+                                </div>
+                                <div class="card-body pb-4">
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <a href="#"
+                                            class="badge fs-sm text-nav bg-secondary text-decoration-none">Psychology</a>
+                                        <span class="fs-sm text-muted">Nov 24, 2021</span>
+                                    </div>
+                                    <h3 class="h5 mb-0">
+                                        <a href="#">Empowering women to make their health a priority</a>
+                                    </h3>
+                                </div>
+                                <div class="card-footer py-4">
+                                    <a href="#" class="d-flex align-items-center text-decoration-none">
+                                        <img src="assets/img/avatar/38.jpg" class="rounded" width="48"
+                                            alt="Avatar">
+                                        <div class="ps-3">
+                                            <h6 class="fs-base fw-semibold mb-0">Albert Flores</h6>
+                                            <span class="fs-sm text-muted">M.Sc. Clinical Neuroscience</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto pb-3">
+                            <article class="card h-100 border-0 shadow-sm mx-2">
+                                <div class="position-relative">
+                                    <a href="#" class="position-absolute top-0 start-0 w-100 h-100"
+                                        aria-label="Read more"></a>
+                                    <a href="#"
+                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
+                                        <i class="bx bx-bookmark"></i>
+                                    </a>
+                                    <img src="assets/img/landing/medical/news/04.jpg" class="card-img-top"
+                                        alt="Image">
+                                </div>
+                                <div class="card-body pb-4">
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <a href="#"
+                                            class="badge fs-sm text-nav bg-secondary text-decoration-none">Health</a>
+                                        <span class="fs-sm text-muted">Oct 13, 2021</span>
+                                    </div>
+                                    <h3 class="h5 mb-0">
+                                        <a href="#">Vitamin D: benefits, deficiency, sources, and dosage</a>
+                                    </h3>
+                                </div>
+                                <div class="card-footer py-4">
+                                    <a href="#" class="d-flex align-items-center text-decoration-none">
+                                        <img src="assets/img/avatar/37.jpg" class="rounded" width="48"
+                                            alt="Avatar">
+                                        <div class="ps-3">
+                                            <h6 class="fs-base fw-semibold mb-0">Jenny Wilson</h6>
+                                            <span class="fs-sm text-muted">Ph.D. Physiology</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Pagination (bullets) -->
+                    <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Location -->
+    <section class="container py-5">
+        <div class="row mt-lg-3 pt-1 pt-md-4 pt-lg-5">
+            <div class="col-xl-3 col-md-4 text-center text-md-start">
+                <h2 class="h1 mb-4">IUIU Alumni Grand Dinner - 2023</h2>
+                <h3 class="h4">Venue</h3>
+                <div class="d-none d-md-block text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="118" height="118" fill="none">
+                        <g clip-path="url(#A)">
+                            <path
+                                d="M116.912 76.527c-4.963-3.081-9.413-6.675-13.52-10.782-1.37-1.369-3.766-.343-3.766 1.54 0 1.54-.171 3.081-.171 4.621-14.89 2.739-29.78 3.936-45.013 4.108-12.836.342-30.123 1.712-41.761-4.45-8.9-4.792-10.269-15.917-6.504-24.475 1.54-3.594 4.279-6.504 7.702-8.557 3.936-2.396 7.873-1.027 11.981-2.054.513-.171.685-.856.342-1.369-6.333-6.675-17.457 1.027-21.565 6.504-5.819 7.702-6.161 18.998-1.027 27.042 7.531 11.981 25.501 11.125 37.653 11.467 19.169.685 39.365.171 58.192-4.108 0 1.712.171 3.252.685 4.963 0 .342.171.513.342.685-1.369 1.198-.171 4.279 2.225 3.765 4.963-1.027 9.927-2.568 14.548-4.792 1.198-1.026.856-3.251-.343-4.107zm-13.178-4.45c2.396 2.054 4.792 4.108 7.531 5.99-2.396 1.027-4.964 1.712-7.531 2.396v-.685c-.514-2.567-.342-5.135 0-7.702z"
+                                fill="currentColor" />
+                        </g>
+                        <defs>
+                            <clipPath id="A">
+                                <path fill="#fff" d="M0 0h118v118H0z" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <div class="col-xl-9 col-md-8">
+                <img src="assets/images/iuiu-campus-min.jpg" class="rounded-3" width="952" alt="Venue">
+            </div>
+        </div>
+        <div class="row mb-lg-3 pb-1 pb-md-4 pb-lg-5 mt-4 mt-sm-n5">
+            <div class="col-lg-4 col-md-5 offset-md-6 offset-lg-7 mt-md-n5">
+                <div class="gallery mt-md-n4 mx-auto" style="max-width: 416px;">
+                    <a href="../external.html?link=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.192027341148!2d-74.0045150840621!3d40.75780104274828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f66383c1d305%3A0xb1589156bdadde83!2sJavits%20Center!5e0!3m2!1sen!2sua!4v1638895524631!5m2!1sen!2sua"
+                        data-iframe="true" class="gallery-item rounded-2"
+                        data-sub-html='<h6 class="fs-sm text-light">Javits Center, NY, USA</h6>'>
+                        <img src="assets/img/landing/conference/map-light.jpg" class="d-dark-mode-none"
+                            alt="Map preview">
+                        <img src="assets/img/landing/conference/map-dark.jpg" class="d-none d-dark-mode-block"
+                            alt="Map preview">
+                        <div class="gallery-item-caption fs-sm fw-medium">Javits Center, NYY, USA</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Buy ticket CTA -->
+    <section class="bg-gradient-primary py-5">
+        <div class="container py-2 py-md-4 py-lg-5">
+            <div class="row py-xl-3">
+                <div class="col-xl-4 col-lg-5 offset-xl-1 order-lg-2 mb-4">
+                    <h2 class="h1 text-light text-center text-sm-start pb-4 mb-0 mb-lg-3">When was the last time you dinned
+                        with your classmates?</h2>
+                    <div class="d-flex align-items-center">
+                        <div class="bg-white rounded-circle text-primary flex-shrink-0 p-3">
+                            <svg style="margin: 2px;" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="../external.html?link=http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.0225 2.91133C17.2397 2.91133 16.5038 3.21602 15.9507 3.76914C15.3132 4.40664 14.9616 5.25508 14.9616 6.15977V8.98633C14.9616 12.516 13.0772 15.6098 10.26 17.3207H14.2585C18.0225 17.3207 21.0882 14.2598 21.0882 10.491V5.97227C21.0882 4.28945 19.71 2.91133 18.0225 2.91133ZM18.7772 5.97695C18.3882 5.97695 18.0741 5.66289 18.0741 5.27383C18.0741 4.88477 18.3882 4.5707 18.7772 4.5707C19.1663 4.5707 19.4804 4.88477 19.4804 5.27383C19.4804 5.66289 19.1663 5.97695 18.7772 5.97695ZM23.7929 1.71133C23.5163 1.43477 23.071 1.43477 22.7991 1.71133L21.4257 3.08477C20.6054 2.11914 19.3819 1.50977 18.0225 1.50977C16.8647 1.50977 15.7772 1.95977 14.9569 2.78008L0.20535 17.527C0.00378752 17.7285 -0.05715 18.0285 0.0506625 18.291C0.158475 18.5535 0.416288 18.727 0.702225 18.727H5.22097H9.4491L11.8069 21.0848H11.2444C10.8553 21.0848 10.5413 21.3988 10.5413 21.7879C10.5413 22.177 10.8553 22.491 11.2444 22.491H15.7632C16.1522 22.491 16.4663 22.177 16.4663 21.7879C16.4663 21.3988 16.1522 21.0848 15.7632 21.0848H13.7944L11.4366 18.727H14.2585C18.8007 18.727 22.4944 15.0332 22.4944 10.491V5.97227C22.4944 5.39102 22.3819 4.8332 22.1757 4.31758L23.7929 2.70039C24.0694 2.4332 24.0694 1.98789 23.7929 1.71133ZM2.3991 17.3207L13.5554 6.16445V8.98633C13.5554 13.5801 9.81472 17.3207 5.22097 17.3207H2.3991ZM21.0882 10.4957C21.0882 14.2598 18.0272 17.3254 14.2585 17.3254H10.26C13.0772 15.6145 14.9616 12.516 14.9616 8.98633V6.15977C14.9616 5.25508 15.3132 4.40664 15.9507 3.76914C16.5038 3.21602 17.2397 2.91133 18.0225 2.91133C19.71 2.91133 21.0882 4.28477 21.0882 5.97695V10.4957Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                        <p class="fs-xl text-light ps-3 mb-0">Let’s get to network and share opportunities over a meal by
+                            reserving your seat at the dinner table!</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7 order-lg-1">
+
+                    <!-- Ticket card -->
+                    <div class="position-relative">
+                        <div class="position-relative overflow-hidden rounded-3 zindex-5 py-5 px-4 p-sm-5">
+                            <span
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-repeat-0 bg-position-center-start zindex-2"
+                                style="background-image: url(assets/img/landing/conference/price-card-left-bg.png);"></span>
+                            <span
+                                class="position-absolute top-0 end-0 w-100 h-100 bg-repeat-0 bg-position-center-end zindex-2"
+                                style="background-image: url(assets/img/landing/conference/price-card-right-bg.png);"></span>
+                            <div class="px-md-4 position-relative zindex-5">
+                                <div class="d-sm-flex align-items-start justify-content-between">
+                                    <div class="text-center text-sm-start me-sm-4">
+                                        <div class="lead text-primary fw-semibold text-uppercase mb-2">10<sup
+                                                class="text-lowercase">th</sup> FEB, 2023</div>
+                                        <h3 class="h1 text-heading">IUIU Alumni Grand Dinner</h3>
+                                    </div>
+                                    <div class="d-table bg-white rounded-3 p-4 flex-shrink-0 mx-auto mx-sm-0">
+                                        <img src="assets/img/landing/conference/qr.png" width="102" alt="QR Code">
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column flex-sm-row align-items-center pt-4 mt-2">
+                                    <a href="#"
+                                        class="btn btn-primary shadow-primary btn-lg mb-3 mb-sm-0 me-sm-3">BOOK A SEAT</a>
+                                    <div class="d-flex align-items-center">
+                                        <span class="fs-lg me-2">for only</span>
+                                        <span class="h4 text-body mb-0">100K</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="position-absolute bg-dark opacity-35 bottom-0 mb-n2 d-dark-mode-none"
+                            style="left: 1.5rem; width: calc(100% - 3rem); height: 5rem; filter: blur(.75rem);"></span>
                     </div>
                 </div>
             </div>

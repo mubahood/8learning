@@ -153,14 +153,14 @@ return [
     'upload' => [
 
         // Disk in `config/filesystem.php`.
-        'disk' => 'local', 
-
+        'disk' => 'admin',
         // Image and file upload path under the disk above.
         'directory' => [
-            'image' => '/',
-            'file'  => '/',
+            'image' => '/images',
+            'file'  => 'files',
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -176,7 +176,7 @@ return [
         'connection' => '',
 
         // User tables and model.
-        'users_table' => 'admin_users',
+        'users_table' => 'users',
         'users_model' => Encore\Admin\Auth\Database\Administrator::class,
 
         // Role table and model.
@@ -249,7 +249,7 @@ return [
     | Set a default avatar for newly created users.
     |
     */
-    'default_avatar' => '/vendor/laravel-admin/AdminLTE/dist/img/user2-160x160.jpg',
+    'default_avatar' => '/assets/images/user.jpg',
 
     /*
     |--------------------------------------------------------------------------
@@ -403,8 +403,48 @@ return [
     |
     */
     'extensions' => [
-        'summernote' => [
 
+
+        'quill' => [
+            'enable' => true,
+            'config' => [
+                'modules' => [
+                    'syntax' => true,
+                    'toolbar' =>
+                    [
+                        ['size' => []],
+                        ['header' => []],
+                        'bold',
+                        'italic',
+                        'underline',
+                        'strike',
+                        ['script' => 'super'],
+                        ['script' => 'sub'],
+                        ['color' => []],
+                        ['background' => []],
+                        'blockquote',
+                        'code-block',
+                        ['list' => 'ordered'],
+                        ['list' => 'bullet'],
+                        ['indent' => '-1'],
+                        ['indent' => '+1'],
+                        'direction',
+                        ['align' => []],
+                        'link',
+                        'image',
+                        'video',
+                        'formula',
+                        'clean'
+                    ],
+
+                ],
+                'theme' => 'snow',
+                'height' => '200px',
+            ]
+
+        ],
+
+        'summernote' => [
             //Set to false if you want to disable this extension
             'enable' => true,
             'config' => [

@@ -32,15 +32,15 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => $_SERVER['DOCUMENT_ROOT'] . '/storage',
+            'root' => env('DOCUMENT_ROOT').'storage',
             'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 
         'public' => [
             'driver' => 'local',
-            'root' => $_SERVER['DOCUMENT_ROOT'] . '/public/storage',
-            'url' => env('APP_URL') . '',
+            'root' => env('DOCUMENT_ROOT').'storage',
+            'url' => env('APP_URL') . 'public/storage',
             'visibility' => 'public',
         ],
 
@@ -54,16 +54,14 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
         ],
-
         'admin' => [
             'driver' => 'local',
-            'root' => $_SERVER['DOCUMENT_ROOT'].'/storage',
-            'url' => env('APP_URL') . '',
+            'root' => public_path('storage'),
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
-
-
     ],
+
 
     /*
     |--------------------------------------------------------------------------

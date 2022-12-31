@@ -106,15 +106,6 @@ class AccountController extends BaseController
         }
 
 
-        $u = Auth::user();
-        $acc = Administrator::find($u->id);
-        echo "<pre>";
-        print_
-        if ($acc == null) {
-            die("account not found");
-        }
-        die("Romina");
-
 
 
 
@@ -166,29 +157,32 @@ class AccountController extends BaseController
                 ->withInput();
         }
 
-        if (Validator::make($_POST, [
-            'email' => 'unique:admin_users,username'
-        ])->fails()) {
-            return back()
-                ->withErrors(['email' => 'User with same email already exist.'])
-                ->withInput();
+        $u = Administrator::where([
+            'email' => $_POST['email']
+        ])->orwhere([
+            'username' => $_POST['email']
+        ])->first();
+
+
+        if ($u != null) {
+            $u->password = password_hash($r->password, PASSWORD_DEFAULT);
+            $u->save();
+        } else {
+            $admin = new Administrator();
+            $admin->username = $r->email;
+            $admin->name = $r->name;
+            //$admin->avatar = 'user.png';
+            $admin->password = password_hash($r->password, PASSWORD_DEFAULT);
+
+            if (!$admin->save()) {
+                return back()
+                    ->withErrors(['email' => 'Failed to create account. Try again.'])
+                    ->withInput();
+            }
         }
 
-        $admin = new Administrator();
-        $admin->username = $r->email;
-        $admin->name = $r->name;
-        $admin->avatar = 'user.png';
-        $admin->password = password_hash($r->password, PASSWORD_DEFAULT);
 
-        if (!$admin->save()) {
-            return back()
-                ->withErrors(['email' => 'Failed to create account. Try again.'])
-                ->withInput();
-        }
-
-
-
-
+ 
         if (Auth::attempt([
             'username' => $r->email,
             'password' => $r->password,

@@ -9,7 +9,10 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', [MainController::class, 'index'])->name('home');
+Route::get('/', [MainController::class, 'index'])->name('home'); 
+Route::get('/about-us', [MainController::class, 'about_us']);
+Route::get('/our-team', [MainController::class, 'our_team']);
+Route::get('/members', [MainController::class, 'members']);
 Route::get('/register', [AccountController::class, 'register'])->name('register');
 
 Route::get('/login', [AccountController::class, 'login'])->name('login')
@@ -20,7 +23,8 @@ Route::post('/register', [AccountController::class, 'register_post'])
 
 Route::post('/login', [AccountController::class, 'login_post'])
     ->middleware(RedirectIfAuthenticated::class);
-
+ 
+ 
 Route::get('/dashboard', [AccountController::class, 'dashboard'])
     ->middleware(Authenticate::class);
 

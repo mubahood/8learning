@@ -1,7 +1,7 @@
 <?php
 
 if (!isset($header_style)) {
-    $header_style = 1;
+    $header_style = 11;
 }
 
 ?>
@@ -33,87 +33,58 @@ if (!isset($header_style)) {
                     <a href="javascript:;" class="nav-link">Home</a>
                 </li>
 
-
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
-                    <div class="dropdown-menu">
-                        <div class="d-lg-flex pt-lg-3">
-                            <div class="mega-dropdown-column">
-                                <h6 class="px-3 mb-2">Technology</h6>
-                                <ul class="list-unstyled mb-3">
-                                    <li><a href="javascript:;" class="dropdown-item py-1">Course 1</a>
-                                    </li>
-                                    <li><a href="about-v2.html" class="dropdown-item py-1">Course 2</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mega-dropdown-column">
-                                <h6 class="px-3 mb-2">Human resource</h6>
-                                <ul class="list-unstyled mb-3">
-                                    <li><a href="javascript:;" class="dropdown-item py-1">Grid
-                                            View</a></li>
-                                    <li><a href="javascript:;" class="dropdown-item py-1">List
-                                            View</a></li>
-                                    <li><a href="javascript:;" class="dropdown-item py-1">Slider
-                                            View</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-dropdown-column">
-
-                                <h6 class="px-3 mb-2">Finance & Accounting</h6>
-                                <ul class="list-unstyled mb-3">
-                                    <li><a href="javascript:;" class="dropdown-item py-1">List
-                                            Course 1</a></li>
-                                    <li><a href="javascript:;" class="dropdown-item py-1">
-                                            Coruse 2</a></li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
+                <li class="nav-item">
+                    <a href="{{ url('about-us') }}" class="nav-link">About IUIUAA</a>
                 </li>
 
 
-                <li class="nav-item dropdown">
+                {{--         <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
-                        aria-current="page">Admission</a>
+                        aria-current="page">About IUIUAA</a>
                     <div class="dropdown-menu p-0">
                         <div class="d-lg-flex" style="height: 20rem">
                             <div class="mega-dropdown-column bg-position-center bg-repeat-0 bg-size-cover rounded-3 rounded-end-0"
                                 style="background-image: url(assets/img/landings.jpg); margin: -1px;"></div>
                             <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="javascript:;" class="dropdown-item">Fees Payment </a>
-                                    </li>
-                                    <li><a href="javascript:;" class="dropdown-item">Payment</a></li>
+                                    <li><a href="javascript:;" class="dropdown-item">About us</a></li>
+                                    <li><a href="javascript:;" class="dropdown-item">Mission & Vision</a></li>
+                                    <li><a href="javascript:;" class="dropdown-item">What we do</a></li>
+                                    <li><a href="javascript:;" class="dropdown-item">Chairperson's message</a></li>
+                                    <li><a href="javascript:;" class="dropdown-item">Our team</a></li>
+                                    <li><a href="javascript:;" class="dropdown-item">Constitution</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </li>
+  --}}
+
+                <li class="nav-item">
+                    <a href="{{ url('our-team') }}" class="nav-link">Committee</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ url('members') }}" class="nav-link">Members</a>
+                </li>
 
 
 
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">News</a>
                     <ul class="dropdown-menu">
-                        <li><a href="javascript:;" class="dropdown-item">Account Details</a></li>
-                        <li><a href="javascript:;" class="dropdown-item">Security</a></li>
-                        <li><a href="javascript:;" class="dropdown-item">Notifications</a>
-                        </li>
-                        <li><a href="javascript:;" class="dropdown-item">Messages</a></li>
-                        <li><a href="javascript:;" class="dropdown-item">Saved Items</a></li>
-                        <li><a href="javascript:;" class="dropdown-item">My Collections</a>
-                        </li>
-                        <li><a href="javascript:;" class="dropdown-item">Payment Details</a></li>
-                        <li><a href="javascript:;" class="dropdown-item">Sign In</a></li>
-                        <li><a href="javascript:;" class="dropdown-item">Sign Up</a></li>
-                    </ul>
+                        <li><a href="javascript:;" class="dropdown-item">Announcements</a></li>
+                        <li><a href="javascript:;" class="dropdown-item">Events</a></li>
+                        <li><a href="javascript:;" class="dropdown-item">IUIU</a></li>
+                        <li><a href="javascript:;" class="dropdown-item">Scholarships</a>
+                        <li><a href="javascript:;" class="dropdown-item">Jobs</a></li>
                 </li>
+            </ul>
+            </li>
 
-                <li class="nav-item">
-                    <a href="javascript:;" class="nav-link">About</a>
-                </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link">Dinner</a>
+            </li>
 
 
 
@@ -123,7 +94,7 @@ if (!isset($header_style)) {
 
             @guest
                 <a href="{{ url('register') }}" class="btn btn-primary w-100" rel="noopener">
-                    <i class="bx bx-cart fs-4 lh-1 me-1"></i> &nbsp;ENROLL NOW
+                    <i class="bx bx-cart fs-4 lh-1 me-1"></i> &nbsp;JOIN NOW
                 </a>
             @endguest
             @auth
@@ -144,9 +115,8 @@ if (!isset($header_style)) {
         <span class="navbar-toggler-icon"></span>
     </button>
     @guest
-        <a href="{{ url('register') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
-            rel="noopener">
-            <i class="bx bx-cart fs-5 lh-1 me-1"></i> &nbsp;ENROLL NOW
+        <a href="{{ url('register') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" rel="noopener">
+            <i class="bx bx-user-plus fs-5 lh-1 me-1"></i> &nbsp;JOIN NOW
         </a>
     @endguest
 

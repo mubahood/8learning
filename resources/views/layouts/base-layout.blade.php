@@ -28,6 +28,7 @@
     <!-- Vendor Styles -->
     <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
     <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"/>
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
@@ -155,6 +156,7 @@
             <div class="page-spinner"></div><span>Loading...</span>
         </div>
     </div>
+    
     @yield('base-content')
 
 
@@ -170,6 +172,8 @@
     <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
     <script src="assets/vendor/rellax/rellax.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>

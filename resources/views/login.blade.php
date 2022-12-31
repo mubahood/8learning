@@ -20,7 +20,7 @@
                         </h1>
                         <p class="text-center text-xl-start pb-3 mb-3">Don’t have an account yet?<a href="register">Sign in
                                 here.</a></p>
-                        <form class="needs-validation" method="POST" novalidate>
+                        <form class="needs-validation" method="POST" action="{{ admin_url('auth/login') }}" novalidate>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="row">
 
