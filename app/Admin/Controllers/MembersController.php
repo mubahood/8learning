@@ -3,10 +3,14 @@
 namespace App\Admin\Controllers;
 
 use App\Models\User;
+use App\Models\Utils;
+use Carbon\Carbon;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Support\Str;
+
 
 class MembersController extends AdminController
 {
@@ -15,7 +19,7 @@ class MembersController extends AdminController
      *
      * @var string
      */
-    protected $title = 'User';
+    protected $title = 'Members';
 
     /**
      * Make a grid builder.
@@ -24,44 +28,77 @@ class MembersController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new User());
 
-        $grid->column('id', __('Id'));
-        $grid->column('username', __('Username'));
-        $grid->column('password', __('Password'));
-        $grid->column('first_name', __('First name'));
-        $grid->column('last_name', __('Last name'));
-        $grid->column('reg_date', __('Reg date'));
-        $grid->column('last_seen', __('Last seen'));
-        $grid->column('email', __('Email'));
-        $grid->column('approved', __('Approved'));
-        $grid->column('profile_photo', __('Profile photo'));
-        $grid->column('user_type', __('User type'));
-        $grid->column('sex', __('Sex'));
-        $grid->column('reg_number', __('Reg number'));
-        $grid->column('country', __('Country'));
-        $grid->column('occupation', __('Occupation'));
-        $grid->column('profile_photo_large', __('Profile photo large'));
+        $grid = new Grid(new User());
+        $grid->disableExport();
+        $grid->disableCreateButton();
+
+        $grid->quickSearch('name')->placeholder('Search by name');
+
+        $grid->disableBatchActions();
+        $grid->disableActions();
+        $grid->model()->orderBy('id', 'desc');
+
+        $grid->column('avatar', __('Photo'))
+            ->image(url("storage"), 60, 60)
+            ->sortable();
+        $grid->column('name', __('Name'))
+            ->display(function ($name) {
+                return Str::limit($name, 20);
+            })->sortable();
+        /* $grid->column('sex', __('Gender'))->filter([
+            'Male' => 'Male',
+            'Female' => 'Female',
+        ]); */
+        $grid->column('campus_id', __('Campus'))
+            ->display(function () {
+                return $this->campus->name;
+            })->sortable();
+        $grid->column('year', __('Graduated'))
+            ->display(function () {
+                $programs  = $this->programs;
+                if (empty($programs)) {
+                    return '-';
+                }
+                if (!isset($programs[0])) {
+                    return "-";
+                }
+                return $programs[0]->program_year;
+            });
+
+        $grid->column('cv', __('Cv'))->display(function ($file) {
+            if ($file == null || strlen($file) < 2) {
+                return "No CV";
+            }
+            $link = url("storage/" . $file);
+            return '<a href="' . $link . '" target="_blank" ><i class="fa fa-download"></i> Download CV</a>';
+        })->sortable();
+        $grid->column('address', __('Current Address'))
+            ->display(function ($name) {
+                return Str::limit($name, 20);
+            })->sortable();
         $grid->column('phone_number', __('Phone number'));
-        $grid->column('location_lat', __('Location lat'));
-        $grid->column('location_long', __('Location long'));
-        $grid->column('facebook', __('Facebook'));
-        $grid->column('twitter', __('Twitter'));
-        $grid->column('whatsapp', __('Whatsapp'));
-        $grid->column('linkedin', __('Linkedin'));
-        $grid->column('website', __('Website'));
-        $grid->column('other_link', __('Other link'));
-        $grid->column('cv', __('Cv'));
-        $grid->column('language', __('Language'));
-        $grid->column('about', __('About'));
-        $grid->column('address', __('Address'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
-        $grid->column('remember_token', __('Remember token'));
-        $grid->column('avatar', __('Avatar'));
-        $grid->column('name', __('Name'));
-        $grid->column('campus_id', __('Campus id'));
-        $grid->column('complete_profile', __('Complete profile'));
+        $grid->column('country', __('Country'))->sortable();
+        $grid->column('email', __('Email'))
+            ->display(function ($mail) {
+                return '<a href="mailto:' . $mail . '" title="' . $mail . '"  ><i class="fa fa-envelope"></i> Send email</a>';
+            })->sortable();
+        $grid->column('whatsapp', __('Whatsapp'))
+            ->display(function ($num) {
+                if ($num == null || strlen($num) < 2) {
+                    return "No number";
+                }
+                return $num;
+            })->sortable();
+        $grid->column('created_at', __('Joined'))
+            ->display(function ($num) {
+                return Utils::my_date($num);
+            })->sortable();
+        $grid->column('updated_at', __('Last seen'))
+            ->display(function ($num) {
+                return Carbon::parse($num)->diffForHumans();
+            })->sortable();
+
 
         return $grid;
     }

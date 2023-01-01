@@ -16,10 +16,7 @@ use Encore\Admin\Widgets\MultipleSteps;
 class UserController extends Controller
 {
 
-
-
-
-
+ 
 
     public function index(Content $content)
     {

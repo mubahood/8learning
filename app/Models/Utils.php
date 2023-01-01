@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,6 +15,79 @@ class Utils extends Model
             session_start();
         }
     }
+
+
+    
+    public static function month($t)
+    {
+        $c = Carbon::parse($t);
+        if ($t == null) {
+            return $t;
+        }
+        return $c->format('M - Y');
+    }
+    public static function my_day($t)
+    {
+        $c = Carbon::parse($t);
+        if ($t == null) {
+            return $t;
+        }
+        return $c->format('d M');
+    }
+
+
+    public static function my_date_1($t)
+    {
+        $c = Carbon::parse($t);
+        if ($t == null) {
+            return $t;
+        }
+        return $c->format('D - d M');
+    }
+
+    public static function my_date($t)
+    {
+        $c = Carbon::parse($t);
+        if ($t == null) {
+            return $t;
+        }
+        return $c->format('d M, Y');
+    }
+
+    public static function my_date_time($t)
+    {
+        $c = Carbon::parse($t);
+        if ($t == null) {
+            return $t;
+        }
+        return $c->format('d M, Y - h:m a');
+    }
+
+    public static function to_date_time($raw)
+    {
+        $t = Carbon::parse($raw);
+        if ($t == null) {
+            return  "-";
+        }
+        $my_t = $t->toDateString();
+
+        return $my_t . " " . $t->toTimeString();
+    }
+    public static function number_format($num, $unit)
+    {
+        $num = (int)($num);
+        $resp = number_format($num);
+        if ($num < 2) {
+            $resp .= " " . $unit;
+        } else {
+            $resp .= " " . Str::plural($unit);
+        }
+        return $resp;
+    }
+
+
+
+
 
     public static function COUNTRIES()
     {

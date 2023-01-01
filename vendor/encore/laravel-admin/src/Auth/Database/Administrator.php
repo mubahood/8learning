@@ -47,7 +47,8 @@ class Administrator extends Model implements AuthenticatableContract
 
         self::creating(function ($m) {
             $m->name = $m->first_name . " " . $m->last_name;
-        });
+            $m->avatar = 'user.jpg';
+        }); 
         self::updating(function ($m) {
             $m->complete_profile = 0;
             if (
@@ -106,17 +107,7 @@ class Administrator extends Model implements AuthenticatableContract
     {
         return Carbon::parse($this->created_at)->diffForHumans();
     }
-    public function getNameAttribute($name)
-    {
-
-
-        if ($name == null) {
-            if (strlen($name) < 3) {
-                $name = $this->first_name . " " . $this->last_name;
-            }
-        }
-        return $name;
-    }
+ 
 
     /**
      * A user has and belongs to many roles.
