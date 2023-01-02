@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace NunoMaduro\Collision\Adapters\Phpunit;
 
 use NunoMaduro\Collision\Contracts\Adapters\Phpunit\HasPrintableTestCaseName;
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 use Throwable;
 
 /**
