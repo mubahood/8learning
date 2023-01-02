@@ -11,7 +11,7 @@
 
 namespace Symfony\Contracts\Service\Test;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 use Psr\Container\ContainerInterface;
 use Symfony\Contracts\Service\ServiceLocatorTrait;
 
