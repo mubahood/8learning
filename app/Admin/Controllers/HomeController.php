@@ -20,6 +20,25 @@ class HomeController extends Controller
             return redirect(admin_url('auth/setting'));
         }
 
+        $content
+            ->title('IUIU AA - Dashboard')
+            ->description('Hello ' . $u->name . "!");
+
+        $content->row(function (Row $row) {
+            $row->column(6, function (Column $column) {
+                $column->append(Dashboard::dashboard_members());
+            });
+            $row->column(3, function (Column $column) { 
+                $column->append(Dashboard::dashboard_events());
+            });
+            $row->column(3, function (Column $column) {
+                $column->append(Dashboard::dashboard_news());
+            });
+        });
+
+
+
+        return $content;
         return $content
             ->title('Dashboard')
             ->description('Description...')

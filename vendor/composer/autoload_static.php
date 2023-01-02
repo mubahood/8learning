@@ -587,6 +587,7 @@ class ComposerStaticInitda89eef54c810448a827ed04bb3da82f
         'App\\Models\\CourseTopic' => __DIR__ . '/../..' . '/app/Models/CourseTopic.php',
         'App\\Models\\Event' => __DIR__ . '/../..' . '/app/Models/Event.php',
         'App\\Models\\EventBooking' => __DIR__ . '/../..' . '/app/Models/EventBooking.php',
+        'App\\Models\\EventSpeaker' => __DIR__ . '/../..' . '/app/Models/EventSpeaker.php',
         'App\\Models\\EventTicket' => __DIR__ . '/../..' . '/app/Models/EventTicket.php',
         'App\\Models\\NewsPost' => __DIR__ . '/../..' . '/app/Models/NewsPost.php',
         'App\\Models\\Participant' => __DIR__ . '/../..' . '/app/Models/Participant.php',

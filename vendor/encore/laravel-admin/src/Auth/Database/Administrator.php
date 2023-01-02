@@ -48,7 +48,7 @@ class Administrator extends Model implements AuthenticatableContract
         self::creating(function ($m) {
             $m->name = $m->first_name . " " . $m->last_name;
             $m->avatar = 'user.jpg';
-        }); 
+        });
         self::updating(function ($m) {
             $m->complete_profile = 0;
             if (
@@ -64,8 +64,8 @@ class Administrator extends Model implements AuthenticatableContract
             }
 
             $m->name =  $m->first_name . " " . $m->last_name;
-            if($m->title != null && strlen($m->title)> 1){
-                $m->name = $m->title.". ".$m->name;
+            if ($m->title != null && strlen($m->title) > 1) {
+                $m->name = $m->title . ". " . $m->name;
             }
         });
     }
@@ -101,6 +101,16 @@ class Administrator extends Model implements AuthenticatableContract
         return $this->hasMany(UserHasProgram::class, 'user_id');
     }
 
+    public function program()
+    {
+        $p = UserHasProgram::where(['user_id' => $this->id])->first();
+        if ($p == null) {
+            $p = new UserHasProgram();
+            $p->name = "No program"; 
+        }
+        return $p;
+    }
+
 
     public function campus()
     {
@@ -111,7 +121,7 @@ class Administrator extends Model implements AuthenticatableContract
     {
         return Carbon::parse($this->created_at)->diffForHumans();
     }
- 
+
 
     /**
      * A user has and belongs to many roles.

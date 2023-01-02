@@ -43,6 +43,7 @@ return array(
     'App\\Models\\CourseTopic' => $baseDir . '/app/Models/CourseTopic.php',
     'App\\Models\\Event' => $baseDir . '/app/Models/Event.php',
     'App\\Models\\EventBooking' => $baseDir . '/app/Models/EventBooking.php',
+    'App\\Models\\EventSpeaker' => $baseDir . '/app/Models/EventSpeaker.php',
     'App\\Models\\EventTicket' => $baseDir . '/app/Models/EventTicket.php',
     'App\\Models\\NewsPost' => $baseDir . '/app/Models/NewsPost.php',
     'App\\Models\\Participant' => $baseDir . '/app/Models/Participant.php',

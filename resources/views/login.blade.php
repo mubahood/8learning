@@ -54,10 +54,10 @@
 
                     </div>
                     <div class="w-100 align-self-end">
-                        <p class="nav d-block fs-xs text-center text-xl-start pb-2 mb-0">
-                            &copy; All rights reserved. Made by
-                            <a class="nav-link d-inline-block p-0" href="https://8technologies.net/" target="_blank"
-                                rel="noopener">8 Tech Consults Limited</a>
+                        <p class="nav d-block  text-center text-md-start pb-2 pb-lg-0 mb-0">
+                            Hand-made with ❤️ by
+                            <a class="nav-link d-inline-block p-0" href="https://twitter.com/mubahood360"
+                                target="_blank" rel="noopener">M. Muhindo 🥰</a>
                         </p>
                     </div>
                 </div>
