@@ -223,8 +223,10 @@ $book_link = admin_url('event-bookings/create?event=' . $d->id);
                                 <a href="{{ $book_link }}" class="btn btn-light btn-lg mb-3 mb-sm-0 me-sm-3">Book your
                                     seat now</a>
                                 <div class="d-flex align-items-center">
-                                    <span class="fs-lg text-light me-2">for only</span>
-                                    <span class="h4 text-light mb-0">100k</span>
+                                    <span class="fs-lg me-2">from </span>
+                                    <span class="h4 text-body mb-0">100K</span>
+                                    <span class="fs-lg mx-2"> to </span>
+                                    <span class="h4 text-body mb-0">2M</span>
                                 </div>
                             </div>
                         </div>
@@ -661,8 +663,10 @@ $book_link = admin_url('event-bookings/create?event=' . $d->id);
                                     <a href="{{ $book_link }}"
                                         class="btn btn-primary shadow-primary btn-lg mb-3 mb-sm-0 me-sm-3">BOOK A SEAT</a>
                                     <div class="d-flex align-items-center">
-                                        <span class="fs-lg me-2">for only</span>
+                                        <span class="fs-lg me-2">from </span>
                                         <span class="h4 text-body mb-0">100K</span>
+                                        <span class="fs-lg mx-2"> to </span>
+                                        <span class="h4 text-body mb-0">2M</span>
                                     </div>
                                 </div>
                             </div>

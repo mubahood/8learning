@@ -50,7 +50,7 @@
                     }
                   }
                 }'>
-            <div class="swiper-wrapper pt-4">
+            <div class="swiper-wrapper pt-4 text-dark">
 
                 <!-- Item -->
                 <div class="swiper-slide border-end-lg px-2">
@@ -63,7 +63,7 @@
                 </div>
 
                 <!-- Item -->
-                <div class="swiper-slide border-end-lg px-2">
+                <div class="swiper-slide border-end-lg px-2 ">
                     <div class="text-center">
                         <img src="assets/img/landing/digital-agency/icons/award.svg" width="48" alt="Award icon"
                             class="d-block mb-4 mx-auto">
@@ -80,7 +80,7 @@
                         <img src="assets/img/landing/digital-agency/icons/team.svg" width="48" alt="Team icon"
                             class="d-block mb-4 mx-auto">
                         <h4 class="mb-2 pb-1">Our Core Values</h4>
-                        <p class="mx-auto" style="max-width: 336px;">Integrity, Diversity, Creativity & coexistence.</p>
+                        <p class="mx-auto " style="max-width: 336px; ">Integrity, Diversity, Creativity & coexistence.</p>
                     </div>
                 </div>
             </div>

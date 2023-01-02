@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Routing\Controller as BaseController;
 
 class MainController extends BaseController
@@ -21,9 +22,38 @@ class MainController extends BaseController
     {
 
         $members = Administrator::where([])->orderBy('updated_at', 'desc')->limit(8)->get();
+        $profiles = [];
+        $_profiles = [];
+        foreach (Administrator::where([])->orderBy('updated_at', 'desc')->limit(15)->get() as $key => $v) {
+            $profiles[] = $v;
+        }
+ 
+        foreach ($profiles as $key => $pro) {
+            if ($pro->intro == null || strlen($pro->intro) < 3) {
+                $pro->intro = "Hi there, I'm $pro->name IUIU Alumnus. I am excited to be a part of IUIU-AA Network. I call upon you to join the team!";
+            }
+            $_profiles[] = $pro;
+        }
 
+        $posts = [];
+        foreach (NewsPost::all() as $key => $v) {
+            $posts[] = $v;
+        }
+        shuffle($posts);
+        $_posts = [];
+        $i = 0;
+        foreach ($posts as $key => $v) {
+            $_posts[] = $v;
+            $i++;
+            if ($i > 2) {
+                break;
+            }
+        }
+        
         return view('index', [
-            'members' => $members
+            'members' => $members,
+            'profiles' => $_profiles,
+            'posts' => $_posts, 
         ]);
     }
     public function about_us()

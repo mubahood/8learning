@@ -1,5 +1,14 @@
 @extends('layouts.layout-main')
 @section('main-content')
+    <?php
+    use App\Models\PostCategory;
+    use App\Models\NewsPost;
+    use App\Models\Utils;
+    if (!isset($header_style)) {
+        $header_style = 11;
+    }
+    
+    ?>
     <!-- Hero -->
     <section class="position-relative pt-md-3 pt-lg-5 mb-md-3 mb-lg-5">
         <div class="container position-relative zindex-5 pt-5">
@@ -379,217 +388,36 @@
               }
             }
           }'>
+
                 <div class="swiper-wrapper">
-                    <!-- Item -->
-                    <div class="swiper-slide h-auto pt-4">
-                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                                <span
-                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                                    <i class="bx bxs-quote-left"></i>
-                                </span>
-                                <blockquote class="card-body pb-3 mb-0">
-                                    <p class="mb-0">Id mollis consectetur congue egestas egestas suspendisse blandit
-                                        justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
-                                </blockquote>
-                                <div class="card-footer border-0 text-nowrap pt-0">
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bx-star text-muted opacity-75"></i>
-                                    <i class="bx bx-star text-muted opacity-75"></i>
+                    @foreach ($profiles as $profile)
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto pt-4">
+                            <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                                <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                                    <span
+                                        class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                                        <i class="bx bxs-quote-left"></i>
+                                    </span>
+                                    <blockquote class="card-body pb-3 mb-0">
+                                        <p class="mb-0">{{ Str::limit($profile->intro, 150) }}</p>
+                                    </blockquote>
+                                    <div class="card-footer border-0 text-nowrap pt-0">
+                                        <span>Joined</span>
+                                        <span class=" text-primary">{{ $member->created_at_text }}</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <figcaption class="d-flex align-items-center ps-4 pt-4">
-                                <img src="assets/img/avatar/30.jpg" width="48" class="rounded" alt="Fannie Summers">
-                                <div class="ps-3">
-                                    <h6 class="fs-sm fw-semibold mb-0">Fannie Summers</h6>
-                                    <span class="fs-xs text-muted">Medical Center patient</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="swiper-slide h-auto pt-4">
-                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                                <span
-                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                                    <i class="bx bxs-quote-left"></i>
-                                </span>
-                                <blockquote class="card-body pb-3 mb-0">
-                                    <p class="mb-0">Phasellus luctus nisi id orci condimentum, at cursus nisl vestibulum.
-                                        Orci varius natoque penatibus et magnis dis parturient montes.</p>
-                                </blockquote>
-                                <div class="card-footer border-0 text-nowrap pt-0">
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                </div>
-                            </div>
-                            <figcaption class="d-flex align-items-center ps-4 pt-4">
-                                <img src="assets/img/avatar/32.jpg" width="48" class="rounded" alt="Robert Fox">
-                                <div class="ps-3">
-                                    <h6 class="fs-sm fw-semibold mb-0">Robert Fox</h6>
-                                    <span class="fs-xs text-muted">Medical Center patient</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="swiper-slide h-auto pt-4">
-                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                                <span
-                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                                    <i class="bx bxs-quote-left"></i>
-                                </span>
-                                <blockquote class="card-body pb-3 mb-0">
-                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum
-                                        odio, bibendum ornare mi at, efficitur urna.</p>
-                                </blockquote>
-                                <div class="card-footer border-0 text-nowrap pt-0">
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bx-star text-muted opacity-75"></i>
-                                </div>
-                            </div>
-                            <figcaption class="d-flex align-items-center ps-4 pt-4">
-                                <img src="assets/img/avatar/31.jpg" width="48" class="rounded" alt="Annette Black">
-                                <div class="ps-3">
-                                    <h6 class="fs-sm fw-semibold mb-0">Annette Black</h6>
-                                    <span class="fs-xs text-muted">Medical Center patient</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="swiper-slide h-auto pt-4">
-                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                                <span
-                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                                    <i class="bx bxs-quote-left"></i>
-                                </span>
-                                <blockquote class="card-body pb-3 mb-0">
-                                    <p class="mb-0">Etiam augue ante, imperdiet et nunc sed, bibendum faucibus est.
-                                        Suspendisse egestas facilisis erat eu eleifend.</p>
-                                </blockquote>
-                                <div class="card-footer border-0 text-nowrap pt-0">
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bx-star text-muted opacity-75"></i>
-                                    <i class="bx bx-star text-muted opacity-75"></i>
-                                </div>
-                            </div>
-                            <figcaption class="d-flex align-items-center ps-4 pt-4">
-                                <img src="assets/img/avatar/34.jpg" width="48" class="rounded" alt="Jerome Bell">
-                                <div class="ps-3">
-                                    <h6 class="fs-sm fw-semibold mb-0">Jerome Bell</h6>
-                                    <span class="fs-xs text-muted">Medical Center patient</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="swiper-slide h-auto pt-4">
-                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                                <span
-                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                                    <i class="bx bxs-quote-left"></i>
-                                </span>
-                                <blockquote class="card-body pb-3 mb-0">
-                                    <p class="mb-0">Pellentesque finibus congue egestas egestas suspendisse blandit
-                                        justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
-                                </blockquote>
-                                <div class="card-footer border-0 text-nowrap pt-0">
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bx-star text-muted opacity-75"></i>
-                                </div>
-                            </div>
-                            <figcaption class="d-flex align-items-center ps-4 pt-4">
-                                <img src="assets/img/avatar/35.jpg" width="48" class="rounded" alt="Albert Flores">
-                                <div class="ps-3">
-                                    <h6 class="fs-sm fw-semibold mb-0">Albert Flores</h6>
-                                    <span class="fs-xs text-muted">Medical Center patient</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="swiper-slide h-auto pt-4">
-                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                                <span
-                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                                    <i class="bx bxs-quote-left"></i>
-                                </span>
-                                <blockquote class="card-body pb-3 mb-0">
-                                    <p class="mb-0">Nulla volutpat consectetur congue egestas egestas uni suspendisse
-                                        blandit parturient.</p>
-                                </blockquote>
-                                <div class="card-footer border-0 text-nowrap pt-0">
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                </div>
-                            </div>
-                            <figcaption class="d-flex align-items-center ps-4 pt-4">
-                                <img src="assets/img/avatar/33.jpg" width="48" class="rounded" alt="Jenny Wilson">
-                                <div class="ps-3">
-                                    <h6 class="fs-sm fw-semibold mb-0">Jenny Wilson</h6>
-                                    <span class="fs-xs text-muted">Medical Center patient</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="swiper-slide h-auto pt-4">
-                        <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                            <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                                <span
-                                    class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                                    <i class="bx bxs-quote-left"></i>
-                                </span>
-                                <blockquote class="card-body pb-3 mb-0">
-                                    <p class="mb-0">Vivamus iaculis facilisis pretium. Pellentesque vitae mi odio. Donec
-                                        imperdiet pellentesque ipsum quis pharetra. Nullam dolor sem.</p>
-                                </blockquote>
-                                <div class="card-footer border-0 text-nowrap pt-0">
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bx-star text-muted opacity-75"></i>
-                                </div>
-                            </div>
-                            <figcaption class="d-flex align-items-center ps-4 pt-4">
-                                <img src="assets/img/avatar/37.jpg" width="48" class="rounded"
-                                    alt="Cameron Williamson">
-                                <div class="ps-3">
-                                    <h6 class="fs-sm fw-semibold mb-0">Cameron Williamson</h6>
-                                    <span class="fs-xs text-muted">Medical Center patient</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
+                                <figcaption class="d-flex align-items-center ps-4 pt-4">
+                                    <img src="{{ $member->avatar }}" width="48" class="rounded-circle"
+                                        alt="{{ $member->name }}">
+                                    <div class="ps-3">
+                                        <h6 class="fs-sm fw-semibold mb-0">{{ $member->name }}</h6>
+                                        <span class="fs-xs text-muted">{{ $member->campus->name }}</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    @endforeach
                 </div>
 
                 <!-- Pagination (bullets) -->
@@ -604,8 +432,8 @@
 
 
     <!-- Latest news -->
-    <section class="container py-5 mb-1 mb-md-4 mb-lg-5">
-        <h2 class="h1 text-center pt-1 pb-4 mb-1 mb-lg-3">Latest News &amp; Healthy Tips</h2>
+    <section class="container pt-4 pb-2 mb-1 mb-md-0 ">
+        <h2 class="h1 text-center pt-1 pb-4 mb-1 mb-lg-3">Our Latest News</h2>
         <div class="position-relative px-xl-5">
 
             <!-- Slider prev/next buttons -->
@@ -643,153 +471,44 @@
             }'>
                     <div class="swiper-wrapper">
 
-                        <!-- Item -->
-                        <div class="swiper-slide h-auto pb-3">
-                            <article class="card h-100 border-0 shadow-sm mx-2">
-                                <div class="position-relative">
-                                    <a href="#" class="position-absolute top-0 start-0 w-100 h-100"
-                                        aria-label="Read more"></a>
-                                    <a href="#"
-                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
-                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                                        <i class="bx bx-bookmark"></i>
-                                    </a>
-                                    <img src="assets/img/landing/medical/news/01.jpg" class="card-img-top"
-                                        alt="Image">
-                                </div>
-                                <div class="card-body pb-4">
-                                    <div class="d-flex align-items-center justify-content-between mb-3">
-                                        <a href="#"
-                                            class="badge fs-sm text-nav bg-secondary text-decoration-none">Diseases</a>
-                                        <span class="fs-sm text-muted">12 hours ago</span>
+                        @foreach ($posts as $post)
+                            <!-- Item -->
+                            <div class="swiper-slide h-auto pb-3">
+                                <article class="card border-0 shadow-sm h-100 mx-2">
+                                    <div class="  position-relative bg-position-center bg-repeat-0 bg-size-cover"
+                                        style="background-image: url({{ url('storage/' . $post->photo) }}); min-height: 15rem;">
+                                        <a href="{{ url('news/' . $post->id) }}"
+                                            class="position-absolute top-0 start-0 w-100 h-100"
+                                            aria-label="Read more"></a>
+                                        <a href="{{ url('news/' . $post->id) }}"
+                                            class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
+                                            <i class="bx bx-bookmark"></i>
+                                        </a>
                                     </div>
-                                    <h3 class="h5 mb-0">
-                                        <a href="#">Updates on COVID-19 vaccination efforts in your area</a>
-                                    </h3>
-                                </div>
-                                <div class="card-footer py-4">
-                                    <a href="#" class="d-flex align-items-center text-decoration-none">
-                                        <img src="assets/img/avatar/36.jpg" class="rounded" width="48"
-                                            alt="Avatar">
-                                        <div class="ps-3">
-                                            <h6 class="fs-base fw-semibold mb-0">Ralph Edwards</h6>
-                                            <span class="fs-sm text-muted">MBBS, MD Gynaecology</span>
+                                    <div class="card-body pb-4">
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+                                            <a href="#"
+                                                class="badge fs-sm text-nav bg-secondary text-decoration-none">{{ $post->category->name }}</a>
+                                            <span class="fs-sm text-muted">{{ Utils::my_date($post->created_at) }}</span>
                                         </div>
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
+                                        <h3 class="h5 mb-0">
+                                            <a href="{{ url('news/' . $post->id) }}" title="{{ $post->title }}">
+                                                {{ Str::limit($post->title, 60) }}</a>
+                                        </h3>
+                                    </div>
+                                    <div class="card-footer py-4">
+                                        <a href="{{ url('admin/members/' . $post->created_by->id) }}"
+                                            class="d-flex align-items-center fw-bold text-dark text-decoration-none">
+                                            <img src="{{ $post->created_by->avatar }}" class="rounded-circle me-3"
+                                                width="48" alt="Avatar">
+                                            {{ $post->created_by->name }}
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        @endforeach
 
-                        <!-- Item -->
-                        <div class="swiper-slide h-auto pb-3">
-                            <article class="card h-100 border-0 shadow-sm mx-2">
-                                <div class="position-relative">
-                                    <a href="#" class="position-absolute top-0 start-0 w-100 h-100"
-                                        aria-label="Read more"></a>
-                                    <a href="#"
-                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
-                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                                        <i class="bx bx-bookmark"></i>
-                                    </a>
-                                    <img src="assets/img/landing/medical/news/02.jpg" class="card-img-top"
-                                        alt="Image">
-                                </div>
-                                <div class="card-body pb-4">
-                                    <div class="d-flex align-items-center justify-content-between mb-3">
-                                        <a href="#"
-                                            class="badge fs-sm text-nav bg-secondary text-decoration-none">Healthy Tips</a>
-                                        <span class="fs-sm text-muted">1 day ago</span>
-                                    </div>
-                                    <h3 class="h5 mb-0">
-                                        <a href="#">New drug to halt dementia after multiple head injuries</a>
-                                    </h3>
-                                </div>
-                                <div class="card-footer py-4">
-                                    <a href="#" class="d-flex align-items-center text-decoration-none">
-                                        <img src="assets/img/avatar/37.jpg" class="rounded" width="48"
-                                            alt="Avatar">
-                                        <div class="ps-3">
-                                            <h6 class="fs-base fw-semibold mb-0">Jenny Wilson</h6>
-                                            <span class="fs-sm text-muted">Ph.D. Physiology</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="swiper-slide h-auto pb-3">
-                            <article class="card h-100 border-0 shadow-sm mx-2">
-                                <div class="position-relative">
-                                    <a href="#" class="position-absolute top-0 start-0 w-100 h-100"
-                                        aria-label="Read more"></a>
-                                    <a href="#"
-                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
-                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                                        <i class="bx bx-bookmark"></i>
-                                    </a>
-                                    <img src="assets/img/landing/medical/news/03.jpg" class="card-img-top"
-                                        alt="Image">
-                                </div>
-                                <div class="card-body pb-4">
-                                    <div class="d-flex align-items-center justify-content-between mb-3">
-                                        <a href="#"
-                                            class="badge fs-sm text-nav bg-secondary text-decoration-none">Psychology</a>
-                                        <span class="fs-sm text-muted">Nov 24, 2021</span>
-                                    </div>
-                                    <h3 class="h5 mb-0">
-                                        <a href="#">Empowering women to make their health a priority</a>
-                                    </h3>
-                                </div>
-                                <div class="card-footer py-4">
-                                    <a href="#" class="d-flex align-items-center text-decoration-none">
-                                        <img src="assets/img/avatar/38.jpg" class="rounded" width="48"
-                                            alt="Avatar">
-                                        <div class="ps-3">
-                                            <h6 class="fs-base fw-semibold mb-0">Albert Flores</h6>
-                                            <span class="fs-sm text-muted">M.Sc. Clinical Neuroscience</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="swiper-slide h-auto pb-3">
-                            <article class="card h-100 border-0 shadow-sm mx-2">
-                                <div class="position-relative">
-                                    <a href="#" class="position-absolute top-0 start-0 w-100 h-100"
-                                        aria-label="Read more"></a>
-                                    <a href="#"
-                                        class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
-                                        data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                                        <i class="bx bx-bookmark"></i>
-                                    </a>
-                                    <img src="assets/img/landing/medical/news/04.jpg" class="card-img-top"
-                                        alt="Image">
-                                </div>
-                                <div class="card-body pb-4">
-                                    <div class="d-flex align-items-center justify-content-between mb-3">
-                                        <a href="#"
-                                            class="badge fs-sm text-nav bg-secondary text-decoration-none">Health</a>
-                                        <span class="fs-sm text-muted">Oct 13, 2021</span>
-                                    </div>
-                                    <h3 class="h5 mb-0">
-                                        <a href="#">Vitamin D: benefits, deficiency, sources, and dosage</a>
-                                    </h3>
-                                </div>
-                                <div class="card-footer py-4">
-                                    <a href="#" class="d-flex align-items-center text-decoration-none">
-                                        <img src="assets/img/avatar/37.jpg" class="rounded" width="48"
-                                            alt="Avatar">
-                                        <div class="ps-3">
-                                            <h6 class="fs-base fw-semibold mb-0">Jenny Wilson</h6>
-                                            <span class="fs-sm text-muted">Ph.D. Physiology</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
                     </div>
 
                     <!-- Pagination (bullets) -->
@@ -829,14 +548,14 @@
         <div class="row mb-lg-3 pb-1 pb-md-4 pb-lg-5 mt-4 mt-sm-n5">
             <div class="col-lg-4 col-md-5 offset-md-6 offset-lg-7 mt-md-n5">
                 <div class="gallery mt-md-n4 mx-auto" style="max-width: 416px;">
-                    <a href="../external.html?link=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.192027341148!2d-74.0045150840621!3d40.75780104274828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f66383c1d305%3A0xb1589156bdadde83!2sJavits%20Center!5e0!3m2!1sen!2sua!4v1638895524631!5m2!1sen!2sua"
+                    <a href="../external.html?link=https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15959.065741666545!2d32.5143163!3d0.2922013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc9089a574d73ada0!2sIUIU%20%7C%20Islamic%20University%20in%20Uganda%20-%20Females&#39;%20Campus!5e0!3m2!1sen!2sug!4v1672652271533!5m2!1sen!2sug"
                         data-iframe="true" class="gallery-item rounded-2"
-                        data-sub-html='<h6 class="fs-sm text-light">Javits Center, NY, USA</h6>'>
+                        data-sub-html='<h6 class="fs-sm text-light">Kaboja, Kabojja, Nateete, Kampala</h6>'>
                         <img src="assets/img/landing/conference/map-light.jpg" class="d-dark-mode-none"
                             alt="Map preview">
                         <img src="assets/img/landing/conference/map-dark.jpg" class="d-none d-dark-mode-block"
                             alt="Map preview">
-                        <div class="gallery-item-caption fs-sm fw-medium">Javits Center, NYY, USA</div>
+                        <div class="gallery-item-caption fs-sm fw-medium">IUIU Female's campus - Kaboja, Kabojja, Nateete, Kampala</div>
                     </a>
                 </div>
             </div>
@@ -887,11 +606,13 @@
                                     </div>
                                 </div>
                                 <div class="d-flex flex-column flex-sm-row align-items-center pt-4 mt-2">
-                                    <a href="#"
+                                    <a href="{{ admin_url('event-bookings/create?event=1') }}"
                                         class="btn btn-primary shadow-primary btn-lg mb-3 mb-sm-0 me-sm-3">BOOK A SEAT</a>
                                     <div class="d-flex align-items-center">
-                                        <span class="fs-lg me-2">for only</span>
+                                        <span class="fs-lg me-2">from </span>
                                         <span class="h4 text-body mb-0">100K</span>
+                                        <span class="fs-lg mx-2"> to </span>
+                                        <span class="h4 text-body mb-0">2M</span>
                                     </div>
                                 </div>
                             </div>

@@ -266,6 +266,9 @@ class AuthController extends Controller
         $form->radio('sex', 'Sex')->options(['Male' => 'Male', 'Female' => 'Female'])->rules('required');
         $form->date('dob', 'Date of birth');
 
+        $form->textarea('intro', 'Breifly Introduce yourself')->rules('required')
+            ->help('Write a very short bio about yourself'); 
+
         $form->text('reg_number', 'IUIU Reg. Number')->help('What are you currently doing?, e.g Ugandan Politician, Ugandan journalist, e.t.c');
 
         $form->select('campus_id', 'IUIU Campus')
