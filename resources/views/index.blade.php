@@ -8,7 +8,7 @@
                     <h1 class="fs-xl text-uppercase">Welcome to</h1>
                     <h2 class="display-4 pb-md-2 pb-lg-1" style="font-size: 3rem; line-height: 3rem;">Islamic University in
                         Uganda - Alumni Association</h2>
-                    <p class="fs-lg">Haven't joined yet? <a href="#" class="fw-medium">Click here.</a></p>
+                    <p class="fs-lg">Haven't joined yet? <a href="{{ admin_url() }}" class="fw-medium">Click here.</a></p>
                 </div>
                 <div class="col-xl-5 col-lg-6 offset-xl-1 position-relative zindex-5 mb-5 mb-lg-0">
                     <div class="rellax card bg-primary border-0 shadow-primary py-2 p-sm-4 p-lg-5" data-rellax-speed="-1"
@@ -20,7 +20,7 @@
                                 website.
                                 If you are a graduate of IUIU and you are yet to become a member of this Association. <br> I
                                 earnestly invite you to do so - it's easy and inexpensive...</p>
-                            <a href="#" class="btn btn-light btn-lg">
+                            <a href="{{ url('chairperson-message') }}" class="btn btn-light btn-lg">
                                 Read full message
                                 <i class="bx bx-right-arrow-alt lh-1 fs-4 ms-2 me-n2"></i>
                             </a>
@@ -44,7 +44,8 @@
                             <li><strong class="text-dark">10th Feb, 2023:</strong> IUIU Female's campus</li>
                         </ul>
                     </div>
-                    <a href="#" class="btn btn-primary btn-lg shadow-primary">BOOK A TICKET</a>
+                    <a href="{{ admin_url('event-bookings/create?event=1') }}"
+                        class="btn btn-primary btn-lg shadow-primary">BOOK A TICKET</a>
                 </div>
             </div>
         </div>
@@ -74,11 +75,14 @@
                 </p>
                 <p class="fs-lg text-lead mt-2 ">As a network that unites IUIU Alumni under one umbrella, we look forward to
                     promoting the interests, welfare and educational aims of IUIU and the University.</p>
+
+                <p class="fs-lg">Read more about IUIU-AA <a href="{{ url('about-us') }}" class="fw-medium">Click here</a>
+                </p>
             </div>
 
 
             <!-- Benefits (features) -->
-            <div class="mt-3 mb-5 pt-lg-5 bg-secondary rounded" id="benefits">
+            <div class="mt-3 mb-5 pt-lg-5 bg-secondary rounded" id="benefits" style="border: solid 3px rgb(3, 68, 3);">
                 <div class="swiper pt-3"
                     data-swiper-options='{
           "slidesPerView": 1,
@@ -177,7 +181,7 @@
                     in various forms. Take advantage of the opportunity that this association offers to all Alumni of IUIU,
                     our dear alma mater, to give our loving attention and support that she deserves for achieving greater
                     glory and world class status.</p>
-                <a href="#" class="btn btn-primary shadow-primary btn-lg">All services</a>
+                <a href="{{ url('about-us') }}" class="btn btn-primary shadow-primary btn-lg">ABOUT IUIUAA</a>
             </div>
             <div class="col-xl-7 col-lg-8 offset-xl-1">
                 <div class="row row-cols-1 row-cols-md-2">
@@ -190,7 +194,7 @@
                                 <div class="ps-4">
                                     <h3 class="h5 pb-2 mb-1">RECONNECT</h3>
                                     <p class="pb-2 mb-1 ">Reconnect with your friends, classmates, OBs and OGs.</p>
-                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                    <a href="{{ admin_url('') }}" class="btn btn-link stretched-link px-0">
                                         Join now
                                         <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
                                     </a>
@@ -206,7 +210,7 @@
                                     <h3 class="h5 pb-2 mb-1">PROFILE</h3>
                                     <p class="pb-2 mb-1">Create your profile and showcase your skills, capabilities,
                                         qualifications and experience.</p>
-                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                    <a href="{{ admin_url('') }}" class="btn btn-link stretched-link px-0">
                                         Join now
                                         <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
                                     </a>
@@ -226,7 +230,7 @@
 
 
                                     </p>
-                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                    <a href="{{ admin_url('') }}" class="btn btn-link stretched-link px-0">
                                         Join now
                                         <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
                                     </a>
@@ -244,7 +248,7 @@
                                     <h3 class="h5 pb-2 mb-1">GET IN TOUCH</h3>
                                     <p class="pb-2 mb-1">Stay updated with feeds about scholarships, job openings and
                                         announcements.</p>
-                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                    <a href="{{ admin_url('') }}" class="btn btn-link stretched-link px-0">
                                         Join now
                                         <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
                                     </a>
@@ -260,7 +264,7 @@
                                     <h3 class="h5 pb-2 mb-1">INQUIRIES</h3>
                                     <p class="pb-2 mb-1">Make inquiry for job openings, adverts and advance your
                                         professional network.</p>
-                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                    <a href="{{ admin_url('') }}" class="btn btn-link stretched-link px-0">
                                         Join now
                                         <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
                                     </a>
@@ -278,7 +282,7 @@
                                         Alumni success stories.
 
                                     </p>
-                                    <a href="services-single-v2.html" class="btn btn-link stretched-link px-0">
+                                    <a href="{{ admin_url('') }}" class="btn btn-link stretched-link px-0">
                                         Join now
                                         <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
                                     </a>
@@ -299,324 +303,44 @@
         <div
             class="d-md-flex align-items-center justify-content-between text-center text-md-start pb-1 pb-lg-0 mb-4 mb-lg-5">
             <h2 class="h1 mb-md-0">Forward-Thinking People Like You Already Joined</h2>
-            <a href="#" class="btn btn-outline-primary">
-                Join now
+            <a href="{{ admin_url('members') }}" class="btn btn-outline-primary">
+                View All Members
                 <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
             </a>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
 
-            <!-- Item -->
-            <div class="col">
-                <div class="card card-hover border-0 bg-transparent">
-                    <div class="position-relative">
-                        <img src="assets/img/team/16.jpg" class="rounded-3" alt="Dr. Ronald Richards">
-                        <div
-                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
-                            <span
-                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
-                            <div class="position-relative d-flex zindex-2">
-                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
-                                    <i class="bx bxl-linkedin"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body text-center p-3">
-                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Ronald Richards</h3>
-                        <p class="fs-sm mb-2">Neurosurgeon</p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div class="text-nowrap me-1">
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                            </div>
-                            <span class="fs-xs text-muted">(19 reviews)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Item -->
-            <div class="col">
-                <div class="card card-hover border-0 bg-transparent">
-                    <div class="position-relative">
-                        <img src="assets/img/team/17.jpg" class="rounded-3" alt="Dr. Esther Howard">
-                        <div
-                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
-                            <span
-                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
-                            <div class="position-relative d-flex zindex-2">
-                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
-                                    <i class="bx bxl-linkedin"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
+            @foreach ($members as $member)
+                <!-- Item -->
+                <div class="col">
+                    <div class="card card-hover border-0 bg-transparent">
+                        <div class="position-relative">
+                            <img src="{{ $member->avatar }}" class="rounded-3" alt="Dr. Ronald Richards">
+                            <div
+                                class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                                <span
+                                    class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                                <div class="position-relative d-flex zindex-2">
+                                    <a href="{{ url('admin/members/' . $member->id) }}"
+                                        class="btn  btn-secondary btn-facebook btn-sm bg-white me-2">
+                                        VIEW FULL PROFILE
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-body text-center p-3">
-                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Esther Howard</h3>
-                        <p class="fs-sm mb-2">Therapist</p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div class="text-nowrap me-1">
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
+                        <div class="card-body text-center p-3">
+                            <h3 class="fs-lg fw-semibold pt-0 mb-2">{{ $member->name }}</h3>
+                            <p class="fs-sm mb-2">{{ $member->campus->name }}</p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <span class="fs-sm text-muted">joined {{ $member->created_at_text }}</span>
                             </div>
-                            <span class="fs-xs text-muted">(4 reviews)</span>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
 
-            <!-- Item -->
-            <div class="col">
-                <div class="card card-hover border-0 bg-transparent">
-                    <div class="position-relative">
-                        <img src="assets/img/team/18.jpg" class="rounded-3" alt="Dr. Jerome Bell">
-                        <div
-                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
-                            <span
-                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
-                            <div class="position-relative d-flex zindex-2">
-                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
-                                    <i class="bx bxl-linkedin"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body text-center p-3">
-                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Jerome Bell</h3>
-                        <p class="fs-sm mb-2">Anesthesiologist</p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div class="text-nowrap me-1">
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bx-star text-muted fs-sm opacity-75"></i>
-                            </div>
-                            <span class="fs-xs text-muted">(12 reviews)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Item -->
-            <div class="col">
-                <div class="card card-hover border-0 bg-transparent">
-                    <div class="position-relative">
-                        <img src="assets/img/team/19.jpg" class="rounded-3" alt="Dr. Ralph Edwards">
-                        <div
-                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
-                            <span
-                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
-                            <div class="position-relative d-flex zindex-2">
-                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
-                                    <i class="bx bxl-linkedin"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body text-center p-3">
-                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Ralph Edwards</h3>
-                        <p class="fs-sm mb-2">Surgeon</p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div class="text-nowrap me-1">
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                            </div>
-                            <span class="fs-xs text-muted">(8 reviews)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item -->
-            <div class="col">
-                <div class="card card-hover border-0 bg-transparent">
-                    <div class="position-relative">
-                        <img src="assets/img/team/20.jpg" class="rounded-3" alt="Dr. Darrell Steward">
-                        <div
-                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
-                            <span
-                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
-                            <div class="position-relative d-flex zindex-2">
-                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
-                                    <i class="bx bxl-linkedin"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body text-center p-3">
-                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Darrell Steward</h3>
-                        <p class="fs-sm mb-2">Cardiologist</p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div class="text-nowrap me-1">
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bx-star text-muted fs-sm opacity-75"></i>
-                            </div>
-                            <span class="fs-xs text-muted">(14 reviews)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item -->
-            <div class="col">
-                <div class="card card-hover border-0 bg-transparent">
-                    <div class="position-relative">
-                        <img src="assets/img/team/21.jpg" class="rounded-3" alt="Dr. Annette Black">
-                        <div
-                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
-                            <span
-                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
-                            <div class="position-relative d-flex zindex-2">
-                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
-                                    <i class="bx bxl-linkedin"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body text-center p-3">
-                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Annette Black</h3>
-                        <p class="fs-sm mb-2">Pediatrician</p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div class="text-nowrap me-1">
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bx-star text-muted fs-sm opacity-75"></i>
-                            </div>
-                            <span class="fs-xs text-muted">(10 reviews)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item -->
-            <div class="col">
-                <div class="card card-hover border-0 bg-transparent">
-                    <div class="position-relative">
-                        <img src="assets/img/team/22.jpg" class="rounded-3" alt="Dr. Dianne Russell">
-                        <div
-                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
-                            <span
-                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
-                            <div class="position-relative d-flex zindex-2">
-                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
-                                    <i class="bx bxl-linkedin"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body text-center p-3">
-                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Dianne Russell</h3>
-                        <p class="fs-sm mb-2">Dentist</p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div class="text-nowrap me-1">
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                            </div>
-                            <span class="fs-xs text-muted">(5 reviews)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item -->
-            <div class="col">
-                <div class="card card-hover border-0 bg-transparent">
-                    <div class="position-relative">
-                        <img src="assets/img/team/23.jpg" class="rounded-3" alt="Dr. Courtney Henry">
-                        <div
-                            class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
-                            <span
-                                class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
-                            <div class="position-relative d-flex zindex-2">
-                                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2">
-                                    <i class="bx bxl-linkedin"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body text-center p-3">
-                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Dr. Courtney Henry</h3>
-                        <p class="fs-sm mb-2">Gynecologist</p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div class="text-nowrap me-1">
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                                <i class="bx bxs-star text-warning fs-sm"></i>
-                            </div>
-                            <span class="fs-xs text-muted">(16 reviews)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -627,7 +351,7 @@
     <!-- Testimonials (Carousel) -->
     <section class="bg-secondary py-5 mb-2 mb-md-4 mb-lg-5">
         <div class="container pt-lg-4 mt-1">
-            <h2 class="h1 text-center pb-3 pb-md-4 pb-xl-5">IUIU Alumni - Public Messages</h2>
+            <h2 class="h1 text-center pb-3 pb-md-4 pb-xl-5">IUIU Alumni - Profiles</h2>
         </div>
         <div class="pb-lg-3 px-2 px-sm-0">
             <div class="swiper"
@@ -656,7 +380,6 @@
             }
           }'>
                 <div class="swiper-wrapper">
-
                     <!-- Item -->
                     <div class="swiper-slide h-auto pt-4">
                         <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">

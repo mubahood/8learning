@@ -9,10 +9,18 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', [MainController::class, 'index'])->name('home'); 
+Route::get('/', [MainController::class, 'index'])->name('home');
 Route::get('/about-us', [MainController::class, 'about_us']);
 Route::get('/our-team', [MainController::class, 'our_team']);
+Route::get('/news-category/{id}', [MainController::class, 'news_category']);
+Route::get('/news-category', [MainController::class, 'news_category']);
+Route::get('/news', [MainController::class, 'news_category']);
+Route::get('/news/{id}', [MainController::class, 'news']);
 Route::get('/members', [MainController::class, 'members']);
+Route::get('/dinner', [MainController::class, 'dinner']);
+Route::get('/chairperson-message', function(){ return view('chair-person-message'); });
+Route::get('/vision-mission', function(){ return view('vision-mission'); }); 
+Route::get('/constitution', function(){ return view('constitution'); }); 
 Route::get('/register', [AccountController::class, 'register'])->name('register');
 
 Route::get('/login', [AccountController::class, 'login'])->name('login')
@@ -23,8 +31,8 @@ Route::post('/register', [AccountController::class, 'register_post'])
 
 Route::post('/login', [AccountController::class, 'login_post'])
     ->middleware(RedirectIfAuthenticated::class);
- 
- 
+
+
 Route::get('/dashboard', [AccountController::class, 'dashboard'])
     ->middleware(Authenticate::class);
 

@@ -17,5 +17,12 @@ class UserHasProgram extends Model
         'campus_id',
     ];
 
+     
+    public function campus()
+    {
+        return $this->belongsTo(Campus::class, 'campus_id');
+    }
+     
+
     use HasFactory;
 }

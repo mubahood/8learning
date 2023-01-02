@@ -17,4 +17,8 @@ Route::group([
     $router->resource('settings', UserController::class);
     $router->resource('participants', ParticipantController::class);
     $router->resource('members', MembersController::class);
+    $router->resource('post-categories', PostCategoryController::class);
+    $router->resource('news-posts', NewsPostController::class);
+    $router->resource('events', EventController::class);
+    $router->resource('event-bookings', EventBookingController::class);
 });

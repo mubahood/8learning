@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\PostCategory;
 if (!isset($header_style)) {
     $header_style = 11;
 }
@@ -32,9 +32,26 @@ if (!isset($header_style)) {
                 <li class="nav-item">
                     <a href="javascript:;" class="nav-link">Home</a>
                 </li>
-
-                <li class="nav-item">
-                    <a href="{{ url('about-us') }}" class="nav-link">About IUIUAA</a>
+ 
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About IUIUAA</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{ url('about-us') }}" class="dropdown-item">About US</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('vision-mission') }}" class="dropdown-item">Our Vision & Mission</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('constitution') }}" class="dropdown-item">Our Constitution</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('our-team') }}" class="dropdown-item">Our team</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('chairperson-message') }}" class="dropdown-item">Chairperson's message</a>
+                        </li>
+                    </ul>
                 </li>
 
 
@@ -73,17 +90,46 @@ if (!isset($header_style)) {
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">News</a>
                     <ul class="dropdown-menu">
-                        <li><a href="javascript:;" class="dropdown-item">Announcements</a></li>
-                        <li><a href="javascript:;" class="dropdown-item">Events</a></li>
-                        <li><a href="javascript:;" class="dropdown-item">IUIU</a></li>
-                        <li><a href="javascript:;" class="dropdown-item">Scholarships</a>
-                        <li><a href="javascript:;" class="dropdown-item">Jobs</a></li>
+                        @foreach (PostCategory::all() as $cat)
+                            <li><a href="news-category" class="dropdown-item">{{ $cat->name }}</a></li>
+                        @endforeach
                 </li>
             </ul>
             </li>
 
+            <style>
+                .blink {
+                    animation: blinking 1s linear infinite;
+                    color: white;
+                    border-radius: 2rem;
+                    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                    border: 3px dashed rgb(225, 225, 4);
+                    padding: 3px;
+                    font-weight: 800;
+                }
+
+                @keyframes blinking {
+
+                    from,
+                    49.9% {
+                        background-color: rgb(178, 3, 3);
+                    }
+
+                    50%,
+                    to {
+                        background-color: green;
+                    }
+                }
+
+                .blink:hover {
+                    background-color: green;
+                    color: white !important;
+                }
+            </style>
+
             <li class="nav-item">
-                <a href="javascript:;" class="nav-link">Dinner</a>
+                <a href="{{ url('dinner') }}" title="IUIU Alumni association grand 4th dinner - 2023"
+                    class="nav-link blink">Dinner 2023</a>
             </li>
 
 
@@ -93,7 +139,7 @@ if (!isset($header_style)) {
         <div class="offcanvas-header border-top">
 
             @guest
-                <a href="{{ url('register') }}" class="btn btn-primary w-100" rel="noopener">
+                <a href="{{ admin_url() }}" class="btn btn-primary w-100" rel="noopener">
                     <i class="bx bx-cart fs-4 lh-1 me-1"></i> &nbsp;JOIN NOW
                 </a>
             @endguest
@@ -115,7 +161,8 @@ if (!isset($header_style)) {
         <span class="navbar-toggler-icon"></span>
     </button>
     @guest
-        <a href="{{ url('register') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" rel="noopener">
+        <a href="{{ url('register') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
+            rel="noopener">
             <i class="bx bx-user-plus fs-5 lh-1 me-1"></i> &nbsp;JOIN NOW
         </a>
     @endguest

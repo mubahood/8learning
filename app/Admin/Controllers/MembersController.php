@@ -40,11 +40,17 @@ class MembersController extends AdminController
         $grid->model()->orderBy('id', 'desc');
 
         $grid->column('avatar', __('Photo'))
-            ->image(url("storage"), 60, 60)
+            ->display(function ($avatar) {
+                $img = url("storage/" . $avatar);
+                $link = admin_url('members/' . $this->id);
+                return '<a href=' . $link . ' title="View profile"><img class="img-fluid " style="border-radius: 10px;"  src="' . $img . '" ></a>';
+            })
+            ->width(80)
             ->sortable();
         $grid->column('name', __('Name'))
             ->display(function ($name) {
-                return Str::limit($name, 20);
+                $link = admin_url('members/' . $this->id);
+                return '<a class="text-dark" href=' . $link . ' title="View profile">' . Str::limit($name, 20) . '</a>';
             })->sortable();
         /* $grid->column('sex', __('Gender'))->filter([
             'Male' => 'Male',
@@ -99,6 +105,15 @@ class MembersController extends AdminController
                 return Carbon::parse($num)->diffForHumans();
             })->sortable();
 
+        $grid->column('actions', __('Action'))
+            ->display(function () {
+                $link = admin_url('members/' . $this->id);
+                $links = '<a  href="' . $link .'" title="View profile"><i class="fa fa-eye"> View profile</a>';
+                $links .= '<br><a  href="mailto:' . $this->email.'" title="Send email"><i class="fa fa-envelope"> Send email</a>';
+                $links .= '<br><a  href="mailto:' . $this->email.'" title="Call"><i class="fa fa-phone"> Call '.$this->first_name.'</a>';
+
+                return $links;
+            })->sortable();
 
         return $grid;
     }
@@ -111,6 +126,22 @@ class MembersController extends AdminController
      */
     protected function detail($id)
     {
+
+
+        $s = User::findOrFail($id);
+        $back_link = admin_url('members');
+        if (isset($_SERVER['HTTP_REFERER'])) {
+            if ($_SERVER['HTTP_REFERER'] != null) {
+                if (strlen($_SERVER['HTTP_REFERER']) > 10) {
+                    $back_link  = $_SERVER['HTTP_REFERER'];
+                }
+            }
+        }
+        return view('admin.user-prifile', [
+            'p' => $s,
+            'back_link' => $back_link
+        ]);
+
         $show = new Show(User::findOrFail($id));
 
         $show->field('id', __('Id'));

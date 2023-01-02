@@ -34,7 +34,7 @@ class AuthController extends Controller
             return redirect($this->redirectPath());
         }
 
-        return redirect('login');
+        return redirect('register');
         return view($this->loginView);
     }
 
@@ -246,9 +246,25 @@ class AuthController extends Controller
 
         $form->divider('Bio information');
 
+        $form->radio('title', 'Title')
+            ->options([
+                'Mr' => 'Mr',
+                'Ms' => 'Ms',
+                'Mrs' => 'Mrs',
+                'Dr' => 'Dr',
+                'Prof' => 'Prof',
+                'Haji' => 'Haji',
+                'Hajjat' => 'Hajjat',
+                'Imam' => 'Imam',
+                'Shaykh' => 'Shaykh',
+                'Mufti' => 'Mufti',
+            ])
+            ->rules('required');
+
         $form->text('first_name', 'First name')->rules('required');
         $form->text('last_name', 'Last name')->rules('required');
         $form->radio('sex', 'Sex')->options(['Male' => 'Male', 'Female' => 'Female'])->rules('required');
+        $form->date('dob', 'Date of birth');
 
         $form->text('reg_number', 'IUIU Reg. Number')->help('What are you currently doing?, e.g Ugandan Politician, Ugandan journalist, e.t.c');
 
