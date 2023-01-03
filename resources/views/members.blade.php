@@ -42,7 +42,7 @@
                 <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
             </a>
         </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
 
             @foreach ($members as $member)
                 <!-- Item -->

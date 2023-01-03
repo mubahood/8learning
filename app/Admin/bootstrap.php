@@ -18,7 +18,10 @@
  *
  */
 
+use App\Models\Utils;
 use Encore\Admin\Facades\Admin;
+
+Utils::system_boot(); 
 
 Encore\Admin\Form::forget(['map', 'editor']);
 Admin::css(url('/assets/css/bootstrap.css'));

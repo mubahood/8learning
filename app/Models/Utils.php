@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Encore\Admin\Facades\Admin;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,14 +11,33 @@ class Utils extends Model
 {
     use HasFactory;
 
-    public static function start_session(){
+
+    public static function system_boot()
+    {
+        $u = Admin::user();
+
+        if ($u != null) {
+            $r = AdminRoleUser::where([
+                'user_id' => $u->id
+            ])->first();
+            if ($r == null) {
+                $role = new AdminRoleUser();
+                $role->user_id = $u->id;
+                $role->role_id = 1;
+                $role->save();
+            }
+        }
+    }
+
+    public static function start_session()
+    {
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
     }
 
 
-    
+
     public static function month($t)
     {
         $c = Carbon::parse($t);
@@ -93,7 +113,7 @@ class Utils extends Model
     {
         $data = [];
         foreach ([
-            '', 
+            '',
             "Uganda",
             "Somalia",
             "Nigeria",
@@ -101,7 +121,7 @@ class Utils extends Model
             "Kenya",
             "Sudan",
             "Rwanda",
-            "Congo", 
+            "Congo",
             "Afghanistan",
             "Albania",
             "Algeria",
@@ -340,5 +360,5 @@ class Utils extends Model
             $data[$v] = $v;
         };
         return $data;
-    } 
+    }
 }
