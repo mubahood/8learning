@@ -287,7 +287,7 @@ class AuthController extends Controller
 
         $form->text('occupation', 'Occupation');
 
-        $form->quill('about', 'About you')->help('Write something about yourself.');
+        $form->textarea('about', 'About you')->help('Write something about yourself.');
 
 
         $form->image('avatar', 'Porfile photo');
