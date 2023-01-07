@@ -69,12 +69,16 @@
                 <div class="col-lg-6 mt-xl-3 pt-5 pt-lg-4">
                     <div class="row row-cols-2 gx-3 gx-lg-4">
                         <div class="col pt-lg-5 mt-lg-1">
-                            <img src="assets/images/iuiuaa-hero-1.jpg" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
-                            <img src="assets/images/iuiuaa-hero-2.jpg" class="d-block rounded-3" alt="Image">
-                        </div>
+                            <img src="assets/images/group/1.jpg" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
+                            <img src="assets/images/group/2.jpg" class="d-block rounded-3" alt="Image">
+                            <img src="assets/images/group/7.jpg" class="d-block rounded-3 mt-4" alt="Image">
+                            <img src="assets/images/group/8.jpg" class="d-block rounded-3 mt-4" alt="Image">
+                          </div>
                         <div class="col">
-                            <img src="assets/images/iuiuaa-hero-3.jpg" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
-                            <img src="assets/images/iuiuaa-hero-4.jpg" class="d-block rounded-3" alt="Image">
+                            <img src="assets/images/group/10.jpg" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
+                            <img src="assets/images/group/4.jpg" class="d-block rounded-3" alt="Image">
+                            <img src="assets/images/group/5.jpg" class="d-block rounded-3 mt-4" alt="Image">
+
                         </div>
                     </div>
                 </div>
@@ -360,7 +364,7 @@
                 <!-- Item -->
                 <div class="swiper-slide">
                     <div class="position-relative text-center border-end mx-n1">
-                        <a href="https://twitter.com/iuiu_alumni" class="btn btn-icon btn-secondary btn-twitter btn-lg stretched-link">
+                        <a target="_blank" href="https://twitter.com/iuiu_alumni" class="btn btn-icon btn-secondary btn-twitter btn-lg stretched-link">
                             <i class="bx bxl-twitter"></i>
                         </a>
                         <div class="pt-4">
@@ -375,7 +379,7 @@
                 <!-- Item -->
                 <div class="swiper-slide">
                     <div class="position-relative text-center mx-n1">
-                        <a href="https://www.youtube.com/channel/UCkykO2raYBAmss28fwnnu1w" class="btn btn-icon btn-secondary btn-youtube btn-lg stretched-link">
+                        <a target="_blank" href="https://www.youtube.com/channel/UCkykO2raYBAmss28fwnnu1w" class="btn btn-icon btn-secondary btn-youtube btn-lg stretched-link">
                             <i class="bx bxl-youtube"></i>
                         </a>
                         <div class="pt-4">

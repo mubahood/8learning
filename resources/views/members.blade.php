@@ -37,7 +37,7 @@
         <div
             class="d-md-flex align-items-center justify-content-between text-center text-md-start pb-1 pb-lg-0 mb-4 mb-lg-5">
             <h2 class="h1 mb-md-0">Recently joined members</h2>
-            <a href="#" class="btn btn-outline-primary">
+            <a href="{{ admin_url('') }}" class="btn btn-outline-primary">
                 Join now
                 <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
             </a>

@@ -161,7 +161,7 @@ if (!isset($header_style)) {
         <span class="navbar-toggler-icon"></span>
     </button>
     @guest
-        <a href="{{ url('register') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
+        <a href="{{ admin_url('') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
             rel="noopener">
             <i class="bx bx-user-plus fs-5 lh-1 me-1"></i> &nbsp;JOIN NOW
         </a>

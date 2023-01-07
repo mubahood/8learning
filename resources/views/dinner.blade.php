@@ -260,15 +260,15 @@ $book_link = admin_url('event-bookings/create?event=' . $d->id);
 
 
     <!-- Speakers -->
-    <section id="speakers" class="container pb-5 mb-2 mb-md-4 mb-lg-5 mt-0 mt-lg-0">
-        <div class="d-md-flex align-items-center justify-content-between text-center text-md-start pt-md-1 pt-lg-3">
+    <section>
+        {{--  <div class="d-md-flex align-items-center justify-content-between text-center text-md-start pt-md-1 pt-lg-3">
             <h2 class="h1 mb-4 mb-md-0 me-md-3">Main Speakers</h2>
             <a href="{{ $book_link }}" class="btn btn-primary btn-lg">
                 BOOK A SEAT
                 <i class=" bx bx-right-arrow-alt fs-4 lh-1 ms-2 me-n1"></i>
             </a>
-        </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2 mt-lg-4">
+        </div> --}}
+        {{--  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2 mt-lg-4">
 
             @foreach ($d->speakers as $s)
                 <!-- Item -->
@@ -300,7 +300,7 @@ $book_link = admin_url('event-bookings/create?event=' . $d->id);
 
 
 
-        </div>
+        </div> --}}
     </section>
 
 
@@ -349,199 +349,196 @@ $book_link = admin_url('event-bookings/create?event=' . $d->id);
 
 
 
-    <!-- Schedule -->
-    <section class="container py-5">
-        <div class="row mt-xl-2 mb-xl-3 pb-3 py-md-4 py-lg-5">
-            <div class="col-12">
-                <h2 class="h1 text-center text-sm-start pb-2 pb-lg-0 mb-4 mb-lg-5">Schedule</h2>
-            </div>
-            <div class="col-lg-3 mb-4">
-
-                <!-- Nav tabs -->
-                <div class="nav flex-nowrap flex-lg-column nav-tabs" role="tablist" aria-orientation="vertical">
-                    <a href="#day-1"
-                        class="nav-link d-block w-100 rounded-3 p-4 p-xl-5 me-2 me-sm-3 me-lg-0 mb-lg-3 active"
-                        id="day-1-tab" data-bs-toggle="tab" role="tab" aria-controls="day-1" aria-selected="true">
-                        <div class="fs-xl">Friday</div>
-                        <div class="fs-3 fw-bold">{{ Utils::my_date($d->event_date) }}</div>
-                    </a>
+    <!-- Schedule
+        <section class="container py-5">
+            <div class="row mt-xl-2 mb-xl-3 pb-3 py-md-4 py-lg-5">
+                <div class="col-12">
+                    <h2 class="h1 text-center text-sm-start pb-2 pb-lg-0 mb-4 mb-lg-5">Schedule</h2>
                 </div>
-            </div>
-            <div class="col-lg-8 offset-lg-1">
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-
-                    <!-- Day 1 schedule -->
-                    <div class="tab-pane fade show active" id="day-1" role="tabpanel" aria-labelledby="day-1-tab">
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">9:30 – 10:30 am</div>
-                                    <p class="text-muted mb-0">{{ Utils::my_date($d->event_date) }}</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Opening party &amp; early registration</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom py-4">
-                            <div class="row py-1 py-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">10:30 – 11:30 am</div>
-                                    <p class="text-muted mb-2 mb-sm-4">{{ Utils::my_date($d->event_date) }}</p>
-                                    <span class="badge bg-warning shadow-warning fs-sm">Lecture</span>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5>Product strategy: Defining your strategy, tactics, metrics &amp; roadmap</h5>
-                                    <p class="mb-4">Pellentesque rhoncus viverra vestibulum, purus purus quisque quisque
-                                        sed. Cras vestibulum facilisis dictumst consequat. In bibendum diam nunc dignissim
-                                        magna morbi mattis.</p>
-                                    <div class="d-flex align-items-center">
-                                        <img src="assets/images/team/mwebesa.jpg" class="rounded-circle" width="48"
-                                            alt="Abdunur M. Sekindi">
-                                        <div class="ps-3">
-                                            <h6 class="fw-semibold mb-1">Abdunur M. Sekindi</h6>
-                                            <p class="fs-sm text-muted mb-0">Product Manager, Google</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom py-4">
-                            <div class="row py-1 py-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">11:30 am – 13:00 pm</div>
-                                    <p class="text-muted mb-2 mb-sm-4">{{ Utils::my_date($d->event_date) }}</p>
-                                    <span class="badge bg-success shadow-success fs-sm">Workshop</span>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5>Workshop: Top trends and predictions for content that will dominate next year</h5>
-                                    <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel
-                                        pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
-                                    <div class="row row-cols-1 row-cols-md-2 g-3">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/images/team/abdunur.jpg" class="rounded-circle"
-                                                    width="48" alt="Jerome Bell">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jerome Bell</h6>
-                                                    <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/img/avatar/06.jpg" class="rounded-circle" width="48"
-                                                    alt="Jenny Wilson">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
-                                                    <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom py-4">
-                            <div class="row py-1 py-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">13:00 – 14:00 pm</div>
-                                    <p class="text-muted mb-0">{{ Utils::my_date($d->event_date) }}</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Interlude: attendee dinner</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom py-4">
-                            <div class="row py-1 py-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">14:00 – 16:00 pm</div>
-                                    <p class="text-muted mb-2 mb-sm-4">{{ Utils::my_date($d->event_date) }}</p>
-                                    <span class="badge bg-warning shadow-warning fs-sm">Lecture</span>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5>Group discussion: How to align and empower cross-team success</h5>
-                                    <p class="mb-4">Pellentesque rhoncus viverra vestibulum, purus purus quisque quisque
-                                        sed. Cras vestibulum facilisis.</p>
-                                    <div class="row row-cols-1 row-cols-md-2 g-3">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/images/team/faiza.jpg" class="rounded-circle"
-                                                    width="48" alt="Ralph Edwards">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Abdunur M. Sekindi</h6>
-                                                    <p class="fs-sm text-muted mb-0">Founder &amp; CEO, Uber</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/images/team/faiza.jpg" class="rounded-circle"
-                                                    width="48" alt="Albert Flores">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Abdunur M. Sekindi</h6>
-                                                    <p class="fs-sm text-muted mb-0">Principal Consultant, Twitch</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/images/team/faiza.jpg" class="rounded-circle"
-                                                    width="48" alt="Esther Howard">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Abdunur M. Sekindi</h6>
-                                                    <p class="fs-sm text-muted mb-0">VP of Strategy, Stretto Inc.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom py-4">
-                            <div class="row py-1 py-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">16:00 – 17:00 pm</div>
-                                    <p class="text-muted mb-2 mb-sm-4">{{ Utils::my_date($d->event_date) }}</p>
-                                    <span class="badge bg-info shadow-info fs-sm">Panel</span>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5>Panel: State of speed tooling</h5>
-                                    <p class="mb-4">Volutpat aliquam quam eget sit. Aliquam dui pellentesque egestas duis
-                                        amet malesuada eget. Ut faucibus dignissim maecenas dui tristique vestibulum
-                                        facilisis dictumst consequat.</p>
-                                    <div class="d-flex align-items-center">
-                                        <img src="assets/images/team/faiza.jpg" class="rounded-circle" width="48"
-                                            alt="Cameron Williamson">
-                                        <div class="ps-3">
-                                            <h6 class="fw-semibold mb-1">Abdunur M. Sekindi</h6>
-                                            <p class="fs-sm text-muted mb-0">Co-Founder, Invision LTD</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pt-4">
-                            <div class="row pt-1 pt-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">17:00 – 19:00 pm</div>
-                                    <p class="text-muted mb-0">{{ Utils::my_date($d->event_date) }}</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Official mid-conference party after Day One</h5>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-3 mb-4">
+     
+                    <div class="nav flex-nowrap flex-lg-column nav-tabs" role="tablist" aria-orientation="vertical">
+                        <a href="#day-1"
+                            class="nav-link d-block w-100 rounded-3 p-4 p-xl-5 me-2 me-sm-3 me-lg-0 mb-lg-3 active"
+                            id="day-1-tab" data-bs-toggle="tab" role="tab" aria-controls="day-1" aria-selected="true">
+                            <div class="fs-xl">Friday</div>
+                            <div class="fs-3 fw-bold">{{ Utils::my_date($d->event_date) }}</div>
+                        </a>
                     </div>
+                </div>
+                <div class="col-lg-8 offset-lg-1">
+     
+                    <div class="tab-content">
+     
+                        <div class="tab-pane fade show active" id="day-1" role="tabpanel" aria-labelledby="day-1-tab">
+                            <div class="border-bottom pb-4">
+                                <div class="row pb-1 pb-xl-3">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <div class="h5 mb-1">9:30 – 10:30 am</div>
+                                        <p class="text-muted mb-0">{{ Utils::my_date($d->event_date) }}</p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <h5 class="mb-0">Opening party &amp; early registration</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-bottom py-4">
+                                <div class="row py-1 py-xl-3">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <div class="h5 mb-1">10:30 – 11:30 am</div>
+                                        <p class="text-muted mb-2 mb-sm-4">{{ Utils::my_date($d->event_date) }}</p>
+                                        <span class="badge bg-warning shadow-warning fs-sm">Lecture</span>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <h5>Product strategy: Defining your strategy, tactics, metrics &amp; roadmap</h5>
+                                        <p class="mb-4">Pellentesque rhoncus viverra vestibulum, purus purus quisque quisque
+                                            sed. Cras vestibulum facilisis dictumst consequat. In bibendum diam nunc dignissim
+                                            magna morbi mattis.</p>
+                                        <div class="d-flex align-items-center">
+                                            <img src="assets/images/team/mwebesa.jpg" class="rounded-circle" width="48"
+                                                alt="Abdunur M. Sekindi">
+                                            <div class="ps-3">
+                                                <h6 class="fw-semibold mb-1">Abdunur M. Sekindi</h6>
+                                                <p class="fs-sm text-muted mb-0">Product Manager, Google</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-bottom py-4">
+                                <div class="row py-1 py-xl-3">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <div class="h5 mb-1">11:30 am – 13:00 pm</div>
+                                        <p class="text-muted mb-2 mb-sm-4">{{ Utils::my_date($d->event_date) }}</p>
+                                        <span class="badge bg-success shadow-success fs-sm">Workshop</span>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <h5>Workshop: Top trends and predictions for content that will dominate next year</h5>
+                                        <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel
+                                            pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
+                                        <div class="row row-cols-1 row-cols-md-2 g-3">
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/images/team/abdunur.jpg" class="rounded-circle"
+                                                        width="48" alt="Jerome Bell">
+                                                    <div class="ps-3">
+                                                        <h6 class="fw-semibold mb-1">Jerome Bell</h6>
+                                                        <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/img/avatar/06.jpg" class="rounded-circle" width="48"
+                                                        alt="Jenny Wilson">
+                                                    <div class="ps-3">
+                                                        <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
+                                                        <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-bottom py-4">
+                                <div class="row py-1 py-xl-3">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <div class="h5 mb-1">13:00 – 14:00 pm</div>
+                                        <p class="text-muted mb-0">{{ Utils::my_date($d->event_date) }}</p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <h5 class="mb-0">Interlude: attendee dinner</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-bottom py-4">
+                                <div class="row py-1 py-xl-3">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <div class="h5 mb-1">14:00 – 16:00 pm</div>
+                                        <p class="text-muted mb-2 mb-sm-4">{{ Utils::my_date($d->event_date) }}</p>
+                                        <span class="badge bg-warning shadow-warning fs-sm">Lecture</span>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <h5>Group discussion: How to align and empower cross-team success</h5>
+                                        <p class="mb-4">Pellentesque rhoncus viverra vestibulum, purus purus quisque quisque
+                                            sed. Cras vestibulum facilisis.</p>
+                                        <div class="row row-cols-1 row-cols-md-2 g-3">
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/images/team/faiza.jpg" class="rounded-circle"
+                                                        width="48" alt="Ralph Edwards">
+                                                    <div class="ps-3">
+                                                        <h6 class="fw-semibold mb-1">Abdunur M. Sekindi</h6>
+                                                        <p class="fs-sm text-muted mb-0">Founder &amp; CEO, Uber</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/images/team/faiza.jpg" class="rounded-circle"
+                                                        width="48" alt="Albert Flores">
+                                                    <div class="ps-3">
+                                                        <h6 class="fw-semibold mb-1">Abdunur M. Sekindi</h6>
+                                                        <p class="fs-sm text-muted mb-0">Principal Consultant, Twitch</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/images/team/faiza.jpg" class="rounded-circle"
+                                                        width="48" alt="Esther Howard">
+                                                    <div class="ps-3">
+                                                        <h6 class="fw-semibold mb-1">Abdunur M. Sekindi</h6>
+                                                        <p class="fs-sm text-muted mb-0">VP of Strategy, Stretto Inc.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-bottom py-4">
+                                <div class="row py-1 py-xl-3">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <div class="h5 mb-1">16:00 – 17:00 pm</div>
+                                        <p class="text-muted mb-2 mb-sm-4">{{ Utils::my_date($d->event_date) }}</p>
+                                        <span class="badge bg-info shadow-info fs-sm">Panel</span>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <h5>Panel: State of speed tooling</h5>
+                                        <p class="mb-4">Volutpat aliquam quam eget sit. Aliquam dui pellentesque egestas duis
+                                            amet malesuada eget. Ut faucibus dignissim maecenas dui tristique vestibulum
+                                            facilisis dictumst consequat.</p>
+                                        <div class="d-flex align-items-center">
+                                            <img src="assets/images/team/faiza.jpg" class="rounded-circle" width="48"
+                                                alt="Cameron Williamson">
+                                            <div class="ps-3">
+                                                <h6 class="fw-semibold mb-1">Abdunur M. Sekindi</h6>
+                                                <p class="fs-sm text-muted mb-0">Co-Founder, Invision LTD</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4">
+                                <div class="row pt-1 pt-xl-3">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <div class="h5 mb-1">17:00 – 19:00 pm</div>
+                                        <p class="text-muted mb-0">{{ Utils::my_date($d->event_date) }}</p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <h5 class="mb-0">Official mid-conference party after Day One</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    -->
 
 
 

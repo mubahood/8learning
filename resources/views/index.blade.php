@@ -20,11 +20,13 @@
                     <p class="fs-lg">Haven't joined yet? <a href="{{ admin_url() }}" class="fw-medium">Click here.</a></p>
                 </div>
                 <div class="col-xl-5 col-lg-6 offset-xl-1 position-relative zindex-5 mb-5 mb-lg-0">
-                    <div class="rellax card bg-primary border-0 shadow-primary py-2 p-sm-4 p-lg-5" data-rellax-speed="-1"
+                    <div class="rellax card   shadow-primary py-2 p-sm-2 p-lg-4" 
+                        style="background-color: rgba(12, 118, 14, 0.7); border: 5px solid rgb(1, 62, 1)!important;"
+                    data-rellax-speed="-1"
                         data-disable-parallax-down="lg">
-                        <div class="card-body p-lg-3">
-                            <h2 class="text-light pb-1 pb-md-3">Chairman’s Message</h2>
-                            <p class="fs-lg text-light pb-2 pb-md-0 mb-4 mb-md-5">
+                        <div class="card-body p-lg-2">
+                            <h2 class="text-white pb-1 pb-md-3 text-dark">Chairman’s Message</h2>
+                            <p class="fs-lg text-white pb-2 pb-md-0 mb-4 mb-md-5  text-dark">
                                 It is my distinct honour and privilege to welcome you to the IUIU Alumni Association
                                 website.
                                 If you are a graduate of IUIU and you are yet to become a member of this Association. <br> I
@@ -61,7 +63,7 @@
         <div class="d-none d-lg-block position-absolute top-0 end-0 w-50 d-flex flex-column ps-3"
             style="height: calc(100% - 108px);">
             <div class="w-100 h-100 overflow-hidden bg-position-center bg-repeat-0 bg-size-cover"
-                style="background-image: url(assets/images/youths/{{ rand(1, 10) }}.JPG); border-bottom-left-radius: .5rem;">
+                style="background-image: url(assets/images/group/{{ rand(1, 10) }}.jpg); border-bottom-left-radius: .5rem;">
             </div>
         </div>
     </section>
