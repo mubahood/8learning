@@ -44,7 +44,6 @@ class AccountController extends BaseController
 
     public function logout()
     {
-
         Auth::logout();
         return redirect('/');
     }
@@ -58,7 +57,7 @@ class AccountController extends BaseController
         ])->fails()) {
             return back()
                 ->withErrors(['email' => 'Enter a valid email address.'])
-                ->withInput();
+                ->withInput(); 
         }
 
         if (Validator::make($_POST, [
@@ -182,7 +181,7 @@ class AccountController extends BaseController
         }
 
 
- 
+
         if (Auth::attempt([
             'username' => $r->email,
             'password' => $r->password,

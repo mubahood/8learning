@@ -4,6 +4,7 @@ namespace App\Admin\Controllers;
 
 use App\Models\Event;
 use App\Models\EventBooking;
+use App\Models\Utils;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Form\Field\Radio;
@@ -28,21 +29,71 @@ class EventBookingController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new EventBooking());
+        $u = Auth::user();
+        if (!$u->isRole('admin')) {
+            $grid->model()->where(
+                ['administrator_id' => $u->id]
+            ); 
+            $grid->disableCreateButton();
+            $grid->disableTools();
+            $grid->disableExport();
+        }
+        $grid->model()->orderBy('id', 'desc');
+        $grid->disableBatchActions();
 
-        $grid->column('id', __('Id'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
-        $grid->column('administrator_id', __('Administrator id'));
-        $grid->column('event_id', __('Event id'));
-        $grid->column('event_ticket_id', __('Event ticket id'));
-        $grid->column('is_paid', __('Is paid'));
-        $grid->column('payment_approved', __('Payment approved'));
-        $grid->column('payment_approved_by', __('Payment approved by'));
-        $grid->column('ticket_approved', __('Ticket approved'));
-        $grid->column('payment_method', __('Payment method'));
-        $grid->column('payment_account', __('Payment account'));
-        $grid->column('payment_transaction_id', __('Payment transaction id'));
-        $grid->column('short_message', __('Short message'));
+
+        $grid->column('created_at', __('Date'))->display(function ($t) {
+            return Utils::my_date_time($t);
+        });
+        $grid->column('administrator_id', __('Booked by'))->display(function ($t) {
+            return $this->booked_by->name;
+        });
+        $grid->column('event_id', __('Event id'))
+            ->display(function ($t) {
+                return $this->event->title;
+            });
+        $grid->column('event_ticket_id', __('Ticket'))
+            ->display(function ($t) {
+                return  number_format($this->event_ticket->price) . " - UGX " . $this->event_ticket->name;
+            });
+        $grid->column('is_paid', __('Is paid'))
+            ->using([
+                1 => 'Paid',
+                0 => 'Not-paid',
+            ], 'Not-paid')
+            ->label([
+                1 => 'success',
+                0 => 'danger',
+            ], 'danger');
+        $grid->column('payment_approved', __('Payment approved'))
+            ->using([
+                1 => 'Approved',
+                0 => 'Pending',
+            ], 'Pending')
+            ->label([
+                1 => 'success',
+                0 => 'danger',
+            ], 'danger');
+        $grid->column('ticket_approved', __('Ticket approved'))
+            ->using([
+                1 => 'Approved',
+                0 => 'Pending',
+            ], 'Pending')
+            ->label([
+                1 => 'success',
+                0 => 'danger',
+            ], 'danger');
+
+        if ($u->isRole('admin')) {
+            $grid->column('payment_method', __('Payment method'));
+            $grid->column('payment_account', __('Payment account'));
+            $grid->column('payment_transaction_id', __('Payment transaction id'));
+
+            $grid->column('short_message', __('Short message'));
+        };
+
+
+
         $grid->column('admin_message', __('Admin message'));
 
         return $grid;

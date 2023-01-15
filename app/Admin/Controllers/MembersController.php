@@ -29,6 +29,8 @@ class MembersController extends AdminController
     protected function grid()
     {
 
+        Utils::checkEventRegustration();
+
         $grid = new Grid(new User());
         $grid->disableExport();
         $grid->disableCreateButton();

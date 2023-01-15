@@ -29,7 +29,6 @@
 
                                     @include('components.input-text', [
                                         'name' => 'email',
-                                        'type' => 'email',
                                         'label' => 'Email',
                                     ])
 

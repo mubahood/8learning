@@ -3,6 +3,7 @@
 @section('base-content')
     <?php
     $header_data['header_style'] = 2;
+    
     ?>
 
     <body>
@@ -19,7 +20,7 @@
                         <h1 class="text-center text-xl-start">Joining IUIU Alumni Association</h1>
 
                         <p class="lead fs-sm text-dark mt-3 border border-primary p-3 bg-secondary rounded">
-                            Dear Respected colleague, thank you for your interest in the IUIU ALUMNI REGROUP. We are planning to create an alumni database to enhance ways of reaching out and supporting one another.
+                            Dear Respected colleague, thank you for your interest in the IUIU ALUMNI Association. We are planning to create an alumni database to enhance ways of reaching out and supporting one another.
                             Please fill out this form to help us get to know you better. The details you provide will only be used. 
                         </p>
                         <p class="text-center text-xl-start pb-3 mb-3">Already registred an account? <a href="login">Login

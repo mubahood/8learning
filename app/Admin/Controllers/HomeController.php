@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Utils;
 use Encore\Admin\Controllers\Dashboard;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Column;
@@ -19,6 +20,7 @@ class HomeController extends Controller
             admin_info('Alert', 'Please complete your profile information to proceed.');
             return redirect(admin_url('auth/setting'));
         }
+        Utils::checkEventRegustration();
 
         $content
             ->title('IUIU AA - Dashboard')

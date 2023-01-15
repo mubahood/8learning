@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Models\Event;
+use App\Models\Utils;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Form;
@@ -26,6 +27,7 @@ class EventController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Event());
+        Utils::checkEventRegustration(); 
 
         $grid->column('id', __('Id'));
         $grid->column('created_at', __('Created at'));
