@@ -460,6 +460,7 @@
                         <p class="fs-sm mb-0">Executive Member</p>
                     </div>
                 </div>
+            </div>
 
             <!-- Item -->
             <div class="col">
@@ -494,7 +495,7 @@
             <div class="col">
                 <div class="card card-hover border-0 bg-transparent">
                     <div class="position-relative">
-                        <img src="assets/images/team/taufiq.jpg" class="rounded-3">
+                        <img src="assets/images/team/kayiira.jpg" class="rounded-3">
                         <div
                             class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
                             <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25 rounded-3"></span>
