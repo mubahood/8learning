@@ -234,7 +234,7 @@
             <div class="col">
                 <div class="card card-hover border-0 bg-transparent">
                     <div class="position-relative">
-                        <img src="assets/images/team/musa.jpg" class="rounded-3" alt="Jerome Bell">
+                        <img src="https://iuiuaa.org/storage/user.jpg" class="rounded-3" alt="Jerome Bell">
                         <div
                             class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
                             <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25 rounded-3"></span>
@@ -252,7 +252,7 @@
                         </div>
                     </div>
                     <div class="card-body text-center p-3">
-                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Mr. Mousa Ssenkubuge</h3>
+                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Mr. Mousa S Kato</h3>
                         <p class="fs-sm mb-0">Executive Secretary</p>
                     </div>
                 </div>
@@ -646,7 +646,7 @@
                 of our membership if we manage to mobilise ourselves fully.</p>
 
             <p>
-                <b>Mousa Ali Senkubuge,</b><br>
+                <b>Mr. Mousa S Kato,</b><br>
                 <b>Executive Secretary, IUIU Alumni Association</b>
             </p>
         </div>
