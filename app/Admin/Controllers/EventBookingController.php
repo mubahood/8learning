@@ -33,7 +33,7 @@ class EventBookingController extends AdminController
         if (!$u->isRole('admin')) {
             $grid->model()->where(
                 ['administrator_id' => $u->id]
-            ); 
+            );
             $grid->disableCreateButton();
             $grid->disableTools();
             $grid->disableExport();
@@ -180,7 +180,7 @@ class EventBookingController extends AdminController
                             'Cash' => 'Cash',
                         ])
                         ->when('Mobile money', function ($f) {
-                            $f->mobile('payment_account', 'Enter Phone number you used to send the money')->options(['mask' => '+256 9999 99999'])->rules('required');
+                            $f->mobile('payment_account', 'Enter Phone number you used to send the money')->rules('required');
                             $f->text('payment_transaction_id', __('Payment transaction ID'))->rules('required');
                         })
                         ->when('Bank', function ($f) {

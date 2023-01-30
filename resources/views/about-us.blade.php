@@ -484,7 +484,7 @@
                         </div>
                     </div>
                     <div class="card-body text-center p-3">
-                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Mr. Prof Taufiq</h3>
+                        <h3 class="fs-lg fw-semibold pt-1 mb-2">Prof. Dr. Taufiq</h3>
                         <p class="fs-sm mb-0">Executive Member</p>
                     </div>
                 </div>
