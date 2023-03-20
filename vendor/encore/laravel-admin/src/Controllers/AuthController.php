@@ -243,6 +243,7 @@ class AuthController extends Controller
         $form->disableCreatingCheck();
         $form->disableEditingCheck();
         $form->disableViewCheck();
+        $form->disableReset();
         $form->disableCreatingCheck();
         $form->html('<br>Respected colleague, Thank you for your interest in the <b>IUIU ALUMNI ASSOCIATION</b>. We are
         planning to create an alumni database to enhance ways of <b>reaching out and supporting</b> one another.
