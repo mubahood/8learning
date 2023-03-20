@@ -61,7 +61,6 @@ class Administrator extends Model implements AuthenticatableContract
                 strlen($m->country)
             ) {
                 $m->complete_profile = 1;
-
                 $m->name =  $m->first_name . " " . $m->last_name;
                 if ($m->title != null && strlen($m->title) > 1) {
                     $m->name = $m->title . ". " . $m->name;

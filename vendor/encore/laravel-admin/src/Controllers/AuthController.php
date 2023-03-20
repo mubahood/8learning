@@ -240,6 +240,10 @@ class AuthController extends Controller
         Utils::checkEventRegustration();
 
         $form = new Form(new $class());
+        $form->disableCreatingCheck();
+        $form->disableEditingCheck();
+        $form->disableViewCheck();
+        $form->disableCreatingCheck();
         $form->html('<br>Respected colleague, Thank you for your interest in the <b>IUIU ALUMNI ASSOCIATION</b>. We are
         planning to create an alumni database to enhance ways of <b>reaching out and supporting</b> one another.
         Please fill out this form to help us get to know you better. The details you provide will only be used
