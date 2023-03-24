@@ -17,13 +17,12 @@
                     <h1 class="fs-xl text-uppercase">Welcome to</h1>
                     <h2 class="display-4 pb-md-2 pb-lg-1" style="font-size: 3rem; line-height: 3rem;">Islamic University in
                         Uganda - Alumni Association</h2>
-                    <p class="fs-lg">Haven't joined yet? <a href="{{ admin_url() }}" class="fw-medium">Click here.</a></p>
+                    <p class="fs-lg">Haven't joined yet? <a href="{{ admin_url() }}" class="fw-medium">Click here to join.</a></p>
                 </div>
                 <div class="col-xl-5 col-lg-6 offset-xl-1 position-relative zindex-5 mb-5 mb-lg-0">
-                    <div class="rellax card   shadow-primary py-2 p-sm-2 p-lg-4" 
+                    <div class="rellax card   shadow-primary py-2 p-sm-2 p-lg-4"
                         style="background-color: rgba(12, 118, 14, 0.7); border: 5px solid rgb(1, 62, 1)!important;"
-                    data-rellax-speed="-1"
-                        data-disable-parallax-down="lg">
+                        data-rellax-speed="-1" data-disable-parallax-down="lg">
                         <div class="card-body p-lg-2">
                             <h2 class="text-white pb-1 pb-md-3 text-dark">Chairman’s Message</h2>
                             <p class="fs-lg text-white pb-2 pb-md-0 mb-4 mb-md-5  text-dark">
@@ -51,12 +50,11 @@
                             <i class="bx bx-time text-primary fs-3"></i>
                         </div>
                         <ul class="list-unstyled ps-3 ps-lg-0 ps-xl-3 mb-0">
-                            <li><strong class="text-dark">UPCOMING EVENT:</strong> IUIU Alumni Dinner</li>
-                            <li><strong class="text-dark">10th Feb, 2023:</strong> IUIU Female's campus</li>
-                        </ul>
+                            <li><strong class="text-dark">IUIU-AA:</strong> is creating fellowship among IUIU Alumni under
+                                one umbrella and offer practical solutions that benefit members and the Alma mater through
+                                rigorous networking</li>
                     </div>
-                    <a href="{{ admin_url('event-bookings/create?event=1') }}"
-                        class="btn btn-primary btn-lg shadow-primary">BOOK A TICKET</a>
+                    <a href="{{ url('login') }}" class="btn btn-primary btn-lg shadow-primary">JOIN IUIU-AA</a>
                 </div>
             </div>
         </div>
@@ -87,7 +85,7 @@
                 <p class="fs-lg text-lead mt-2 ">As a network that unites IUIU Alumni under one umbrella, we look forward to
                     promoting the interests, welfare and educational aims of IUIU and the University.</p>
 
-                <p class="fs-lg">Read more about IUIU-AA <a href="{{ url('about-us') }}" class="fw-medium">Click here</a>
+                <p class="fs-lg">Read more about IUIU-AA <a href="{{ url('about-us') }}" class="fw-medium">Click here  to join</a>
                 </p>
             </div>
 
@@ -557,7 +555,8 @@
                             alt="Map preview">
                         <img src="assets/img/landing/conference/map-dark.jpg" class="d-none d-dark-mode-block"
                             alt="Map preview">
-                        <div class="gallery-item-caption fs-sm fw-medium">IUIU Female's campus - Kaboja, Kabojja, Nateete, Kampala</div>
+                        <div class="gallery-item-caption fs-sm fw-medium">IUIU Female's campus - Kaboja, Kabojja, Nateete,
+                            Kampala</div>
                     </a>
                 </div>
             </div>

@@ -128,8 +128,8 @@ if (!isset($header_style)) {
             </style>
 
             <li class="nav-item">
-                <a href="{{ url('dinner') }}" title="IUIU Alumni association grand 4th dinner - 2023"
-                    class="nav-link blink">Dinner 2023</a>
+                <a href="{{ url('login') }}" title="IUIU Alumni association grand 4th dinner - 2023"
+                    class="nav-link blink">REGISTER</a>
             </li>
 
 
@@ -139,7 +139,7 @@ if (!isset($header_style)) {
         <div class="offcanvas-header border-top">
 
             @guest
-                <a href="{{ admin_url() }}" class="btn btn-primary w-100" rel="noopener">
+                <a href="{{ url('login') }}" class="btn btn-primary w-100" rel="noopener">
                     <i class="bx bx-cart fs-4 lh-1 me-1"></i> &nbsp;JOIN NOW
                 </a>
             @endguest
@@ -161,7 +161,7 @@ if (!isset($header_style)) {
         <span class="navbar-toggler-icon"></span>
     </button>
     @guest
-        <a href="{{ admin_url('') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
+        <a href="{{ url('login') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
             rel="noopener">
             <i class="bx bx-user-plus fs-5 lh-1 me-1"></i> &nbsp;JOIN NOW
         </a>
