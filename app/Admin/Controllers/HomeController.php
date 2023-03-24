@@ -20,7 +20,7 @@ class HomeController extends Controller
             admin_info('Alert', 'Please complete your profile information to proceed.');
             return redirect(admin_url('auth/setting'));
         }
-        Utils::checkEventRegustration();
+        //Utils::checkEventRegustration();
 
         $content
             ->title('IUIU AA - Dashboard')
