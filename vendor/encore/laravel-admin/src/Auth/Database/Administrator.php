@@ -46,7 +46,10 @@ class Administrator extends Model implements AuthenticatableContract
         parent::boot();
 
         self::creating(function ($m) {
-            $m->name = $m->first_name . " " . $m->last_name;
+            if(strlen($m->first_name)> 2){
+                $m->name = $m->first_name . " " . $m->last_name;
+            }
+
             $m->avatar = 'user.jpg';
         });
         self::updating(function ($m) {
@@ -66,6 +69,9 @@ class Administrator extends Model implements AuthenticatableContract
                     $m->name = $m->title . ". " . $m->name;
                 }
             }
+            if(strlen($m->first_name)> 2){
+                $m->name = $m->first_name . " " . $m->last_name;
+            } 
         });
     }
 
