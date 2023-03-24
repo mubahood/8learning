@@ -521,7 +521,7 @@
 
 
     <!-- Location -->
-    <section class="container py-5">
+ {{--    <section class="container py-5">
         <div class="row mt-lg-3 pt-1 pt-md-4 pt-lg-5">
             <div class="col-xl-3 col-md-4 text-center text-md-start">
                 <h2 class="h1 mb-4">IUIU Alumni Grand Dinner - 2023</h2>
@@ -562,10 +562,10 @@
             </div>
         </div>
     </section>
-
+ --}}
 
     <!-- Buy ticket CTA -->
-    <section class="bg-gradient-primary py-5">
+ {{--    <section class="bg-gradient-primary py-5">
         <div class="container py-2 py-md-4 py-lg-5">
             <div class="row py-xl-3">
                 <div class="col-xl-4 col-lg-5 offset-xl-1 order-lg-2 mb-4">
@@ -624,5 +624,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

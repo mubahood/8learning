@@ -586,7 +586,7 @@ $book_link = admin_url('event-bookings/create?event=' . $d->id);
 
 
 
-
+{{-- 
     <section class="container mb-3 mb-md-5">
         <div class="row  justify-content-center">
             <div class="col-md-8">
@@ -612,10 +612,10 @@ $book_link = admin_url('event-bookings/create?event=' . $d->id);
             </div>
         </div>
     </section>
-
+ --}}
 
     <!-- Buy ticket CTA -->
-    <section class="bg-gradient-primary py-5">
+   {{--  <section class="bg-gradient-primary py-5">
         <div class="container py-2 py-md-4 py-lg-5">
             <div class="row py-xl-3">
                 <div class="col-xl-4 col-lg-5 offset-xl-1 order-lg-2 mb-4">
@@ -674,5 +674,5 @@ $book_link = admin_url('event-bookings/create?event=' . $d->id);
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection
