@@ -75,7 +75,7 @@ class NewsPostController extends AdminController
 
         $form->image('photo', __('Thumbnail'))->rules('required');
         $form->text('title', __('Title'))->rules('required');
-        $form->textarea('description', __('Post description'))->rules('required');
+        $form->text('description', __('Post description'))->rules('required');
         $form->textarea('details', __('Post Details'))->rules('required');
         $form->hidden('administrator_id', __('Administrator id'))
             ->default(Auth::user()->id);
