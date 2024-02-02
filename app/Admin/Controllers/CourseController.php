@@ -95,15 +95,17 @@ class CourseController extends AdminController
 
         $form = new Form(new Course());
 
+
+
         $form->tab('Basic info', function ($form) {
 
             $form->setTitle("Creating course");
 
             $users = [];
             foreach (Administrator::all() as $key => $value) {
-                if ($value->isRole('instructor')) {
-                    $users[$value->id] = $value->name . " - " . $value->id;
-                }
+                $users[$value->id] = $value->name . " - " . $value->id;
+                /* if ($value->isRole('instructor')) {
+                } */
             }
             if (Admin::user()->isRole('administrator')) {
                 $form->select('administrator_id', __('Course instructor'))
@@ -158,37 +160,40 @@ class CourseController extends AdminController
             });
         });
 
-        $form->tab('Chapter Topics', function ($form) {
-            $form->setWidth(6, 4);
-            $form->hasMany('course_topics', __('Click on NEW to add course topic'), function (NestedForm $form) {
-                $id = request()->route()->parameters['course'];
-                $model = Course::find($id);
-                if (!$model) {
-                    dd("Coruse not found");
-                }
+        if ($form->isEditing()) {
 
-                $form->select('course_chapter_id', __('Select chapter'))
-                    ->options($model->course_chapters->pluck('name', 'id'))
-                    ->default(1)
-                    ->required();
-                $form->text('name', __('Chapter title'))->required();
-                $form->text('minutes', __('Length (in Minutes)'))->attribute('type', 'number')->required();
-                $form->radio('type', __('Main content type'))
-                    ->options([
-                        'Video' => 'Video',
-                        'Youtube Video' => 'Youtube Video',
-                        'File' => 'File',
-                        'Text' => 'Text',
-                    ])->required();
+            $form->tab('Chapter Topics', function ($form) {
+                $form->setWidth(6, 4);
+                $form->hasMany('course_topics', __('Click on NEW to add course topic'), function (NestedForm $form) {
+                    $id = request()->route()->parameters['course'];
+                    $model = Course::find($id);
+                    if (!$model) {
+                        dd("Coruse not found");
+                    }
 
-                $form->file('video', __('Upload Video'));
-                $form->url('youtube', __('Youtube Video'));
-                $form->multipleFile('files', __('Other files'));
-                $form->summernote('description', __('Notes'));
+                    $form->select('course_chapter_id', __('Select chapter'))
+                        ->options($model->course_chapters->pluck('name', 'id'))
+                        ->default(1)
+                        ->required();
+                    $form->text('name', __('Chapter title'))->required();
+                    $form->text('minutes', __('Length (in Minutes)'))->attribute('type', 'number')->required();
+                    $form->radio('type', __('Main content type'))
+                        ->options([
+                            'Video' => 'Video',
+                            'Youtube Video' => 'Youtube Video',
+                            'File' => 'File',
+                            'Text' => 'Text',
+                        ])->required();
+
+                    $form->file('video', __('Upload Video'));
+                    $form->url('youtube', __('Youtube Video'));
+                    $form->multipleFile('files', __('Other files'));
+                    $form->summernote('description', __('Notes'));
+                });
             });
-        });
+        }
 
-        $form->tab('Chapter Topics', function ($form) {
+        $form->tab('Course Visibility', function ($form) {
 
             $form->setWidth(6, 4);
             $form->radio('visibility', __('Course visibility'))
