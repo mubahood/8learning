@@ -108,13 +108,13 @@ class AccountController extends BaseController
 
         $u = Auth::user();
         $acc = Administrator::find($u->id);
-        echo "<pre>";
+       /*  echo "<pre>";
         print_
         if ($acc == null) {
             die("account not found");
         }
         die("Romina");
-
+ */
 
 
 

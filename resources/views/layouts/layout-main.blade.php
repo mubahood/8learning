@@ -16,7 +16,7 @@
 
 
     <!-- Footer -->
-    <footer class="footer pt-5 pb-4 pb-lg-5">
+    <footer class="footer bg-secondary pt-5 pb-4 pb-lg-5">
         <div class="container pt-lg-4">
             <div class="row pb-5">
                 <div class="col-lg-4 col-md-6">

@@ -2,6 +2,7 @@
 
 namespace Doctrine\DBAL\Platforms;
 
+use Doctrine\DBAL\SQL\Builder\SelectSQLBuilder;
 use Doctrine\Deprecations\Deprecation;
 
 /**
@@ -10,9 +11,9 @@ use Doctrine\Deprecations\Deprecation;
 class MySQL80Platform extends MySQL57Platform
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
-     * @deprecated Implement {@link createReservedKeywordsList()} instead.
+     * @deprecated Implement {@see createReservedKeywordsList()} instead.
      */
     protected function getReservedKeywordsClass()
     {
@@ -20,9 +21,14 @@ class MySQL80Platform extends MySQL57Platform
             'doctrine/dbal',
             'https://github.com/doctrine/dbal/issues/4510',
             'MySQL80Platform::getReservedKeywordsClass() is deprecated,'
-                . ' use MySQL80Platform::createReservedKeywordsList() instead.'
+                . ' use MySQL80Platform::createReservedKeywordsList() instead.',
         );
 
         return Keywords\MySQL80Keywords::class;
+    }
+
+    public function createSelectSQLBuilder(): SelectSQLBuilder
+    {
+        return AbstractPlatform::createSelectSQLBuilder();
     }
 }

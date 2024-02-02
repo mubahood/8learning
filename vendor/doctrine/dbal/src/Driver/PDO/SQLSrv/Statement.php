@@ -2,53 +2,77 @@
 
 namespace Doctrine\DBAL\Driver\PDO\SQLSrv;
 
+use Doctrine\DBAL\Driver\Exception\UnknownParameterType;
+use Doctrine\DBAL\Driver\Middleware\AbstractStatementMiddleware;
 use Doctrine\DBAL\Driver\PDO\Statement as PDOStatement;
-use Doctrine\DBAL\Driver\Result;
-use Doctrine\DBAL\Driver\Statement as StatementInterface;
 use Doctrine\DBAL\ParameterType;
 use Doctrine\Deprecations\Deprecation;
 use PDO;
 
 use function func_num_args;
 
-final class Statement implements StatementInterface
+final class Statement extends AbstractStatementMiddleware
 {
-    /** @var PDOStatement */
-    private $statement;
+    private PDOStatement $statement;
 
-    /**
-     * @internal The statement can be only instantiated by its driver connection.
-     */
+    /** @internal The statement can be only instantiated by its driver connection. */
     public function __construct(PDOStatement $statement)
     {
+        parent::__construct($statement);
+
         $this->statement = $statement;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     *
+     * @deprecated Use {@see bindValue()} instead.
      *
      * @param string|int $param
      * @param mixed      $variable
      * @param int        $type
      * @param int|null   $length
      * @param mixed      $driverOptions The usage of the argument is deprecated.
+     *
+     * @throws UnknownParameterType
+     *
+     * @psalm-assert ParameterType::* $type
      */
-    public function bindParam($param, &$variable, $type = ParameterType::STRING, $length = null, $driverOptions = null)
-    {
+    public function bindParam(
+        $param,
+        &$variable,
+        $type = ParameterType::STRING,
+        $length = null,
+        $driverOptions = null
+    ): bool {
+        Deprecation::trigger(
+            'doctrine/dbal',
+            'https://github.com/doctrine/dbal/pull/5563',
+            '%s is deprecated. Use bindValue() instead.',
+            __METHOD__,
+        );
+
+        if (func_num_args() < 3) {
+            Deprecation::trigger(
+                'doctrine/dbal',
+                'https://github.com/doctrine/dbal/pull/5558',
+                'Not passing $type to Statement::bindParam() is deprecated.'
+                    . ' Pass the type corresponding to the parameter being bound.',
+            );
+        }
+
         if (func_num_args() > 4) {
             Deprecation::triggerIfCalledFromOutside(
                 'doctrine/dbal',
                 'https://github.com/doctrine/dbal/issues/4533',
-                'The $driverOptions argument of Statement::bindParam() is deprecated.'
+                'The $driverOptions argument of Statement::bindParam() is deprecated.',
             );
         }
 
         switch ($type) {
             case ParameterType::LARGE_OBJECT:
             case ParameterType::BINARY:
-                if ($driverOptions === null) {
-                    $driverOptions = PDO::SQLSRV_ENCODING_BINARY;
-                }
+                $driverOptions ??= PDO::SQLSRV_ENCODING_BINARY;
 
                 break;
 
@@ -63,18 +87,23 @@ final class Statement implements StatementInterface
     }
 
     /**
-     * {@inheritdoc}
+     * @throws UnknownParameterType
+     *
+     * {@inheritDoc}
+     *
+     * @psalm-assert ParameterType::* $type
      */
-    public function bindValue($param, $value, $type = ParameterType::STRING)
+    public function bindValue($param, $value, $type = ParameterType::STRING): bool
     {
-        return $this->bindParam($param, $value, $type);
-    }
+        if (func_num_args() < 3) {
+            Deprecation::trigger(
+                'doctrine/dbal',
+                'https://github.com/doctrine/dbal/pull/5558',
+                'Not passing $type to Statement::bindValue() is deprecated.'
+                    . ' Pass the type corresponding to the parameter being bound.',
+            );
+        }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function execute($params = null): Result
-    {
-        return $this->statement->execute($params);
+        return $this->bindParam($param, $value, $type);
     }
 }
