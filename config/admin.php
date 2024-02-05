@@ -4,29 +4,29 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel-admin name
+    | 8Learning name
     |--------------------------------------------------------------------------
     |
-    | This value is the name of laravel-admin, This setting is displayed on the
+    | This value is the name of 8Learning, This setting is displayed on the
     | login page.
     |
     */
-    'name' => 'Laravel-admin',
+    'name' => '8Learning',
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel-admin logo
+    | 8Learning logo
     |--------------------------------------------------------------------------
     |
     | The logo of all admin pages. You can also set it as an image by using a
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>Laravel</b> admin',
+    'logo' => '<b>8Learning</b>',
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel-admin mini logo
+    | 8Learning mini logo
     |--------------------------------------------------------------------------
     |
     | The logo of all admin pages when the sidebar menu is collapsed. You can
@@ -38,17 +38,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel-admin bootstrap setting
+    | 8Learning bootstrap setting
     |--------------------------------------------------------------------------
     |
-    | This value is the path of laravel-admin bootstrap file.
+    | This value is the path of 8Learning bootstrap file.
     |
     */
     'bootstrap' => app_path('Admin/bootstrap.php'),
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel-admin route settings
+    | 8Learning route settings
     |--------------------------------------------------------------------------
     |
     | The routing configuration of the admin page, including the path prefix,
@@ -58,7 +58,7 @@ return [
     */
     'route' => [
 
-        'prefix' => env('ADMIN_ROUTE_PREFIX', 'admin'),
+        'prefix' => env('ADMIN_ROUTE_PREFIX', ''),
 
         'namespace' => 'App\\Admin\\Controllers',
 
@@ -67,7 +67,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel-admin install directory
+    | 8Learning install directory
     |--------------------------------------------------------------------------
     |
     | The installation directory of the controller and routing configuration
@@ -79,7 +79,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel-admin html title
+    | 8Learning html title
     |--------------------------------------------------------------------------
     |
     | Html title for all pages.
@@ -99,7 +99,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel-admin auth setting
+    | 8Learning auth setting
     |--------------------------------------------------------------------------
     |
     | Authentication settings for all admin pages. Include an authentication
@@ -143,7 +143,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel-admin upload setting
+    | 8Learning upload setting
     |--------------------------------------------------------------------------
     |
     | File system configuration for form upload files and images, including
@@ -153,7 +153,7 @@ return [
     'upload' => [
 
         // Disk in `config/filesystem.php`.
-        'disk' => 'local', 
+        'disk' => 'local',
 
         // Image and file upload path under the disk above.
         'directory' => [
@@ -164,10 +164,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel-admin database settings
+    | 8Learning database settings
     |--------------------------------------------------------------------------
     |
-    | Here are database settings for laravel-admin builtin model & tables.
+    | Here are database settings for 8Learning builtin model & tables.
     |
     */
     'database' => [
@@ -204,7 +204,7 @@ return [
     | User operation log setting
     |--------------------------------------------------------------------------
     |
-    | By setting this option to open or close operation log in laravel-admin.
+    | By setting this option to open or close operation log in 8Learning.
     |
     */
     'operation_log' => [
@@ -249,7 +249,7 @@ return [
     | Set a default avatar for newly created users.
     |
     */
-    'default_avatar' => '/vendor/laravel-admin/AdminLTE/dist/img/user2-160x160.jpg',
+    'default_avatar' => '/vendor/8Learning/AdminLTE/dist/img/user2-160x160.jpg',
 
     /*
     |--------------------------------------------------------------------------
@@ -306,7 +306,7 @@ return [
     | Show version at footer
     |--------------------------------------------------------------------------
     |
-    | Whether to display the version number of laravel-admin at the footer of
+    | Whether to display the version number of 8Learning at the footer of
     | each page
     |
     */
@@ -357,7 +357,7 @@ return [
     | Enable/Disable sidebar menu search
     |--------------------------------------------------------------------------
     */
-    'enable_menu_search' => true,
+    'enable_menu_search' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -399,7 +399,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | You can find all available extensions here
-    | https://github.com/laravel-admin-extensions.
+    | https://github.com/8Learning-extensions.
     |
     */
     'extensions' => [

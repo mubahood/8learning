@@ -16,7 +16,6 @@ class MainController extends BaseController
     public function index()
     {
         $top_courses = Course::where([
-            'visibility' => 1,
         ])->orderBy('id', 'Desc')
             ->limit(6)
             ->get();

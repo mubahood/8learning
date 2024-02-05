@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Admin\Controllers\AuthController;
 use Encore\Admin\Auth\Database\Administrator;
 use Encore\Admin\Facades\Admin;
 use Illuminate\Http\Request;
@@ -12,21 +13,27 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
-class AccountController extends BaseController
+class AccountController extends AuthController
 {
 
     public function register()
     {
-        if (Auth::guard()->check()) {
+        $u = Admin::user();
+        //dd($u);
+        if ($u != null) {
             return redirect("/dashboard");
         }
         return view('register');
     }
     public function login()
     {
-        if (Auth::guard()->check()) {
+        $u = Admin::user();
+        if ($u != null) {
             return redirect("/dashboard");
-        }
+        } 
+        /* if (Auth::guard()->check()) {
+            return redirect("/dashboard");
+        } */
         return view('login');
     }
 
@@ -108,7 +115,7 @@ class AccountController extends BaseController
 
         $u = Auth::user();
         $acc = Administrator::find($u->id);
-       /*  echo "<pre>";
+        /*  echo "<pre>";
         print_
         if ($acc == null) {
             die("account not found");
@@ -126,7 +133,6 @@ class AccountController extends BaseController
 
     public function register_post(Request $r)
     {
-
 
         if (Validator::make($_POST, [
             'name' => 'required|string|min:4'
@@ -186,10 +192,22 @@ class AccountController extends BaseController
                 ->withInput();
         }
 
+        $credentials = $r->only([$this->username(), 'password']);
+        $remember = $r->get('remember', true);
+
+        if ($this->guard()->attempt([
+            'username' => $r->email,
+            'password' => $r->password,
+        ], $remember)) {
+            return $this->sendLoginResponse($r);
+        }
+        return back()->withInput()->withErrors([
+            $this->username() => $this->getFailedLoginMessage(),
+        ]);
 
 
 
-        if (Auth::attempt([
+        if (Admin::attempt([
             'username' => $r->email,
             'password' => $r->password,
         ], true)) {

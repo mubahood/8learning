@@ -19,7 +19,9 @@
                         <h1 class="text-center text-xl-start">Create Account</h1>
                         <p class="text-center text-xl-start pb-3 mb-3">Already have an account? <a
                                 href="login">Sign in here.</a></p>
-                        <form class="needs-validation" method="POST" novalidate>
+                        <form class="needs-validation" method="POST" 
+                        action="{{ route('register') }}"
+                        >
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="row">
                                 <div class="col-sm-6 mb-3">
@@ -53,13 +55,13 @@
                                     ])
                                 </div>
                             </div>
-                            <div class="mb-4">
+                            {{-- <div class="mb-4">
                                 <div class="form-check">
                                     <input type="checkbox" id="terms" class="form-check-input">
                                     <label for="terms" class="form-check-label fs-base">I agree to <a
                                             href="javascript:;">Terms &amp; Conditions</a></label>
                                 </div>
-                            </div>
+                            </div> --}}
                             <button type="submit" class="btn btn-primary shadow-primary btn-lg w-100">Sign up</button>
                         </form>
 

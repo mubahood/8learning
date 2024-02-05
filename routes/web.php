@@ -12,17 +12,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [MainController::class, 'index'])->name('home');
 Route::get('/register', [AccountController::class, 'register'])->name('register');
 
-Route::get('/login', [AccountController::class, 'login'])->name('login')
-    ->middleware(RedirectIfAuthenticated::class);
+Route::get('/auth/login', [AccountController::class, 'login'])->name('login');
+Route::get('login', function () {
+    return redirect('/auth/login');
+});
 
 Route::post('/register', [AccountController::class, 'register_post'])
-    ->middleware(RedirectIfAuthenticated::class);
+    /* ->middleware(RedirectIfAuthenticated::class) */;
 
 Route::post('/login', [AccountController::class, 'login_post'])
-    ->middleware(RedirectIfAuthenticated::class);
+    /* ->middleware(RedirectIfAuthenticated::class) */;
 
-Route::get('/dashboard', [AccountController::class, 'dashboard'])
-    ->middleware(Authenticate::class);
+/* Route::get('/dashboard', [AccountController::class, 'dashboard'])
+    ->middleware(Authenticate::class); */
 
 
 Route::get('/account-details', [AccountController::class, 'account_details'])

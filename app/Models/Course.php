@@ -20,5 +20,7 @@ class Course extends Model
         return $this->hasMany(CourseTopic::class);
     }
 
+  
+
     use HasFactory;
 }
