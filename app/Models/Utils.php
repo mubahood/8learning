@@ -15,6 +15,63 @@ class Utils extends Model
     use HasFactory;
 
 
+    public static  function send_sms($phone, $sms)
+    {
+        $_phone = $phone;
+        try {
+            $_phone = Utils::prepare_phone_number($phone);
+        } catch (\Throwable $th) {
+            $_phone = $phone;
+        }
+
+        $phone = Utils::prepare_phone_number($_phone);
+        $sms = urlencode($sms);
+        $url = '';
+        $url .= "?spname=mulimisa";
+        $url .= "&sppass=Dev@Team1";
+        $url .= "&numbers=$phone";
+        $url .= "&msg=$sms";
+        $url .= "&type=json";
+
+        $url = "https://sms.dmarkmobile.com/v2/api/send_sms/" . $url;
+
+        //use guzzle to make the request 
+        $body = null;
+        try {
+            //use use curl to make the request
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $body = curl_exec($ch);
+            curl_close($ch);
+        } catch (\Throwable $th) {
+            //throw $th;
+            return 'Failed to send request';
+        }
+        $data = json_decode($body);
+        if ($data == null) {
+            return 'Failed to decode response 1';
+        }
+
+        if (!isset($data->Failed)) {
+            return 'Failed to get status ' . $body;
+        }
+        if (!isset($data->Total)) {
+            return 'Total not set ' . $body;
+        }
+
+        if (((int)$data->Failed) > 0) {
+            return 'Failed sms sent is greater than 0';
+        }
+        if (((int)$data->Total) < 1) {
+            return 'Total sms sent is less than 1 5';
+        }
+
+        return 'success';
+    }
+
+
+
     public static function get_ai_answer($query)
     {
         if (strlen($query) < 3) {
@@ -521,9 +578,11 @@ class Utils extends Model
 
         return true;
     }
+    
+
+
     public static function prepare_phone_number($phone_number)
     {
-        return $phone_number;
         $original = $phone_number;
         //$phone_number = '+256783204665';
         //0783204665
@@ -540,6 +599,7 @@ class Utils extends Model
         }
         return "+256" . $phone_number;
     }
+
 
 
 

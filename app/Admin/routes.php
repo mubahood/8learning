@@ -18,4 +18,5 @@ Route::group([
     $router->resource('participants', ParticipantController::class);
     $router->resource('dashboard-course-topics', CourseTopicController::class);
     $router->resource('dashboard-publications', PublicationController::class);
+    $router->resource('dashboard-s-m-s-intergrations', SMSIntergrationController::class);
 });
