@@ -14,6 +14,7 @@ return array(
     'App\\Admin\\Controllers\\HomeController' => $baseDir . '/app/Admin/Controllers/HomeController.php',
     'App\\Admin\\Controllers\\ParticipantController' => $baseDir . '/app/Admin/Controllers/ParticipantController.php',
     'App\\Admin\\Controllers\\PublicationController' => $baseDir . '/app/Admin/Controllers/PublicationController.php',
+    'App\\Admin\\Controllers\\SMSIntergrationController' => $baseDir . '/app/Admin/Controllers/SMSIntergrationController.php',
     'App\\Admin\\Controllers\\UserController' => $baseDir . '/app/Admin/Controllers/UserController.php',
     'App\\Admin\\Forms\\Setting' => $baseDir . '/app/Admin/Forms/Setting.php',
     'App\\Admin\\Forms\\Steps\\Info' => $baseDir . '/app/Admin/Forms/Steps/Info.php',

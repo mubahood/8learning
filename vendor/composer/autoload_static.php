@@ -555,6 +555,7 @@ class ComposerStaticInitda89eef54c810448a827ed04bb3da82f
         'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
         'App\\Admin\\Controllers\\ParticipantController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ParticipantController.php',
         'App\\Admin\\Controllers\\PublicationController' => __DIR__ . '/../..' . '/app/Admin/Controllers/PublicationController.php',
+        'App\\Admin\\Controllers\\SMSIntergrationController' => __DIR__ . '/../..' . '/app/Admin/Controllers/SMSIntergrationController.php',
         'App\\Admin\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Admin/Controllers/UserController.php',
         'App\\Admin\\Forms\\Setting' => __DIR__ . '/../..' . '/app/Admin/Forms/Setting.php',
         'App\\Admin\\Forms\\Steps\\Info' => __DIR__ . '/../..' . '/app/Admin/Forms/Steps/Info.php',
