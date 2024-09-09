@@ -73,6 +73,20 @@
         })(window, document, 'script', 'dataLayer', 'GTM-TJLS4HMZ');
     </script>
     <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN4K8HM1ZY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HN4K8HM1ZY');
+    </script>
+
     <!-- Page loading styles -->
     <style>
         .page-loading {
