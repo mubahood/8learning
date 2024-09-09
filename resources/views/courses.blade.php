@@ -57,7 +57,7 @@
               <a href="portfolio-single-course.html">Fullstack Web Developer Course from Scratch</a>
             </h3>
             <p class="fs-sm mb-2">By Albert Flores</p>
-            <p class="fs-lg fw-semibold text-primary mb-0">$12.50</p>
+            <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
@@ -87,7 +87,7 @@
               <a href="portfolio-single-course.html">HTML, CSS, JavaScript Web Developer</a>
             </h3>
             <p class="fs-sm mb-2">By Jenny Wilson &amp; Marvin McKinney</p>
-            <p class="fs-lg fw-semibold text-primary mb-0">$15.99</p>
+            <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
@@ -118,7 +118,7 @@
               <a href="portfolio-single-course.html">HTML, CSS, JavaScript Web Developer</a>
             </h3>
             <p class="fs-sm mb-2">By Robert Fox</p>
-            <p class="text-muted mb-0"><span class="fs-lg fw-semibold text-danger me-2">$9.99</span><del>$44.99</del></p>
+            <p class="text-muted mb-0"><span class="fs-lg fw-semibold text-danger me-2">FREE</span><del>FREE</del></p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
@@ -148,7 +148,7 @@
               <a href="portfolio-single-course.html">iOS &amp; Swift - The Complete iOS App Development Course</a>
             </h3>
             <p class="fs-sm mb-2">By Marvin McKinney</p>
-            <p class="fs-lg fw-semibold text-primary mb-0">$15.99</p>
+            <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
@@ -179,7 +179,7 @@
               <a href="portfolio-single-course.html">Data Science &amp; Machine Learning with Python</a>
             </h3>
             <p class="fs-sm mb-2">By Esther Howard</p>
-            <p class="fs-lg fw-semibold text-primary mb-0">$19.75</p>
+            <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
@@ -209,7 +209,7 @@
               <a href="portfolio-single-course.html">Creative CSS Drawing Course: Make Art With CSS</a>
             </h3>
             <p class="fs-sm mb-2">By Robert Fox</p>
-            <p class="fs-lg fw-semibold text-primary mb-0">$17.99</p>
+            <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
@@ -239,7 +239,7 @@
               <a href="portfolio-single-course.html">Blender Character Creator v2.0 for Video Games Design</a>
             </h3>
             <p class="fs-sm mb-2">By Ralph Edwards</p>
-            <p class="fs-lg fw-semibold text-primary mb-0">$25.00</p>
+            <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
@@ -270,7 +270,7 @@
               <a href="portfolio-single-course.html">The Ultimate Guide to 2D Mobile Game Development with Unity</a>
             </h3>
             <p class="fs-sm mb-2">By Albert Flores</p>
-            <p class="text-muted mb-0"><span class="fs-lg fw-semibold text-danger me-2">$12.99</span><del>$34.99</del></p>
+            <p class="text-muted mb-0"><span class="fs-lg fw-semibold text-danger me-2">FREE</span><del>FREE</del></p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
@@ -300,7 +300,7 @@
               <a href="portfolio-single-course.html">Learn JMETER from Scratch on Live Apps-Performance Testing</a>
             </h3>
             <p class="fs-sm mb-2">By Jenny Wilson</p>
-            <p class="fs-lg fw-semibold text-primary mb-0">$14.50</p>
+            <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">

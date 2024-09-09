@@ -11,8 +11,8 @@
             <div class="row">
                 <div class="col-lg-5 d-flex flex-column pt-lg-4 pt-xl-5">
                     <h5 class="my-2">Welcome!</h5>
-                    <h1 class="display-3 mb-4">Learn <span class="text-primary">IT Online</span> with No Limits</h1>
-                    <p class="fs-lg mb-5">Enjoy our great selection of IT courses. Choose from more than 25K online video
+                    <h1 class="display-3 mb-4">Learn <span class="text-primary">Farming Online</span> with No Limits</h1>
+                    <p class="fs-lg mb-5">Enjoy our great selection of Farming courses. Choose from more than 25K online video
                         courses and become an IT expert now!</p>
 
                     <!-- Desktop form -->
@@ -215,7 +215,7 @@
                                             Scratch</a>
                                     </h3>
                                     <p class="fs-sm mb-2">By Albert Flores</p>
-                                    <p class="fs-lg fw-semibold text-primary mb-0">$12.50</p>
+                                    <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
                                 </div>
                                 <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                                     <div class="d-flex align-items-center me-4">
@@ -250,7 +250,7 @@
                                         <a href="portfolio-single-course.html">HTML, CSS, JavaScript Web Developer</a>
                                     </h3>
                                     <p class="fs-sm mb-2">By Jenny Wilson &amp; Marvin McKinney</p>
-                                    <p class="fs-lg fw-semibold text-primary mb-0">$15.99</p>
+                                    <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
                                 </div>
                                 <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                                     <div class="d-flex align-items-center me-4">
@@ -288,7 +288,7 @@
                                     </h3>
                                     <p class="fs-sm mb-2">By Robert Fox</p>
                                     <p class="text-muted mb-0"><span
-                                            class="fs-lg fw-semibold text-danger me-2">$9.99</span><del>$44.99</del></p>
+                                            class="fs-lg fw-semibold text-danger me-2">FREE</span><del>UGX 45,000</del></p>
                                 </div>
                                 <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                                     <div class="d-flex align-items-center me-4">
@@ -324,7 +324,7 @@
                                             Python</a>
                                     </h3>
                                     <p class="fs-sm mb-2">By Esther Howard</p>
-                                    <p class="fs-lg fw-semibold text-primary mb-0">$13.99</p>
+                                    <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
                                 </div>
                                 <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                                     <div class="d-flex align-items-center me-4">
@@ -360,7 +360,7 @@
                                             Development</a>
                                     </h3>
                                     <p class="fs-sm mb-2">By Albert Flores</p>
-                                    <p class="fs-lg fw-semibold text-primary mb-0">$29.99</p>
+                                    <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
                                 </div>
                                 <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                                     <div class="d-flex align-items-center me-4">
