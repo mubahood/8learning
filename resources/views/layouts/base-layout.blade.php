@@ -10,7 +10,7 @@
     <meta name="keywords"
         content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
     <meta name="author" content="Createx Studio">
-    <base href="http://localhost:8888/8learning/" >
+    <base href="{{ env('APP_URL') }}">
 
 
     {{-- base url --}}
