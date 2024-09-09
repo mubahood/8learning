@@ -32,44 +32,43 @@ class ParticipantController extends AdminController
         } else {
             $grid->model()->where('user_id', $u->id)->orderBy('id', 'desc');
         }
-        $grid->column('id', __('Id'));
-
-        $grid->column('email', __('Email'));
+        // $grid->column('id', __('Id'));
         $grid->column('created_at', __('Date'))
-            ->date('Y-m-d');
+            ->display(function ($created_at) {
+                return date('d M Y', strtotime($created_at));
+            })->sortable();
+
+        $grid->column('email', __('Email'))->sortable();
+
         $grid->disableBatchActions();
 
 
-        $grid->column('activation_status', __('Course Activation'))
+        $grid->column('activation_status', __('Course Completion'))
             ->display(function ($activation_status) {
-                if ($activation_status == 'Active') {
-                    return "<span class='label label-success'>Active</span>";
+                if ($activation_status == 'Completed') {
+                    return "<span class='label label-success'>Completed</span>";
                 } else {
-                    return "<span class='label label-danger'>Inactive</span>";
+                    return "<span class='label label-info'>Ongoing</span>";
                 }
-            }); 
-        $grid->column('payment_status', __('Payment Status'))
+            });
+        $grid->column('payment_status', __('Learning progress'))
             ->display(function ($payment_status) {
-                if ($payment_status == 'Paid') {
-                    return "<span class='label label-success'>Paid</span>";
-                } else {
-                    return "<span class='label label-danger'>Not Paid</span>";
-                }
-            }); 
+                return rand(5, 100) . '%';
+            });
         $grid->column('payment_method', __('Payment Method'))->hide();
-        $grid->column('payment_reference', __('Payment reference'));
-        $grid->column('payment_amount', __('Payment amount'));
-        $grid->column('payment_date', __('Payment date'));
-        $grid->column('payment_currency', __('Payment Currency'));
+        // $grid->column('payment_reference', __('Payment reference'));
+        // $grid->column('payment_amount', __('Payment amount'));
+        // $grid->column('payment_date', __('Payment date'));
+        // $grid->column('payment_currency', __('Payment Currency'));
         if ($u->isRole('administrator')) {
-/*             $grid->column('user.name', __('User')); */
+            /*             $grid->column('user.name', __('User')); */
             $grid->column('course_id', __('Course'))
                 ->display(function ($course_id) {
                     return \App\Models\Course::find($course_id)->name;
                 });
             $grid->column('ref', __('Ref'))->hide();
             $grid->column('name', __('Name'))->hide();
-            $grid->column('whatsapp', __('Whatsapp'));
+            $grid->column('whatsapp', __('Contact'));
             $grid->column('country', __('Country'));
             $grid->column('message', __('Message'))->hide();
         }
@@ -160,7 +159,7 @@ class ParticipantController extends AdminController
         if ($u->isRole('administrator')) {
             $form->text('name', __('Full Name'))->rules('required');
             $form->email('email', __('Email'))->rules('required');
-            $form->text('whatsapp', __('Whatsapp'))->rules('required');
+            $form->text('whatsapp', __('Contact'))->rules('required');
             $form->text('country', __('Country'))->rules('required');
             $form->textarea('message', __('Message'));
         } else {
@@ -197,7 +196,7 @@ class ParticipantController extends AdminController
         $form->text('payment_date', __('Payment date'));
         $form->text('payment_currency', __('Payment currency'));
              */
-        $form->disableEditingCheck();
+        // $form->disableEditingCheck();
         $form->disableCreatingCheck();
         $form->disableViewCheck();
         $form->disableReset();

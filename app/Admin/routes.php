@@ -13,7 +13,9 @@ Route::group([
 
     $router->get('dashboard', 'HomeController@index')->name('home');
     $router->resource('course-categories', CourseCategoryController::class);
-    $router->resource('courses', CourseController::class);
+    $router->resource('dashboard-courses', CourseController::class);
     $router->resource('settings-1', UserController::class);
     $router->resource('participants', ParticipantController::class);
+    $router->resource('dashboard-course-topics', CourseTopicController::class);
+    $router->resource('dashboard-publications', PublicationController::class);
 });

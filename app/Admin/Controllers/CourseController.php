@@ -33,23 +33,57 @@ class CourseController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Course());
-
+        $grid->quickSearch('name')->placeholder('Search by title');
         $grid->column('id', __('Id'));
-        $grid->column('created_at', __('Created'));
-        $grid->column('administrator_id', __('Administrator id'));
-        $grid->column('course_category_id', __('Course category id'));
-        $grid->column('name', __('Name'));
-        $grid->column('price', __('Price'));
+        $grid->column('thumbnail', __('Thumbnail'))->image('', 80, 80)
+            ->width(85);
+        $grid->disableBatchActions();
+        $grid->column('created_at', __('Created'))
+            ->display(function ($created_at) {
+                return Utils::my_date($created_at);
+            });
+        $grid->column('name', __('Title'))->sortable();
         $grid->column('total_hours', __('Total hours'));
-        $grid->column('level', __('Level'));
-        $grid->column('thumbnail', __('Thumbnail'));
-        $grid->column('introduction_video', __('Introduction video'));
-        $grid->column('has_certificate', __('Has certificate'));
-        $grid->column('details', __('Details'));
-        $grid->column('skills', __('Skills'));
-        $grid->column('prerequisits', __('Prerequisits'));
-        $grid->column('tags', __('Tags'));
-        $grid->column('language', __('Language'));
+        $grid->column('administrator_id', __('Created by'))
+            ->display(function () {
+                $u = Administrator::find($this->administrator_id);
+                if ($u) {
+                    return $u->name;
+                }
+                return "Unknown";
+            })->sortable();
+        $grid->column('course_category_id', __('Category'))
+            ->display(function () {
+                $u = CourseCategory::find($this->course_category_id);
+                if ($u) {
+                    return $u->name;
+                }
+                return "Unknown";
+            })->sortable();
+        $grid->column('level', __('Level'))->sortable();
+
+        $grid->column('has_certificate', __('Has certificate'))
+            ->label([
+                0 => 'Danger',
+                1 => 'Success',
+            ])
+            ->filter([
+                0 => 'No',
+                1 => 'Yes',
+            ]);
+        // $grid->column('skills', __('Skills'));
+        // $grid->column('prerequisits', __('Prerequisits'));
+        $grid->column('tags', __('Tags'))
+            ->display(function ($tags) {
+                $tags = explode(",", $tags);
+                $html = "";
+                foreach ($tags as $tag) {
+                    $html .= "<span class='label label-primary'>$tag</span>&nbsp;";
+                }
+                return $html;
+            }); 
+        $grid->column('language', __('Language'))
+            ->hide();
 
         return $grid;
     }
@@ -160,7 +194,7 @@ class CourseController extends AdminController
             });
         });
 
-        if ($form->isEditing()) {
+       /*  if ($form->isEditing()) {
 
             $form->tab('Chapter Topics', function ($form) {
                 $form->setWidth(6, 4);
@@ -191,7 +225,7 @@ class CourseController extends AdminController
                     $form->summernote('description', __('Notes'));
                 });
             });
-        }
+        } */
 
         $form->tab('Course Visibility', function ($form) {
 

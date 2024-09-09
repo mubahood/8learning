@@ -23,4 +23,11 @@ class CourseChapter extends Model
         'course_id',
         'name'
     ];
+
+    //get dropdown list
+    public static function getCourseChapterDropdown()
+    {
+        $course_chapters = CourseChapter::pluck('name', 'id');
+        return $course_chapters;
+    }
 }

@@ -30,11 +30,16 @@ if (!isset($header_style)) {
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a href="javascript:;" class="nav-link">Our Courses</a>
+                    <a href="{{ route('courses') }}" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('publications') }}" class="nav-link">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('news') }}" class="nav-link">News</a>
                 </li>
 
-                {{-- 
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
                     <div class="dropdown-menu">
                         <div class="d-lg-flex pt-lg-3">
@@ -71,29 +76,31 @@ if (!isset($header_style)) {
                             </div>
                         </div>
                     </div>
-                </li>
- --}}
+                </li> --}}
 
-                {{--         <li class="nav-item dropdown">
+
+                <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
-                        aria-current="page">Admission</a>
+                        aria-current="page">Pages</a>
                     <div class="dropdown-menu p-0">
                         <div class="d-lg-flex" style="height: 20rem">
                             <div class="mega-dropdown-column bg-position-center bg-repeat-0 bg-size-cover rounded-3 rounded-end-0"
                                 style="background-image: url(assets/img/landings.jpg); margin: -1px;"></div>
                             <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="javascript:;" class="dropdown-item">Fees Payment </a>
+                                    <li><a href="{{ route('podcast') }}" class="dropdown-item">Single podcast</a></li>
+                                    <li><a href="{{ route('course') }}" class="dropdown-item">Single course</a></li>
+                                    <li><a href="{{ route('news-post') }}" class="dropdown-item">Single newspost</a>
                                     </li>
-                                    <li><a href="javascript:;" class="dropdown-item">Payment</a></li>
+                                    <li><a href="{{ route('contact-us') }}" class="dropdown-item">Contact us</a></li>
+                                    <li><a href="{{ route('slider') }}" class="dropdown-item">Slider view</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </li>
- --}}
 
-                {{-- 
+
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account</a>
                     <ul class="dropdown-menu">
@@ -109,10 +116,10 @@ if (!isset($header_style)) {
                         <li><a href="javascript:;" class="dropdown-item">Sign In</a></li>
                         <li><a href="javascript:;" class="dropdown-item">Sign Up</a></li>
                     </ul>
-                </li> --}}
+                </li>
 
                 <li class="nav-item">
-                    <a href="javascript:;" class="nav-link">About Us</a>
+                    <a href="{{ route('about-us') }}" class="nav-link">About Us</a>
                 </li>
             </ul>
         </div>
@@ -141,6 +148,11 @@ if (!isset($header_style)) {
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+        <input type="checkbox" class="form-check-input" id="theme-mode">
+        <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+        <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+    </div>
     @if ($u == null)
         <a href="{{ url('register') }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
             rel="noopener">

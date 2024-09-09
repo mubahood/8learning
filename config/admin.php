@@ -153,12 +153,11 @@ return [
     'upload' => [
 
         // Disk in `config/filesystem.php`.
-        'disk' => 'local',
-
+        'disk' => 'admin',
         // Image and file upload path under the disk above.
         'directory' => [
-            'image' => '/',
-            'file'  => '/',
+            'image' => '/images',
+            'file'  => 'files',
         ],
     ],
 
@@ -275,7 +274,7 @@ return [
     |    "skin-red", "skin-red-light", "skin-black", "skin-black-light".
     |
     */
-    'skin' => env('ADMIN_SKIN', 'skin-blue-light'),
+    'skin' => env('ADMIN_SKIN', 'skin-purple-light'),
 
     /*
     |--------------------------------------------------------------------------

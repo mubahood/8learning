@@ -4,7 +4,7 @@ php artisan migrate
 
 php artisan make:migration create_courses_table 
 
-php artisan make:migration add_cols_participants --table=participants
+php artisan make:migration change_cols_participants_course_categories --table=course_categories
 
 Encore\Admin\Auth\Database\Administrator::class,
 php artisan admin:make FormSr4Controller --model=App\FormSr4
@@ -14,7 +14,7 @@ php artisan admin:make FormSr4Controller --model=App\FormSr4
 
  
 php artisan admin:make CourseController --model=App\\Models\\Course
-php artisan admin:make ParticipantController --model=App\\Models\\Participant
+php artisan admin:make PublicationController --model=App\\Models\\Publication
  
-php artisan make:model Participant
+php artisan make:model Publication -m
 

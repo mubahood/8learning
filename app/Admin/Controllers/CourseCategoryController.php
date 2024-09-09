@@ -26,12 +26,19 @@ class CourseCategoryController extends AdminController
     {
         $grid = new Grid(new CourseCategory());
 
-        $grid->column('id', __('Id'));
+        $grid->model()->orderBy('name', 'asc');
+        $grid->disableBatchActions();
+        $grid->quickSearch('name')->placeholder('Search by title');
+
+        /* $grid->column('id', __('Id'))
         $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
-        $grid->column('name', __('Name'));
-        $grid->column('thumbnail', __('Thumbnail'));
-        $grid->column('details', __('Details'));
+        $grid->column('updated_at', __('Updated at')); */
+        $grid->column('thumbnail', __('Thumbnail'))
+            ->image('', 80, 80)
+            ->width(85);
+        $grid->column('name', __('Title'))->sortable();
+
+        $grid->column('details', __('Details'))->hide();
 
         return $grid;
     }
@@ -71,7 +78,8 @@ class CourseCategoryController extends AdminController
             ->rules('required');
 
         $form->image('thumbnail', __('Thumbnail'))
-            ->rules('required');
+            ->rules('required')
+            ->uniqueName();
         $form->summernote('details', __('Details'))
             ->rules('required');
 

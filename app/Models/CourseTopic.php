@@ -28,4 +28,25 @@ class CourseTopic extends Model
         'description',
         'minutes',
     ];
+
+    //getter for files
+    public function getFilesAttribute($files)
+    {
+        return json_decode($files);
+    }
+
+    //setter for files
+    public function setFilesAttribute($files)
+    {
+        if (is_array($files)) {
+            $this->attributes['files'] = json_encode($files);
+        }
+
+        //first check
+        // $this->attributes['files'] = json_encode($value);
+        // if (is_array($value)) {
+        // } else {
+        //     $this->attributes['files'] = json_encode([]);
+        // }
+    }
 }
