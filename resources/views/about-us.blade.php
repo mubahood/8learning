@@ -26,7 +26,7 @@
                     </nav>
 
                     <!-- Text -->
-                    <h1 class="pb-2 pb-md-3">About Silicon</h1>
+                    <h1 class="pb-2 pb-md-3">About PELUM KML</h1>
                     <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">We are a dedicated team of
                         passionate product managers, full stack developers, UX/UI designers, QA engineers and marketing
                         experts helping businesses of every size — from new startups to public companies — launch their
@@ -204,7 +204,7 @@
                         class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
                     <div
                         class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4">
-                        <h2 class="h1 text-center text-md-start p-lg-4">What Our Clients Say About Silicon Studio</h2>
+                        <h2 class="h1 text-center text-md-start p-lg-4">What Our Clients Say About PELUM KML Studio</h2>
                     </div>
                 </div>
             </div>
@@ -624,7 +624,7 @@
                         </a>
                         <div class="pt-4">
                             <h6 class="mb-1">Facebook</h6>
-                            <p class="fs-sm text-muted mb-0">silicon</p>
+                            <p class="fs-sm text-muted mb-0">PELUM KML</p>
                         </div>
                     </div>
                 </div>
@@ -638,7 +638,7 @@
                         </a>
                         <div class="pt-4">
                             <h6 class="mb-1">Instagram</h6>
-                            <p class="fs-sm text-muted mb-0">@silicon</p>
+                            <p class="fs-sm text-muted mb-0">@PELUM</p>
                         </div>
                     </div>
                 </div>
@@ -652,7 +652,7 @@
                         </a>
                         <div class="pt-4">
                             <h6 class="mb-1">Twitter</h6>
-                            <p class="fs-sm text-muted mb-0">@silicon</p>
+                            <p class="fs-sm text-muted mb-0">@PELUM KML</p>
                         </div>
                     </div>
                 </div>
@@ -666,7 +666,7 @@
                         </a>
                         <div class="pt-4">
                             <h6 class="mb-1">LinkedIn</h6>
-                            <p class="fs-sm text-muted mb-0">Silicon Inc.</p>
+                            <p class="fs-sm text-muted mb-0">PELUM KML Inc.</p>
                         </div>
                     </div>
                 </div>
@@ -680,7 +680,7 @@
                         </a>
                         <div class="pt-4">
                             <h6 class="mb-1">YouTube</h6>
-                            <p class="fs-sm text-muted mb-0">Silicon</p>
+                            <p class="fs-sm text-muted mb-0">PELUM KML</p>
                         </div>
                     </div>
                 </div>
@@ -694,7 +694,7 @@
                         </a>
                         <div class="pt-4">
                             <h6 class="mb-1">Dribbble</h6>
-                            <p class="fs-sm text-muted mb-0">Silicon</p>
+                            <p class="fs-sm text-muted mb-0">PELUM KML</p>
                         </div>
                     </div>
                 </div>

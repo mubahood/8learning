@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Silicon | Online Courses Landing</title>
+    <title>PELUM | Knowledge Management & Learning Platform</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
+    <meta name="description" content="PELUM - K">
     <meta name="keywords"
         content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
     <meta name="author" content="Createx Studio">
