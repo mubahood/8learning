@@ -19,7 +19,7 @@ if (!isset($header_style)) {
 
 <div class="container px-3">
     <a href="{{ url('/') }}" class="navbar-brand pe-3">
-        <img src="assets/img/logo.svg" width="47" alt="PELUM KML"> PELUM KML
+        <img src="assets/img/pelum.webp" width="47" alt="PELUM KML"> PELUM KML
     </a>
     <div id="navbarNav" class="offcanvas offcanvas-end">
         <div class="offcanvas-header border-bottom">
