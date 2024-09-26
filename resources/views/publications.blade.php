@@ -6,7 +6,7 @@
             <li class="breadcrumb-item">
                 <a href="index-2.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">Blog List with Sidebar</li>
+            <li class="breadcrumb-item active" aria-current="page">Farming Publications</li>
         </ol>
     </nav>
 
@@ -16,14 +16,14 @@
 
         <!-- Page title + Layout switcher -->
         <div class="d-flex align-items-center justify-content-between mb-4 pb-1 pb-md-3">
-            <h1 class="mb-0">Blog List with Sidebar</h1>
+            <h1 class="mb-0">Farming Publications</h1>
             <div class="nav flex-nowrap ms-sm-4 ms-3">
-                <a href="blog-list-with-sidebar.html" class="nav-link me-2 p-0 active" aria-label="List view">
-                    <i class="bx bx-list-ul fs-4"></i>
-                </a>
-                <a href="blog-grid-with-sidebar.html" class="nav-link p-0" aria-label="Grid view">
-                    <i class="bx bx-grid-alt fs-4"></i>
-                </a>
+            <a href="blog-list-with-sidebar.html" class="nav-link me-2 p-0 active" aria-label="List view">
+                <i class="bx bx-list-ul fs-4"></i>
+            </a>
+            <a href="blog-grid-with-sidebar.html" class="nav-link p-0" aria-label="Grid view">
+                <i class="bx bx-grid-alt fs-4"></i>
+            </a>
             </div>
         </div>
 
@@ -35,8 +35,8 @@
                 <!-- Item -->
                 <article class="card border-0 bg-transparent me-xl-5 mb-4">
                     <div class="row g-0">
-                        <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3"
-                            style="background-image: url(assets/img/blog/05.jpg); min-height: 15rem;">
+                        <div class="col-sm-3 position-relative bg-position-center bg-repeat-0 bg-size-cover "
+                            style="background-image: url(); min-height: 15rem;">
                             <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
                                 aria-label="Read more"></a>
                             <a href="#"
@@ -45,17 +45,16 @@
                                 aria-label="Read later">
                                 <i class="bx bx-bookmark"></i>
                             </a>
+                            <img src="assets/img/pubs/05.jpg" alt="">
                         </div>
-                        <div class="col-sm-7">
+                        <div class="col-sm-9">
                             <div class="card-body px-0 pt-sm-0 ps-sm-4 pb-0 pb-sm-4">
                                 <a href="#"
-                                    class="badge fs-sm text-white bg-info shadow-info text-decoration-none mb-3">Digital</a>
+                                    class="badge fs-sm text-white bg-info shadow-info text-decoration-none mb-3">Agriculture</a>
                                 <h3 class="h4">
-                                    <a href="blog-single.html">Inclusive Marketing: Why and How Does it Work?</a>
+                                    <a href="blog-single.html">Sustainable Farming Practices for the Future</a>
                                 </h3>
-                                <p class="mb-4">Nunc aliquet scelerisque pellentesque imperdiet tortor elit, dictum.
-                                    Tristique odio at dignissim viverra aliquet eleifend erat. Tellus, at arcu, egestas
-                                    praesent.</p>
+                                <p class="mb-4">Discover the latest sustainable farming practices that can help reduce environmental impact and improve crop yields. Learn how to implement these techniques on your farm.</p>
                                 <div class="d-flex align-items-center text-muted">
                                     <div class="fs-sm border-end pe-3 me-3">Oct 9, 2023</div>
                                     <div class="d-flex align-items-center me-3">
@@ -83,7 +82,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between mb-3">
                             <a href="#"
-                                class="badge fs-sm text-white bg-warning shadow-warning text-decoration-none">Business</a>
+                                class="badge fs-sm text-white bg-warning shadow-warning text-decoration-none">Agribusiness</a>
                             <a href="#"
                                 class="btn btn-icon btn-secondary btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
                                 data-bs-toggle="tooltip" data-bs-placement="left" title="Read later"
@@ -92,13 +91,9 @@
                             </a>
                         </div>
                         <h3 class="h4">
-                            <a href="blog-single.html">A Study on Smartwatch Design Qualities and People’s Preferences</a>
+                            <a href="blog-single.html">The Impact of Technology on Modern Farming</a>
                         </h3>
-                        <p class="mb-4">Sed parturient in faucibus porttitor morbi rutrum in. Amet fermentum, scelerisque
-                            suspendisse nisi faucibus quis lacus. Convallis eget pretium leo, egestas nisl, congue quam et
-                            ultrices. Pharetra, elementum pulvinar massa mattis sapien, sit. Id sollicitudin viverra morbi
-                            vitae ac tempor bibendum pulvinar vel. Integer non mattis ultrices est morbi ullamcorper
-                            scelerisque hac mi. Id semper ut dui sit magna.</p>
+                        <p class="mb-4">Explore how modern technology is transforming the farming industry. From precision agriculture to automated machinery, see how these advancements are increasing efficiency and productivity.</p>
                         <div class="d-flex align-items-center text-muted">
                             <div class="fs-sm border-end pe-3 me-3">Sep 3, 2023</div>
                             <div class="d-flex align-items-center me-3">
@@ -122,8 +117,8 @@
                 <!-- Item -->
                 <article class="card border-0 bg-transparent me-xl-5 mb-4">
                     <div class="row g-0">
-                        <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3"
-                            style="background-image: url(assets/img/blog/03.jpg); min-height: 15rem;">
+                        <div class="col-sm-3 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3"
+                            style="background-image: url(assets/img/pubs/03.jpg); min-height: 15rem;">
                             <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
                                 aria-label="Read more"></a>
                             <a href="#"
@@ -132,17 +127,16 @@
                                 aria-label="Read later">
                                 <i class="bx bx-bookmark"></i>
                             </a>
+                            <img src="assets/img/pubs/02.jpg" alt="">
                         </div>
-                        <div class="col-sm-7">
+                        <div class="col-sm-9">
                             <div class="card-body px-0 pt-sm-0 ps-sm-4 pb-0 pb-sm-4">
                                 <a href="#"
                                     class="badge fs-sm text-white bg-danger shadow-danger text-decoration-none mb-3">Technology</a>
                                 <h3 class="h4">
-                                    <a href="blog-single.html">This Week in Search: New Limits and Exciting Features</a>
+                                    <a href="blog-single.html">Innovations in Crop Management</a>
                                 </h3>
-                                <p class="mb-4">Aliquet donec cras amet orci in in neque. Ut sed diam quis consectetur
-                                    purus lorem eu, sit. Aliquam eget arcu sed urna feugiat. In integer nisl at dui
-                                    malesuada. Diam pellentesque lobortis elementum lacus.</p>
+                                <p class="mb-4">Learn about the latest innovations in crop management that are helping farmers increase yields and reduce costs. From new irrigation techniques to advanced pest control methods, stay ahead of the curve.</p>
                                 <div class="d-flex align-items-center text-muted">
                                     <div class="fs-sm border-end pe-3 me-3">Sep 16, 2023</div>
                                     <div class="d-flex align-items-center me-3">
@@ -179,11 +173,9 @@
                             </a>
                         </div>
                         <h3 class="h4">
-                            <a href="blog-single.html">How Agile is Your Forecasting Process?</a>
+                            <a href="blog-single.html">How Startups are Innovating in Agriculture</a>
                         </h3>
-                        <p class="mb-4">Nunc aliquet scelerisque pellentesque imperdiet tortor elit, dictum. Tristique
-                            odio at dignissim viverra aliquet eleifend erat. Tellus, at arcu, egestas praesent. Varius
-                            aliquet pharetra adipiscing tincidunt orci nec neque.</p>
+                        <p class="mb-4">Discover how agricultural startups are bringing innovative solutions to the farming industry. From vertical farming to drone technology, learn about the latest trends and advancements.</p>
                         <div class="d-flex align-items-center text-muted">
                             <div class="fs-sm border-end pe-3 me-3">Sep 10, 2023</div>
                             <div class="d-flex align-items-center me-3">
@@ -207,8 +199,8 @@
                 <!-- Item -->
                 <article class="card border-0 bg-transparent me-xl-5 mb-4">
                     <div class="row g-0">
-                        <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3"
-                            style="background-image: url(assets/img/blog/02.jpg); min-height: 15rem;">
+                        <div class="col-sm-3 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3"
+                            style="background-image: url(assets/img/pubs/02.jpg); min-height: 15rem;">
                             <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100"
                                 aria-label="Read more"></a>
                             <a href="#"
@@ -217,17 +209,16 @@
                                 aria-label="Read later">
                                 <i class="bx bx-bookmark"></i>
                             </a>
+                            <img src="assets/img/pubs/03.jpg" alt="">
                         </div>
-                        <div class="col-sm-7">
+                        <div class="col-sm-9">
                             <div class="card-body px-0 pt-sm-0 ps-sm-4 pb-0 pb-sm-4">
                                 <a href="#"
                                     class="badge fs-sm text-white bg-warning shadow-warning text-decoration-none mb-3">Business</a>
                                 <h3 class="h4">
-                                    <a href="blog-single.html">Why UX Design Matters and How it Affects Ranking</a>
+                                    <a href="blog-single.html">The Role of UX Design in Agricultural Tools</a>
                                 </h3>
-                                <p class="mb-4">In mauris porttitor tincidunt mauris massa sit lorem sed scelerisque.
-                                    Fringilla pharetra vel massa enim sollicitudin cras. At pulvinar eget sociis adipiscing
-                                    eget donec ultricies nibh tristique.</p>
+                                <p class="mb-4">Explore how user experience design is impacting the development of agricultural tools and machinery. Learn why intuitive design is crucial for improving efficiency and usability in farming operations.</p>
                                 <div class="d-flex align-items-center text-muted">
                                     <div class="fs-sm border-end pe-3 me-3">Aug 19, 2023</div>
                                     <div class="d-flex align-items-center me-3">
@@ -264,12 +255,9 @@
                             </a>
                         </div>
                         <h3 class="h4">
-                            <a href="blog-single.html">This Long-Awaited Technology May Finally Change the World</a>
+                            <a href="blog-single.html">Digital Transformation in Agriculture</a>
                         </h3>
-                        <p class="mb-4">Nunc, enim donec venenatis quis amet, magna vulputate rhoncus. Interdum lacus,
-                            nam elementum, cursus felis cras eros vel tincidunt. Felis nunc rhoncus quis curabitur facilisi.
-                            Odio cursus in vel et pretium. Ornare interdum in cras nibh lectus fusce. Neque, donec nunc,
-                            tellus, bibendum. Id euismod urna diam dolor lobortis consectetu.</p>
+                        <p class="mb-4">Learn about the digital transformation in agriculture and how new technologies are revolutionizing the industry. From data analytics to IoT devices, see how digital tools are enhancing farming practices.</p>
                         <div class="d-flex align-items-center text-muted">
                             <div class="fs-sm border-end pe-3 me-3">Sep 3, 2023</div>
                             <div class="d-flex align-items-center me-3">
@@ -293,8 +281,8 @@
                 <!-- Item -->
                 <article class="card border-0 bg-transparent me-xl-5">
                     <div class="row g-0">
-                        <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3 overflow-hidden"
-                            style="background-image: url(assets/img/blog/01.jpg); min-height: 15rem;">
+                        <div class="col-sm-3 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3 overflow-hidden"
+                            style="background-image: url(assets/img/pubs/01.jpg); min-height: 15rem;">
                             <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
                             <div
                                 class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 zindex-2">
@@ -310,8 +298,9 @@
                                 aria-label="Read later">
                                 <i class="bx bx-bookmark"></i>
                             </a>
+                            <img src="assets/img/pubs/04.jpg" alt="">
                         </div>
-                        <div class="col-sm-7">
+                        <div class="col-sm-9">
                             <div class="card-body px-0 pt-sm-0 ps-sm-4 pb-0 pb-sm-4">
                                 <a href="#"
                                     class="badge fs-sm text-white bg-success shadow-success text-decoration-none mb-3">Startups</a>
@@ -381,27 +370,27 @@
                                             class="fw-normal opacity-60 ms-1">(48)</span></a>
                                 </li>
                                 <li class="nav-item mb-1">
-                                    <a href="#" class="nav-link py-1 px-0">Digital <span
+                                    <a href="#" class="nav-link py-1 px-0">Crop Management <span
                                             class="fw-normal opacity-60 ms-1">(12)</span></a>
                                 </li>
                                 <li class="nav-item mb-1">
-                                    <a href="#" class="nav-link py-1 px-0">Marketing <span
+                                    <a href="#" class="nav-link py-1 px-0">Sustainable Farming <span
                                             class="fw-normal opacity-60 ms-1">(5)</span></a>
                                 </li>
                                 <li class="nav-item mb-1">
-                                    <a href="#" class="nav-link py-1 px-0">Startups <span
+                                    <a href="#" class="nav-link py-1 px-0">Agricultural Technology <span
                                             class="fw-normal opacity-60 ms-1">(10)</span></a>
                                 </li>
                                 <li class="nav-item mb-1">
-                                    <a href="#" class="nav-link py-1 px-0">Technology <span
+                                    <a href="#" class="nav-link py-1 px-0">Livestock Management <span
                                             class="fw-normal opacity-60 ms-1">(9)</span></a>
                                 </li>
                                 <li class="nav-item mb-1">
-                                    <a href="#" class="nav-link py-1 px-0">Business <span
+                                    <a href="#" class="nav-link py-1 px-0">Market Trends <span
                                             class="fw-normal opacity-60 ms-1">(4)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link py-1 px-0">Processes &amp; Tools <span
+                                    <a href="#" class="nav-link py-1 px-0">Farm Equipment <span
                                             class="fw-normal opacity-60 ms-1">(3)</span></a>
                                 </li>
                             </ul>
@@ -416,7 +405,7 @@
                                 <ul class="list-unstyled mb-0">
                                     <li class="border-bottom pb-3 mb-3">
                                         <h4 class="h6 mb-2">
-                                            <a href="#">5 Bad Landing Page Examples &amp; How We Would Fix Them</a>
+                                            <a href="#">Top 5 Sustainable Farming Practices</a>
                                         </h4>
                                         <div class="d-flex align-items-center text-muted pt-1">
                                             <div class="fs-xs border-end pe-3 me-3">12 hours ago</div>
@@ -436,7 +425,7 @@
                                     </li>
                                     <li class="border-bottom pb-3 mb-3">
                                         <h4 class="h6 mb-2">
-                                            <a href="#">How Agile is Your Forecasting Process?</a>
+                                            <a href="#">How to Improve Soil Health</a>
                                         </h4>
                                         <div class="d-flex align-items-center text-muted pt-1">
                                             <div class="fs-xs border-end pe-3 me-3">Oct 9, 2023</div>
@@ -456,7 +445,7 @@
                                     </li>
                                     <li>
                                         <h4 class="h6 mb-2">
-                                            <a href="#">Inclusive Marketing: Why and How Does it Work?</a>
+                                            <a href="#">The Future of Precision Agriculture</a>
                                         </h4>
                                         <div class="d-flex align-items-center text-muted pt-1">
                                             <div class="fs-xs border-end pe-3 me-3">Sep 13, 2023</div>
@@ -482,14 +471,14 @@
                         <div class="card card-body mb-4">
                             <h3 class="h5">Tags</h3>
                             <div class="d-flex flex-wrap">
-                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#lifestyle</a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#ux</a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#tech</a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#user</a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#software</a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#it</a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#network</a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#engineering</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#farming</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#agriculture</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#sustainability</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#technology</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#innovation</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#crops</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#livestock</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#market</a>
                             </div>
                         </div>
 
@@ -518,7 +507,7 @@
 
                         <!-- Advertising -->
                         <div class="card border-0 bg-faded-primary bg-repeat-0 bg-size-cover"
-                            style="min-height: 25rem; background-image: url(assets/img/blog/banner.png);">
+                            style="min-height: 25rem; background-image: url(assets/img/pubs/banner.png);">
                             <div class="card-body">
                                 <h5 class="h3 mb-4 pb-2 text-center">Ad Banner</h5>
                             </div>

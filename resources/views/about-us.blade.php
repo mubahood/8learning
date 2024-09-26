@@ -21,31 +21,27 @@
                             <li class="breadcrumb-item">
                                 <a href="index-2.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">About v.1</li>
+                            <li class="breadcrumb-item active" aria-current="page">About Us</li>
                         </ol>
                     </nav>
 
                     <!-- Text -->
-                    <h1 class="pb-2 pb-md-3">About PELUM KML</h1>
-                    <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">We are a dedicated team of
-                        passionate product managers, full stack developers, UX/UI designers, QA engineers and marketing
-                        experts helping businesses of every size — from new startups to public companies — launch their
-                        projects using our software.</p>
+                    <h1 class="pb-2 pb-md-3">About Our PELUM KML</h1>
+                    <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">We are a dedicated team of passionate farmers, agronomists, and agricultural engineers committed to sustainable farming practices. Our mission is to provide fresh, organic produce while promoting environmental stewardship and supporting local communities.</p>
                     <img src="assets/img/about/clutch-dark.png" class=" d-dark-mode-none" width="175" alt="Clutch">
-                    <img src="assets/img/about/clutch-light.png" class="d-none d-dark-mode-block" width="175"
-                        alt="Clutch">
+                    <img src="assets/img/about/clutch-light.png" class="d-none d-dark-mode-block" width="175" alt="Clutch">
                     <div class="row row-cols-3 pt-4 pt-md-5 mt-2 mt-xl-4">
                         <div class="col">
-                            <h3 class="h2 mb-2">2,480</h3>
-                            <p class="mb-0"><strong>Remote</strong> Sales Experts</p>
+                            <h3 class="h2 mb-2">500</h3>
+                            <p class="mb-0"><strong>Acres</strong> of Farmland</p>
                         </div>
                         <div class="col">
-                            <h3 class="h2 mb-2">760</h3>
-                            <p class="mb-0"><strong>New Clients</strong> per Month</p>
+                            <h3 class="h2 mb-2">300</h3>
+                            <p class="mb-0"><strong>Happy</strong> Customers</p>
                         </div>
                         <div class="col">
-                            <h3 class="h2 mb-2">1,200</h3>
-                            <p class="mb-0"><strong>Requests</strong> per Week</p>
+                            <h3 class="h2 mb-2">50</h3>
+                            <p class="mb-0"><strong>Varieties</strong> of Crops</p>
                         </div>
                     </div>
                 </div>
@@ -93,9 +89,8 @@
                     <div class="text-center">
                         <img src="assets/img/landing/digital-agency/icons/idea.svg" width="48" alt="Bulb icon"
                             class="d-block mb-4 mx-auto">
-                        <h4 class="mb-2 pb-1">Creative Solutions</h4>
-                        <p class="mx-auto" style="max-width: 336px;">Sed morbi nulla pulvinar lectus tempor vel euismod
-                            accumsan.</p>
+                        <h4 class="mb-2 pb-1">Innovative Farming</h4>
+                        <p class="mx-auto" style="max-width: 336px;">We employ cutting-edge techniques to enhance crop yield and sustainability.</p>
                     </div>
                 </div>
 
@@ -105,8 +100,7 @@
                         <img src="assets/img/landing/digital-agency/icons/award.svg" width="48" alt="Award icon"
                             class="d-block mb-4 mx-auto">
                         <h4 class="mb-2 pb-1">Award Winning</h4>
-                        <p class="mx-auto" style="max-width: 336px;">Sit facilisis dolor arcu, fermentum vestibulum arcu
-                            elementum imperdiet.</p>
+                        <p class="mx-auto" style="max-width: 336px;">Our commitment to excellence has earned us numerous accolades in the agricultural sector.</p>
                     </div>
                 </div>
 
@@ -115,9 +109,8 @@
                     <div class="text-center">
                         <img src="assets/img/landing/digital-agency/icons/team.svg" width="48" alt="Team icon"
                             class="d-block mb-4 mx-auto">
-                        <h4 class="mb-2 pb-1">Team of Professionals</h4>
-                        <p class="mx-auto" style="max-width: 336px;">Nam venenatis urna aenean quis feugiat et senectus
-                            turpis.</p>
+                        <h4 class="mb-2 pb-1">Expert Team</h4>
+                        <p class="mx-auto" style="max-width: 336px;">Our team of professionals is dedicated to advancing sustainable farming practices.</p>
                     </div>
                 </div>
             </div>
@@ -149,7 +142,7 @@
     <section class="container mb-5 pb-3 pb-md-4 pb-lg-5">
         <div class="row gy-4 py-xl-2">
             <div class="col-md-4">
-                <h2 class="mb-0 text-md-start text-center">Award-winning designs featured by</h2>
+                <h2 class="mb-0 text-md-start text-center">Recognized for Excellence in Agriculture</h2>
             </div>
             <div class="col-lg-7 offset-lg-1 col-md-8">
                 <div class="row row-cols-sm-4 row-cols-2 gy-4">
@@ -159,7 +152,7 @@
                                 class="d-block mx-auto mb-3">
                             <a href="#"
                                 class="text-body justify-content-center fs-sm stretched-link text-decoration-none">4x
-                                mobile of the day</a>
+                                Sustainable Farming Award</a>
                         </div>
                     </div>
                     <div class="col">
@@ -168,7 +161,7 @@
                                 class="d-block mx-auto mb-3">
                             <a href="#"
                                 class="text-body justify-content-center fs-sm stretched-link text-decoration-none">1x
-                                Kudos</a>
+                                Best Organic Farm</a>
                         </div>
                     </div>
                     <div class="col">
@@ -177,7 +170,7 @@
                                 alt="Awwwards" class="d-block mx-auto mb-3">
                             <a href="#"
                                 class="text-body justify-content-center fs-sm stretched-link text-decoration-none">3x
-                                website of the day</a>
+                                Innovative Farming Techniques</a>
                         </div>
                     </div>
                     <div class="col">
@@ -185,8 +178,8 @@
                             <img src="assets/img/landing/digital-agency/awards/fwa.svg" width="100" alt="FWA"
                                 class="d-block mx-auto mb-3">
                             <a href="#"
-                                class="text-body justify-content-center fs-sm stretched-link text-decoration-none">2x best
-                                website</a>
+                                class="text-body justify-content-center fs-sm stretched-link text-decoration-none">2x Best
+                                Community Support</a>
                         </div>
                     </div>
                 </div>
@@ -204,7 +197,7 @@
                         class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
                     <div
                         class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4">
-                        <h2 class="h1 text-center text-md-start p-lg-4">What Our Clients Say About PELUM KML Studio</h2>
+                        <h2 class="h1 text-center text-md-start p-lg-4">What Our Clients Say About Our Farming Practices</h2>
                     </div>
                 </div>
             </div>
@@ -246,10 +239,7 @@
                             <div class="swiper-slide h-auto">
                                 <figure class="card h-100 position-relative border-0 bg-transparent">
                                     <blockquote class="card-body p-0 mb-0">
-                                        <p class="fs-lg mb-0">Mi semper risus ultricies orci pulvinar in at enim orci. Quis
-                                            facilisis nunc pellentesque in ullamcorper sit. Lorem blandit arcu sapien,
-                                            senectus libero, amet dapibus cursus quam. Eget pellentesque eu purus volutpat
-                                            adipiscing malesuada. Purus nisi, tortor vel lacus.</p>
+                                        <p class="fs-lg mb-0">The quality of produce from PELUM KML is unmatched. Their commitment to sustainable farming practices is evident in every bite. We are proud to support such a dedicated team.</p>
                                     </blockquote>
                                     <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
                                         <img src="assets/img/avatar/14.jpg" width="60" class="rounded-circle"
@@ -266,17 +256,14 @@
                             <div class="swiper-slide h-auto">
                                 <figure class="card h-100 position-relative border-0 bg-transparent">
                                     <blockquote class="card-body p-0 mb-0">
-                                        <p class="fs-lg mb-0">Vestibulum nunc lectus auctor quis. Natoque lectus tortor
-                                            lacus, eu. Nunc feugiat nisl maecenas nulla hac morbi. Vitae, donec facilisis
-                                            sed nunc netus. Venenatis posuere faucibus enim est. Vel dignissim morbi blandit
-                                            morbi tellus. Arcu ullamcorper quis enim.</p>
+                                        <p class="fs-lg mb-0">PELUM KML has transformed our approach to sourcing fresh produce. Their innovative techniques and dedication to quality are truly commendable.</p>
                                     </blockquote>
                                     <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
                                         <img src="assets/img/avatar/13.jpg" width="60" class="rounded-circle"
                                             alt="Ralph Edwards">
                                         <div class="ps-3">
                                             <h6 class="fw-semibold lh-base mb-0">Ralph Edwards</h6>
-                                            <span class="fs-sm text-muted">Head of Marketing at Lorem Ltd. </span>
+                                            <span class="fs-sm text-muted">Head of Marketing at Lorem Ltd.</span>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -286,10 +273,7 @@
                             <div class="swiper-slide h-auto">
                                 <figure class="card h-100 position-relative border-0 bg-transparent">
                                     <blockquote class="card-body p-0 mb-0">
-                                        <p class="fs-lg mb-0">Ac at sed sit senectus massa. Massa ante amet ultrices magna
-                                            porta tempor. Aliquet diam in et magna ultricies mi at. Lectus enim, vel enim
-                                            egestas nam pellentesque et leo. Elit mi faucibus laoreet aliquam pellentesque
-                                            sed aliquet integer massa. Orci leo tortor ornare.</p>
+                                        <p class="fs-lg mb-0">Working with PELUM KML has been a game-changer for our business. Their expertise in sustainable farming and high-quality produce has set a new standard in the industry.</p>
                                     </blockquote>
                                     <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
                                         <img src="assets/img/avatar/11.jpg" width="60" class="rounded-circle"

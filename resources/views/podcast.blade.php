@@ -18,7 +18,7 @@
     <section class="container mt-4 mb-5 pt-2 pb-lg-5">
         <div class="row gy-4">
             <div class="col-lg-7 col-md-6">
-                <img src="assets/img/blog/podcasts/06.jpg" alt="Cover" class="rounded-3">
+                <img src="assets/img/blog/02.jpg" alt="Cover" class="rounded-3">
             </div>
             <div class="col-lg-5 col-md-6">
                 <div class="ms-xl-5 ms-lg-4 ps-xxl-34">
@@ -40,7 +40,7 @@
                         </svg>
                         Podcast
                     </h3>
-                    <h1 class="display-5 pb-md-3">How to Choose a Fantastic SEO Agency</h1>
+                    <h1 class="display-5 pb-md-3">Listen to Let's Talk Agriculture Podcast podcast</h1>
                     <div class="d-flex align-items-center flex-wrap text-muted mb-lg-5 mb-md-4 mb-3">
                         <div class="fs-xs border-end pe-3 me-3 mb-2">
                             <span class="badge bg-faded-primary text-primary fs-base">Startups</span>
@@ -79,7 +79,7 @@
             <div class="col-lg-3 col-md-4 order-md-2 position-relative">
                 <div class="sticky-top ms-xxl-5 ps-lg-4" style="top: 105px !important;">
                     <div class="d-flex align-items-center position-relative mb-lg-5 mb-4">
-                        <img src="assets/img/avatar/06.jpg" class="rounded-circle me-3" width="60" alt="Avatar">
+                        <img src="assets/img/avatar/01.jpg" class="rounded-circle me-3" width="60" alt="Avatar">
                         <div>
                             <h4 class="h6 mb-1">Hosted by</h4>
                             <a href="#" class="fw-semibold stretched-link">Jenny Wilson</a>

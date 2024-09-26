@@ -3,7 +3,7 @@
     <!-- Hero -->
     <section class="jarallax bg-dark pt-2 pt-lg-3 pb-lg-5" data-jarallax data-speed="0.35" data-bs-theme="dark">
         <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-70"></span>
-        <div class="jarallax-img" style="background-image: url(assets/img/portfolio/courses/single.jpg);"></div>
+        <div class="jarallax-img" style="background-image: url(assets/img/portfolio/courses/01.jpg);"></div>
         <div class="container position-relative zindex-5 pb-5">
 
             <!-- Breadcrumb -->
@@ -15,7 +15,7 @@
                     <li class="breadcrumb-item">
                         <a href="portfolio-courses.html">Courses</a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Fullstack Web Developer Course from Scratch</li>
+                    <li class="breadcrumb-item active" aria-current="page">Organic Farming: Principles and Practices</li>
                 </ol>
             </nav>
 
@@ -26,7 +26,7 @@
             </div>
 
             <!-- Title -->
-            <h1>Fullstack Web Developer Course from Scratch</h1>
+            <h1 class="text-white">Organic Farming: Principles and Practices</h1>
             <p class="fs-lg text-light opacity-70">Egestas feugiat lorem eu neque suspendisse ullamcorper scelerisque
                 aliquam mauris.</p>
 
@@ -644,23 +644,23 @@
                                     aria-label="Save to Favorites">
                                     <i class="bx bx-bookmark"></i>
                                 </a>
-                                <img src="assets/img/portfolio/courses/02.jpg" class="card-img-top" alt="Image">
+                                <img src="assets/img/portfolio/courses/organic-farming.jpg" class="card-img-top" alt="Image">
                             </div>
                             <div class="card-body pb-3">
                                 <h3 class="h5 mb-2">
-                                    <a href="#">HTML, CSS, JavaScript Web Developer</a>
+                                    <a href="#">Organic Farming: Principles and Practices</a>
                                 </h3>
-                                <p class="fs-sm mb-2">By Jenny Wilson &amp; Marvin McKinney</p>
-                                <p class="fs-lg fw-semibold text-primary mb-0">$15.99</p>
+                                <p class="fs-sm mb-2">By Dr. Jane Doe</p>
+                                <p class="fs-lg fw-semibold text-primary mb-0">$29.99</p>
                             </div>
                             <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                                 <div class="d-flex align-items-center me-4">
                                     <i class="bx bx-time fs-xl me-1"></i>
-                                    160 hours
+                                    40 hours
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <i class="bx bx-like fs-xl me-1"></i>
-                                    92% (3.1K)
+                                    95% (1.2K)
                                 </div>
                             </div>
                         </article>
@@ -680,24 +680,24 @@
                                     aria-label="Save to Favorites">
                                     <i class="bx bx-bookmark"></i>
                                 </a>
-                                <img src="assets/img/portfolio/courses/03.jpg" class="card-img-top" alt="Image">
+                                <img src="assets/img/portfolio/courses/sustainable-agriculture.jpg" class="card-img-top" alt="Image">
                             </div>
                             <div class="card-body pb-3">
                                 <h3 class="h5 mb-2">
-                                    <a href="#">HTML, CSS, JavaScript Web Developer</a>
+                                    <a href="#">Sustainable Agriculture: Techniques and Practices</a>
                                 </h3>
-                                <p class="fs-sm mb-2">By Robert Fox</p>
+                                <p class="fs-sm mb-2">By Prof. John Smith</p>
                                 <p class="text-muted mb-0"><span
-                                        class="fs-lg fw-semibold text-danger me-2">$9.99</span><del>$44.99</del></p>
+                                        class="fs-lg fw-semibold text-danger me-2">$19.99</span><del>$39.99</del></p>
                             </div>
                             <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                                 <div class="d-flex align-items-center me-4">
                                     <i class="bx bx-time fs-xl me-1"></i>
-                                    210 hours
+                                    50 hours
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <i class="bx bx-like fs-xl me-1"></i>
-                                    98% (2.7K)
+                                    97% (2.3K)
                                 </div>
                             </div>
                         </article>
@@ -715,23 +715,23 @@
                                     aria-label="Save to Favorites">
                                     <i class="bx bx-bookmark"></i>
                                 </a>
-                                <img src="assets/img/portfolio/courses/09.jpg" class="card-img-top" alt="Image">
+                                <img src="assets/img/portfolio/courses/permaculture.jpg" class="card-img-top" alt="Image">
                             </div>
                             <div class="card-body pb-3">
                                 <h3 class="h5 mb-2">
-                                    <a href="#">Learn JMETER from Scratch on Live Apps-Performance Testing</a>
+                                    <a href="#">Permaculture Design: Creating Sustainable Ecosystems</a>
                                 </h3>
-                                <p class="fs-sm mb-2">By Jenny Wilson</p>
-                                <p class="fs-lg fw-semibold text-primary mb-0">$14.50</p>
+                                <p class="fs-sm mb-2">By Dr. Emily Johnson</p>
+                                <p class="fs-lg fw-semibold text-primary mb-0">$24.99</p>
                             </div>
                             <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                                 <div class="d-flex align-items-center me-4">
                                     <i class="bx bx-time fs-xl me-1"></i>
-                                    120 hours
+                                    45 hours
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <i class="bx bx-like fs-xl me-1"></i>
-                                    92% (3.8K)
+                                    94% (1.8K)
                                 </div>
                             </div>
                         </article>

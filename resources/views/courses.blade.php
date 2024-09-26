@@ -4,39 +4,36 @@
   <!-- Page content -->
   <section class="container">
 
-
     <!-- Breadcrumb -->
     <nav class="pt-4 mt-lg-3" aria-label="breadcrumb">
       <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item">
           <a href="landing-online-courses.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
         </li>
-        <li class="breadcrumb-item active" aria-current="page">Courses</li>
+        <li class="breadcrumb-item active" aria-current="page">Farming Courses</li>
       </ol>
     </nav>
 
-
     <!-- Page title + Filters -->
     <div class="d-lg-flex align-items-center justify-content-between py-4 mt-lg-2">
-      <h1 class="me-3">Courses</h1>
+      <h1 class="me-3">Farming Courses</h1>
       <div class="d-md-flex mb-3">
         <select class="form-select me-md-4 mb-2 mb-md-0" style="min-width: 240px;">
           <option value="All">All categories</option>
-          <option value="Web Development">Web Development</option>
-          <option value="Mobile Development">Mobile Development</option>
-          <option value="Programming">Programming</option>
-          <option value="Game Development">Game Development</option>
-          <option value="Software Testing">Software Testing</option>
-          <option value="Software Engineering">Software Engineering</option>
-          <option value="Network & Security">Network &amp; Security</option>
+          <option value="Organic Farming">Organic Farming</option>
+          <option value="Sustainable Agriculture">Sustainable Agriculture</option>
+          <option value="Crop Management">Crop Management</option>
+          <option value="Livestock Farming">Livestock Farming</option>
+          <option value="Agribusiness">Agribusiness</option>
+          <option value="Soil Science">Soil Science</option>
+          <option value="Irrigation Techniques">Irrigation Techniques</option>
         </select>
         <div class="position-relative" style="min-width: 300px;">
-          <input type="text" class="form-control pe-5" placeholder="Search courses">
+          <input type="text" class="form-control pe-5" placeholder="Search farming courses">
           <i class="bx bx-search text-nav fs-lg position-absolute top-50 end-0 translate-middle-y me-3"></i>
         </div>
       </div>
     </div>
-
 
     <!-- Courses grid -->
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-3 gx-md-4 mt-n2 mt-sm-0">
@@ -54,19 +51,19 @@
           </div>
           <div class="card-body pb-3">
             <h3 class="h5 mb-2">
-              <a href="portfolio-single-course.html">Fullstack Web Developer Course from Scratch</a>
+              <a href="portfolio-single-course.html">Organic Farming: Principles and Practices</a>
             </h3>
-            <p class="fs-sm mb-2">By Albert Flores</p>
+            <p class="fs-sm mb-2">By John Doe</p>
             <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
               <i class="bx bx-time fs-xl me-1"></i>
-              220 hours
+              120 hours
             </div>
             <div class="d-flex align-items-center">
               <i class="bx bx-like fs-xl me-1"></i>
-              94% (4.2K)
+              95% (1.2K)
             </div>
           </div>
         </article>
@@ -84,19 +81,19 @@
           </div>
           <div class="card-body pb-3">
             <h3 class="h5 mb-2">
-              <a href="portfolio-single-course.html">HTML, CSS, JavaScript Web Developer</a>
+              <a href="portfolio-single-course.html">Sustainable Agriculture: Techniques and Methods</a>
             </h3>
-            <p class="fs-sm mb-2">By Jenny Wilson &amp; Marvin McKinney</p>
+            <p class="fs-sm mb-2">By Jane Smith</p>
             <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
               <i class="bx bx-time fs-xl me-1"></i>
-              160 hours
+              100 hours
             </div>
             <div class="d-flex align-items-center">
               <i class="bx bx-like fs-xl me-1"></i>
-              92% (3.1K)
+              90% (900)
             </div>
           </div>
         </article>
@@ -115,19 +112,19 @@
           </div>
           <div class="card-body pb-3">
             <h3 class="h5 mb-2">
-              <a href="portfolio-single-course.html">HTML, CSS, JavaScript Web Developer</a>
+              <a href="portfolio-single-course.html">Advanced Crop Management</a>
             </h3>
-            <p class="fs-sm mb-2">By Robert Fox</p>
+            <p class="fs-sm mb-2">By Michael Brown</p>
             <p class="text-muted mb-0"><span class="fs-lg fw-semibold text-danger me-2">FREE</span><del>FREE</del></p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
               <i class="bx bx-time fs-xl me-1"></i>
-              210 hours
+              150 hours
             </div>
             <div class="d-flex align-items-center">
               <i class="bx bx-like fs-xl me-1"></i>
-              98% (2.7K)
+              92% (1.1K)
             </div>
           </div>
         </article>
@@ -145,19 +142,19 @@
           </div>
           <div class="card-body pb-3">
             <h3 class="h5 mb-2">
-              <a href="portfolio-single-course.html">iOS &amp; Swift - The Complete iOS App Development Course</a>
+              <a href="portfolio-single-course.html">Livestock Farming: Best Practices</a>
             </h3>
-            <p class="fs-sm mb-2">By Marvin McKinney</p>
+            <p class="fs-sm mb-2">By Sarah Johnson</p>
             <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
               <i class="bx bx-time fs-xl me-1"></i>
-              170 hours
+              130 hours
             </div>
             <div class="d-flex align-items-center">
               <i class="bx bx-like fs-xl me-1"></i>
-              95% (3.3K)
+              94% (1.3K)
             </div>
           </div>
         </article>
@@ -176,19 +173,19 @@
           </div>
           <div class="card-body pb-3">
             <h3 class="h5 mb-2">
-              <a href="portfolio-single-course.html">Data Science &amp; Machine Learning with Python</a>
+              <a href="portfolio-single-course.html">Agribusiness Management</a>
             </h3>
-            <p class="fs-sm mb-2">By Esther Howard</p>
+            <p class="fs-sm mb-2">By David Lee</p>
             <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
               <i class="bx bx-time fs-xl me-1"></i>
-              150 hours
+              140 hours
             </div>
             <div class="d-flex align-items-center">
               <i class="bx bx-like fs-xl me-1"></i>
-              96% (3.8K)
+              96% (1.5K)
             </div>
           </div>
         </article>
@@ -206,9 +203,9 @@
           </div>
           <div class="card-body pb-3">
             <h3 class="h5 mb-2">
-              <a href="portfolio-single-course.html">Creative CSS Drawing Course: Make Art With CSS</a>
+              <a href="portfolio-single-course.html">Soil Science: Understanding Soil Health</a>
             </h3>
-            <p class="fs-sm mb-2">By Robert Fox</p>
+            <p class="fs-sm mb-2">By Emily Davis</p>
             <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
@@ -218,7 +215,7 @@
             </div>
             <div class="d-flex align-items-center">
               <i class="bx bx-like fs-xl me-1"></i>
-              92% (5.3K)
+              92% (1.4K)
             </div>
           </div>
         </article>
@@ -236,19 +233,19 @@
           </div>
           <div class="card-body pb-3">
             <h3 class="h5 mb-2">
-              <a href="portfolio-single-course.html">Blender Character Creator v2.0 for Video Games Design</a>
+              <a href="portfolio-single-course.html">Irrigation Techniques for Efficient Water Use</a>
             </h3>
-            <p class="fs-sm mb-2">By Ralph Edwards</p>
+            <p class="fs-sm mb-2">By William Martinez</p>
             <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
               <i class="bx bx-time fs-xl me-1"></i>
-              160 hours
+              90 hours
             </div>
             <div class="d-flex align-items-center">
               <i class="bx bx-like fs-xl me-1"></i>
-              93% (4.5K)
+              93% (1.1K)
             </div>
           </div>
         </article>
@@ -267,19 +264,19 @@
           </div>
           <div class="card-body pb-3">
             <h3 class="h5 mb-2">
-              <a href="portfolio-single-course.html">The Ultimate Guide to 2D Mobile Game Development with Unity</a>
+              <a href="portfolio-single-course.html">Precision Farming: Technology in Agriculture</a>
             </h3>
-            <p class="fs-sm mb-2">By Albert Flores</p>
+            <p class="fs-sm mb-2">By Linda White</p>
             <p class="text-muted mb-0"><span class="fs-lg fw-semibold text-danger me-2">FREE</span><del>FREE</del></p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
             <div class="d-flex align-items-center me-4">
               <i class="bx bx-time fs-xl me-1"></i>
-              230 hours
+              200 hours
             </div>
             <div class="d-flex align-items-center">
               <i class="bx bx-like fs-xl me-1"></i>
-              97% (4.1K)
+              97% (1.8K)
             </div>
           </div>
         </article>
@@ -297,12 +294,15 @@
           </div>
           <div class="card-body pb-3">
             <h3 class="h5 mb-2">
-              <a href="portfolio-single-course.html">Learn JMETER from Scratch on Live Apps-Performance Testing</a>
+              <a href="portfolio-single-course.html">Agroforestry: Integrating Trees into Agriculture</a>
             </h3>
-            <p class="fs-sm mb-2">By Jenny Wilson</p>
+            <p class="fs-sm mb-2">By Mark Green</p>
             <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
           </div>
           <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
+            <div class="d-flex align-items-center me-4">
+              <i class="bx bx-time fs-xl me-1"></i>
+              110 hours
             <div class="d-flex align-items-center me-4">
               <i class="bx bx-time fs-xl me-1"></i>
               120 hours

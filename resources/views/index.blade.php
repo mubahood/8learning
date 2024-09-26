@@ -12,8 +12,8 @@
                 <div class="col-lg-5 d-flex flex-column pt-lg-4 pt-xl-5">
                     <h5 class="my-2">Welcome!</h5>
                     <h1 class="display-3 mb-4">Learn <span class="text-primary">Farming Online</span> with No Limits</h1>
-                    <p class="fs-lg mb-5">Enjoy our great selection of Farming courses. Choose from more than 25K online video
-                        courses and become an IT expert now!</p>
+                    <p class="fs-lg mb-5">Explore our vast collection of Farming courses. Choose from over 25K online video
+                        courses and grow your expertise in agriculture!</p>
 
                     <!-- Desktop form -->
                     <form class="d-none d-sm-flex mb-5">
@@ -109,38 +109,38 @@
                 <ul class="nav nav-tabs flex-nowrap overflow-auto flex-md-column pb-2 pb-md-0 mb-3 mb-md-5" role="tablist">
                     <li class="nav-item">
                         <a href="#" class="nav-link d-inline-block text-nowrap active" role="tab"
-                            aria-selected="true">Web Development</a>
+                            aria-selected="true">Crop Farming</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Data Science</a>
+                            aria-selected="false">Livestock Management</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Mobile Development</a>
+                            aria-selected="false">Sustainable Agriculture</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Programming</a>
+                            aria-selected="false">Organic Farming</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Game Development</a>
+                            aria-selected="false">Poultry Farming</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Software Testing</a>
+                            aria-selected="false">Aquaculture</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Software Engineering</a>
+                            aria-selected="false">Soil Science</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link d-inline-block text-nowrap" role="tab"
-                            aria-selected="false">Network &amp; Security</a>
+                            aria-selected="false">Farm Management</a>
                     </li>
                 </ul>
-                <a href="portfolio-courses.html" class="btn btn-outline-primary btn-lg d-none d-md-inline-flex">
+                <a href="#" class="btn btn-outline-primary btn-lg d-none d-md-inline-flex">
                     See all courses
                     <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
                 </a>
@@ -196,8 +196,7 @@
                         <div class="swiper-slide h-auto pb-3">
                             <article class="card h-100 border-0 shadow-sm mx-2">
                                 <div class="position-relative">
-                                    <a href="portfolio-single-course.html"
-                                        class="d-block position-absolute w-100 h-100 top-0 start-0"
+                                    <a href="course" class="d-block position-absolute w-100 h-100 top-0 start-0"
                                         aria-label="Course link"></a>
                                     <span class="badge bg-success position-absolute top-0 start-0 zindex-2 mt-3 ms-3">Best
                                         Seller</span>
@@ -211,8 +210,7 @@
                                 </div>
                                 <div class="card-body pb-3">
                                     <h3 class="h5 mb-2">
-                                        <a href="portfolio-single-course.html">Fullstack Web Developer Course from
-                                            Scratch</a>
+                                        <a href="course">Sustainable Crop Production</a>
                                     </h3>
                                     <p class="fs-sm mb-2">By Albert Flores</p>
                                     <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
@@ -234,8 +232,7 @@
                         <div class="swiper-slide h-auto pb-3">
                             <article class="card h-100 border-0 shadow-sm mx-2">
                                 <div class="position-relative">
-                                    <a href="portfolio-single-course.html"
-                                        class="d-block position-absolute w-100 h-100 top-0 start-0"
+                                    <a href="course" class="d-block position-absolute w-100 h-100 top-0 start-0"
                                         aria-label="Course link"></a>
                                     <a href="#"
                                         class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3"
@@ -247,7 +244,7 @@
                                 </div>
                                 <div class="card-body pb-3">
                                     <h3 class="h5 mb-2">
-                                        <a href="portfolio-single-course.html">HTML, CSS, JavaScript Web Developer</a>
+                                        <a href="course">Organic Farming Techniques</a>
                                     </h3>
                                     <p class="fs-sm mb-2">By Jenny Wilson &amp; Marvin McKinney</p>
                                     <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
@@ -269,8 +266,7 @@
                         <div class="swiper-slide h-auto pb-3">
                             <article class="card h-100 border-0 shadow-sm mx-2">
                                 <div class="position-relative">
-                                    <a href="portfolio-single-course.html"
-                                        class="d-block position-absolute w-100 h-100 top-0 start-0"
+                                    <a href="course" class="d-block position-absolute w-100 h-100 top-0 start-0"
                                         aria-label="Course link"></a>
                                     <span
                                         class="badge bg-danger position-absolute top-0 start-0 zindex-2 mt-3 ms-3">Sale!</span>
@@ -284,7 +280,7 @@
                                 </div>
                                 <div class="card-body pb-3">
                                     <h3 class="h5 mb-2">
-                                        <a href="portfolio-single-course.html">HTML, CSS, JavaScript Web Developer</a>
+                                        <a href="course">Livestock Rearing and Management</a>
                                     </h3>
                                     <p class="fs-sm mb-2">By Robert Fox</p>
                                     <p class="text-muted mb-0"><span
@@ -307,8 +303,7 @@
                         <div class="swiper-slide h-auto pb-3">
                             <article class="card h-100 border-0 shadow-sm mx-2">
                                 <div class="position-relative">
-                                    <a href="portfolio-single-course.html"
-                                        class="d-block position-absolute w-100 h-100 top-0 start-0"
+                                    <a href="course" class="d-block position-absolute w-100 h-100 top-0 start-0"
                                         aria-label="Course link"></a>
                                     <a href="#"
                                         class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3"
@@ -320,8 +315,7 @@
                                 </div>
                                 <div class="card-body pb-3">
                                     <h3 class="h5 mb-2">
-                                        <a href="portfolio-single-course.html">Data Science &amp; Machine Learning with
-                                            Python</a>
+                                        <a href="course">Agroforestry Practices for Sustainable Farming</a>
                                     </h3>
                                     <p class="fs-sm mb-2">By Esther Howard</p>
                                     <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
@@ -343,8 +337,7 @@
                         <div class="swiper-slide h-auto pb-3">
                             <article class="card h-100 border-0 shadow-sm mx-2">
                                 <div class="position-relative">
-                                    <a href="portfolio-single-course.html"
-                                        class="d-block position-absolute w-100 h-100 top-0 start-0"
+                                    <a href="course" class="d-block position-absolute w-100 h-100 top-0 start-0"
                                         aria-label="Course link"></a>
                                     <a href="#"
                                         class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3"
@@ -356,8 +349,7 @@
                                 </div>
                                 <div class="card-body pb-3">
                                     <h3 class="h5 mb-2">
-                                        <a href="portfolio-single-course.html">The Ultimate Guide to Unity Game
-                                            Development</a>
+                                        <a href="course">Poultry Farming and Egg Production</a>
                                     </h3>
                                     <p class="fs-sm mb-2">By Albert Flores</p>
                                     <p class="fs-lg fw-semibold text-primary mb-0">FREE</p>
@@ -388,93 +380,7 @@
     </section>
 
 
-    <!-- How it works (Steps) -->
-    <section class="container pt-4 pt-lg-0 pb-4 pb-lg-5">
-        <h2 class="h1 text-center pb-3 pb-md-0 mb-md-5">How Does It Work?</h2>
-        <div class="steps">
-            <div class="step pt-0 pt-md-3 pb-5">
-                <div class="step-number">
-                    <div class="step-number-inner">1</div>
-                </div>
-                <div class="step-body d-flex align-items-center ps-xl-5">
-                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
-                        data-rellax-speed="-0.3" data-disable-parallax-down="lg">
-                        <img src="assets/img/landing/online-courses/steps/01-dark.svg" class="d-dark-mode-none"
-                            width="306" alt="Illustration">
-                        <img src="assets/img/landing/online-courses/steps/01-light.svg" class="d-none d-dark-mode-block"
-                            width="306" alt="Illustration">
-                    </div>
-                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.4"
-                        data-disable-parallax-down="lg">
-                        <h3 class="h4">Find what fascinates you &amp; choose your course</h3>
-                        <p class="mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse
-                            gravida hendrerit scelerisque tempus placerat.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="step pt-0 pt-md-4 pb-5">
-                <div class="step-number">
-                    <div class="step-number-inner">2</div>
-                </div>
-                <div class="step-body d-flex align-items-center ps-xl-5">
-                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
-                        data-rellax-speed="-0.5" data-disable-parallax-down="lg">
-                        <img src="assets/img/landing/online-courses/steps/02-dark.svg" class="d-dark-mode-none"
-                            width="306" alt="Illustration">
-                        <img src="assets/img/landing/online-courses/steps/02-light.svg" class="d-none d-dark-mode-block"
-                            width="306" alt="Illustration">
-                    </div>
-                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.5"
-                        data-disable-parallax-down="lg">
-                        <h3 class="h4">Learn by doing</h3>
-                        <p class="mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing
-                            lacinia. Quisque praesent aliquam tempus phasellus ut integer ac nunc dapibus.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="step pt-0 pt-md-4 pb-5">
-                <div class="step-number">
-                    <div class="step-number-inner">3</div>
-                </div>
-                <div class="step-body d-flex align-items-center ps-xl-5">
-                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
-                        data-rellax-speed="-0.3" data-disable-parallax-down="lg">
-                        <img src="assets/img/landing/online-courses/steps/03-dark.svg" class="d-dark-mode-none"
-                            width="306" alt="Illustration">
-                        <img src="assets/img/landing/online-courses/steps/03-light.svg" class="d-none d-dark-mode-block"
-                            width="306" alt="Illustration">
-                    </div>
-                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.4"
-                        data-disable-parallax-down="lg">
-                        <h3 class="h4">Get instant expert feedback</h3>
-                        <p class="mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec
-                            ultrices mi faucibus est. Magna ullamcorper potenti elementum ultricies auctor nec volutpat
-                            augue.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="step pt-0 pt-md-4 pb-5">
-                <div class="step-number">
-                    <div class="step-number-inner">4</div>
-                </div>
-                <div class="step-body d-flex align-items-center ps-xl-5">
-                    <div class="rellax d-none d-lg-block flex-shrink-0 mx-4 mx-xl-5" data-rellax-percentage="0.5"
-                        data-rellax-speed="-0.5" data-disable-parallax-down="lg">
-                        <img src="assets/img/landing/online-courses/steps/04-dark.svg" class="d-dark-mode-none"
-                            width="306" alt="Illustration">
-                        <img src="assets/img/landing/online-courses/steps/04-light.svg" class="d-none d-dark-mode-block"
-                            width="306" alt="Illustration">
-                    </div>
-                    <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.6"
-                        data-disable-parallax-down="lg">
-                        <h3 class="h4">Put your learning into practice &amp; find your dream job</h3>
-                        <p class="mb-0">Sed fermentum ut nibh duis. Dolor pretium arcu, tincidunt ultrices tristique arcu
-                            cursus massa gravida tortor nulla, mollis id pretium.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
 
     <!-- What you get (Icon boxes) -->
@@ -509,9 +415,9 @@
                                 <span
                                     class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
                             </div>
-                            <h3 class="h5 pb-1 mb-2">25K+ Online Video Courses</h3>
-                            <p class="mb-0">Leo condimentum dignissim venenatis sit dignissim vel. Adipiscing tristique
-                                dictum vitae elementum neque.</p>
+                            <h3 class="h5 pb-1 mb-2">Extensive Course Library</h3>
+                            <p class="mb-0">Access over 25K video courses on various aspects of agriculture, from crop
+                                farming to livestock management.</p>
                         </div>
                     </div>
                 </div>
@@ -526,9 +432,9 @@
                                 <span
                                     class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
                             </div>
-                            <h3 class="h5 pb-1 mb-2">Mentor-Based Learning</h3>
-                            <p class="mb-0">Ac dapibus lacus, malesuada ridiculus donec condimentum nunc vestibulum. Mi
-                                feugiat tellus faucibus fermentum mattis ultrices.</p>
+                            <h3 class="h5 pb-1 mb-2">Expert Mentorship</h3>
+                            <p class="mb-0">Learn from experienced farmers and agricultural experts who provide practical
+                                insights and guidance.</p>
                         </div>
                     </div>
                 </div>
@@ -544,8 +450,8 @@
                                     class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
                             </div>
                             <h3 class="h5 pb-1 mb-2">Lifetime Access</h3>
-                            <p class="mb-0">Donec interdum risus convallis tristique quis elit. Sapien turpis enim,
-                                viverra cursus facilisis dignissim condimentum.</p>
+                            <p class="mb-0">Enjoy lifetime access to all courses, allowing you to revisit and review the
+                                material whenever needed.</p>
                         </div>
                     </div>
                 </div>
@@ -566,7 +472,8 @@
                         class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
                     <div
                         class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4">
-                        <h2 class="h1 text-center text-md-start p-lg-4">What Our Students Say About Online Courses</h2>
+                        <h2 class="h1 text-center text-md-start p-lg-4">What Our Students Say About Our Agriculture Courses
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -608,17 +515,16 @@
                             <div class="swiper-slide h-auto">
                                 <figure class="card h-100 position-relative border-0 bg-transparent">
                                     <blockquote class="card-body p-0 mb-0">
-                                        <p class="fs-lg mb-0">Vestibulum nunc lectus auctor quis. Natoque lectus tortor
-                                            lacus, eu. Nunc feugiat nisl maecenas nulla hac morbi. Vitae, donec facilisis
-                                            sed nunc netus. Venenatis posuere faucibus enim est. Vel dignissim morbi blandit
-                                            morbi tellus. Arcu ullamcorper quis enim.</p>
+                                        <p class="fs-lg mb-0">The crop farming course was incredibly insightful. I learned
+                                            so much about sustainable practices and how to maximize yield. Highly recommend!
+                                        </p>
                                     </blockquote>
                                     <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
                                         <img src="assets/img/avatar/13.jpg" width="60" class="rounded-circle"
                                             alt="Ralph Edwards">
                                         <div class="ps-3">
                                             <h6 class="fw-semibold lh-base mb-0">Ralph Edwards</h6>
-                                            <span class="fs-sm text-muted">Head of Marketing at Lorem Ltd. </span>
+                                            <span class="fs-sm text-muted">Farmer at Green Fields</span>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -628,17 +534,15 @@
                             <div class="swiper-slide h-auto">
                                 <figure class="card h-100 position-relative border-0 bg-transparent">
                                     <blockquote class="card-body p-0 mb-0">
-                                        <p class="fs-lg mb-0">Mi semper risus ultricies orci pulvinar in at enim orci. Quis
-                                            facilisis nunc pellentesque in ullamcorper sit. Lorem blandit arcu sapien,
-                                            senectus libero, amet dapibus cursus quam. Eget pellentesque eu purus volutpat
-                                            adipiscing malesuada. Purus nisi, tortor vel lacus.</p>
+                                        <p class="fs-lg mb-0">The livestock management course provided practical tips that
+                                            I could immediately apply to my farm. The expert mentorship was invaluable.</p>
                                     </blockquote>
                                     <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
                                         <img src="assets/img/avatar/14.jpg" width="60" class="rounded-circle"
                                             alt="Annette Black">
                                         <div class="ps-3">
                                             <h6 class="fw-semibold lh-base mb-0">Annette Black</h6>
-                                            <span class="fs-sm text-muted">Strategic Advisor at Company LLC</span>
+                                            <span class="fs-sm text-muted">Livestock Manager at Farm Fresh</span>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -648,17 +552,16 @@
                             <div class="swiper-slide h-auto">
                                 <figure class="card h-100 position-relative border-0 bg-transparent">
                                     <blockquote class="card-body p-0 mb-0">
-                                        <p class="fs-lg mb-0">Ac at sed sit senectus massa. Massa ante amet ultrices magna
-                                            porta tempor. Aliquet diam in et magna ultricies mi at. Lectus enim, vel enim
-                                            egestas nam pellentesque et leo. Elit mi faucibus laoreet aliquam pellentesque
-                                            sed aliquet integer massa. Orci leo tortor ornare.</p>
+                                        <p class="fs-lg mb-0">I was amazed by the depth of the organic farming course. It
+                                            covered everything from soil health to pest management. A must for any aspiring
+                                            organic farmer.</p>
                                     </blockquote>
                                     <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
                                         <img src="assets/img/avatar/11.jpg" width="60" class="rounded-circle"
                                             alt="Darrell Steward">
                                         <div class="ps-3">
                                             <h6 class="fw-semibold lh-base mb-0">Darrell Steward</h6>
-                                            <span class="fs-sm text-muted">Project Manager at Ipsum Ltd.</span>
+                                            <span class="fs-sm text-muted">Organic Farmer at Pure Harvest</span>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -779,20 +682,16 @@
                             <h3 class="accordion-header">
                                 <button class="accordion-button shadow-none rounded-3" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#q-1" aria-expanded="true"
-                                    aria-controls="q-1">What if I don't have any professional background?</button>
+                                    aria-controls="q-1">What if I don't have any professional background in
+                                    agriculture?</button>
                             </h3>
                             <div class="accordion-collapse collapse show" id="q-1" data-bs-parent="#faq">
                                 <div class="accordion-body fs-sm pt-0">
-                                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu,
-                                        viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis
-                                        arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie
-                                        lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod
-                                        montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut
-                                        consequat.</p>
-                                    <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et
-                                        lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor
-                                        vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim
-                                        amet adipiscing massa integer.</p>
+                                    <p>Our courses are designed for everyone, regardless of their professional background.
+                                        Whether you're a beginner or an experienced farmer, you'll find valuable information
+                                        and practical skills to enhance your agricultural knowledge.</p>
+                                    <p>We provide step-by-step guidance and mentorship to ensure you can apply what you
+                                        learn effectively.</p>
                                 </div>
                             </div>
                         </div>
@@ -802,19 +701,16 @@
                             <h3 class="accordion-header">
                                 <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#q-2" aria-expanded="false"
-                                    aria-controls="q-2">How is this different from other courses on the market?</button>
+                                    aria-controls="q-2">How is this platform different from other agricultural
+                                    courses?</button>
                             </h3>
                             <div class="accordion-collapse collapse" id="q-2" data-bs-parent="#faq">
                                 <div class="accordion-body fs-sm pt-0">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in facilisis nibh.
-                                        Vestibulum ac porttitor sapien. Curabitur laoreet malesuada gravida. Phasellus
-                                        vehicula vestibulum consequat. Curabitur feugiat eget sem vitae laoreet. Fusce
-                                        porttitor finibus tellus, quis condimentum nibh. Vestibulum ante ipsum primis in
-                                        faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vehicula malesuada
-                                        magna at viverra. Fusce non est eget libero convallis fringilla suspendisse.</p>
-                                    <p>Nunc dolor velit, interdum finibus bibendum vel, mattis a magna. Mauris mollis sapien
-                                        ac mi aliquet varius. Proin nec est nibh. Dignissim amet adipiscing massa integer.
-                                    </p>
+                                    <p>Our platform is tailored specifically for the Ugandan context, addressing local
+                                        agricultural challenges and opportunities. We collaborate with experienced Ugandan
+                                        farmers and agricultural experts to provide relevant and practical knowledge.</p>
+                                    <p>Additionally, our courses are available in multiple local languages to ensure
+                                        accessibility for all learners.</p>
                                 </div>
                             </div>
                         </div>
@@ -824,25 +720,16 @@
                             <h3 class="accordion-header">
                                 <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#q-3" aria-expanded="false"
-                                    aria-controls="q-3">How much time does it take to do my homework per week? What if I
-                                    don't like it?</button>
+                                    aria-controls="q-3">How much time does it take to complete the courses? What if I don't
+                                    like it?</button>
                             </h3>
                             <div class="accordion-collapse collapse" id="q-3" data-bs-parent="#faq">
                                 <div class="accordion-body fs-sm pt-0">
-                                    <p>Suspendisse viverra volutpat eros. Curabitur in scelerisque lacus, quis fringilla
-                                        sem. Nunc rutrum vel magna et ullamcorper. Sed consectetur augue vitae ligula
-                                        consectetur, eu dapibus justo molestie. Phasellus sit amet metus magna. Sed
-                                        tincidunt tempus felis vitae commodo. Etiam lobortis justo in elit pretium, sit amet
-                                        aliquet tellus euismod. Curabitur in purus sed turpis aliquet pretium. Nunc ut magna
-                                        tempus, iaculis sem id, vulputate ipsum. Etiam fermentum malesuada quam, in tempus
-                                        purus pulvinar at. Vestibulum auctor congue pharetra. Class aptent taciti sociosqu
-                                        ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Nunc
-                                        dolor velit, interdum finibus bibendum vel, mattis a magna. Mauris mollis sapien ac
-                                        mi aliquet varius. Proin nec est nibh. In hac habitasse platea dictumst. Nullam
-                                        porta risus vitae lectus pellentesque interdum. Proin ac leo fermentum, volutpat
-                                        odio ut, lacinia erat. Suspendisse potenti. Praesent vitae faucibus lectus. Sed
-                                        tincidunt at ex id maximus. Morbi tristique ullamcorper velit, non cursus libero
-                                        eleifend quis. Aliquam aliquam odio dui.</p>
+                                    <p>Our courses are self-paced, allowing you to learn at your own convenience. On
+                                        average, learners spend about 2-3 hours per week on course materials and
+                                        assignments.</p>
+                                    <p>If you're not satisfied with a course, we offer a 30-day money-back guarantee. Your
+                                        satisfaction is our priority.</p>
                                 </div>
                             </div>
                         </div>
@@ -856,16 +743,9 @@
                             </h3>
                             <div class="accordion-collapse collapse" id="q-4" data-bs-parent="#faq">
                                 <div class="accordion-body fs-sm pt-0">
-                                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu,
-                                        viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis
-                                        arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie
-                                        lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod
-                                        montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut
-                                        consequat.</p>
-                                    <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et
-                                        lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor
-                                        vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim
-                                        amet adipiscing massa integer.</p>
+                                    <p>Yes, upon successful completion of a course, you will receive a certificate of
+                                        completion. This certificate can be used to demonstrate your knowledge and skills in
+                                        agriculture, which can be beneficial for job applications or further education.</p>
                                 </div>
                             </div>
                         </div>
@@ -875,20 +755,16 @@
                             <h3 class="accordion-header">
                                 <button class="accordion-button shadow-none rounded-3 collapsed" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#q-5" aria-expanded="false"
-                                    aria-controls="q-5">YouTube is full of free tutorials, videos and courses. Why should I
-                                    take any courses here?</button>
+                                    aria-controls="q-5">Why should I take courses here instead of free tutorials on
+                                    YouTube?</button>
                             </h3>
                             <div class="accordion-collapse collapse" id="q-5" data-bs-parent="#faq">
                                 <div class="accordion-body fs-sm pt-0">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in facilisis nibh.
-                                        Vestibulum ac porttitor sapien. Curabitur laoreet malesuada gravida. Phasellus
-                                        vehicula vestibulum consequat. Curabitur feugiat eget sem vitae laoreet. Fusce
-                                        porttitor finibus tellus, quis condimentum nibh. Vestibulum ante ipsum primis in
-                                        faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vehicula malesuada
-                                        magna at viverra. Fusce non est eget libero convallis fringilla suspendisse.</p>
-                                    <p>Nunc dolor velit, interdum finibus bibendum vel, mattis a magna. Mauris mollis sapien
-                                        ac mi aliquet varius. Proin nec est nibh. Dignissim amet adipiscing massa integer.
-                                    </p>
+                                    <p>While YouTube offers many free tutorials, our courses provide structured learning
+                                        paths, expert mentorship, and practical assignments to ensure you gain comprehensive
+                                        and applicable knowledge.</p>
+                                    <p>Additionally, our content is specifically tailored to the Ugandan agricultural
+                                        context, which you may not find in generic online tutorials.</p>
                                 </div>
                             </div>
                         </div>
@@ -902,20 +778,10 @@
                             </h3>
                             <div class="accordion-collapse collapse" id="q-6" data-bs-parent="#faq">
                                 <div class="accordion-body fs-sm pt-0">
-                                    <p>Suspendisse viverra volutpat eros. Curabitur in scelerisque lacus, quis fringilla
-                                        sem. Nunc rutrum vel magna et ullamcorper. Sed consectetur augue vitae ligula
-                                        consectetur, eu dapibus justo molestie. Phasellus sit amet metus magna. Sed
-                                        tincidunt tempus felis vitae commodo. Etiam lobortis justo in elit pretium, sit amet
-                                        aliquet tellus euismod. Curabitur in purus sed turpis aliquet pretium. Nunc ut magna
-                                        tempus, iaculis sem id, vulputate ipsum. Etiam fermentum malesuada quam, in tempus
-                                        purus pulvinar at. Vestibulum auctor congue pharetra. Class aptent taciti sociosqu
-                                        ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Nunc
-                                        dolor velit, interdum finibus bibendum vel, mattis a magna. Mauris mollis sapien ac
-                                        mi aliquet varius. Proin nec est nibh. In hac habitasse platea dictumst. Nullam
-                                        porta risus vitae lectus pellentesque interdum. Proin ac leo fermentum, volutpat
-                                        odio ut, lacinia erat. Suspendisse potenti. Praesent vitae faucibus lectus. Sed
-                                        tincidunt at ex id maximus. Morbi tristique ullamcorper velit, non cursus libero
-                                        eleifend quis. Aliquam aliquam odio dui.</p>
+                                    <p>If you forget or lose your password, you can easily reset it by clicking on the
+                                        "Forgot Password" link on the login page. Follow the instructions to reset your
+                                        password and regain access to your account.</p>
+                                    <p>If you encounter any issues, our support team is available to assist you.</p>
                                 </div>
                             </div>
                         </div>
@@ -924,7 +790,4 @@
             </div>
         </div>
     </section>
-
-
-   
 @endsection
