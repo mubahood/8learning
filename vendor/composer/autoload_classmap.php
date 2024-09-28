@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Admin\\Controllers\\AiQuestionController' => $baseDir . '/app/Admin/Controllers/AiQuestionController.php',
     'App\\Admin\\Controllers\\AuthController' => $baseDir . '/app/Admin/Controllers/AuthController.php',
     'App\\Admin\\Controllers\\CourseCategoryController' => $baseDir . '/app/Admin/Controllers/CourseCategoryController.php',
     'App\\Admin\\Controllers\\CourseController' => $baseDir . '/app/Admin/Controllers/CourseController.php',
@@ -34,10 +35,12 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Models\\AiQuestion' => $baseDir . '/app/Models/AiQuestion.php',
     'App\\Models\\Course' => $baseDir . '/app/Models/Course.php',
     'App\\Models\\CourseCategory' => $baseDir . '/app/Models/CourseCategory.php',
     'App\\Models\\CourseChapter' => $baseDir . '/app/Models/CourseChapter.php',
     'App\\Models\\CourseTopic' => $baseDir . '/app/Models/CourseTopic.php',
+    'App\\Models\\DynamicsApi' => $baseDir . '/app/Models/DynamicsApi.php',
     'App\\Models\\Participant' => $baseDir . '/app/Models/Participant.php',
     'App\\Models\\Publication' => $baseDir . '/app/Models/Publication.php',
     'App\\Models\\SMSIntergration' => $baseDir . '/app/Models/SMSIntergration.php',

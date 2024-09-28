@@ -19,4 +19,6 @@ Route::group([
     $router->resource('dashboard-course-topics', CourseTopicController::class);
     $router->resource('dashboard-publications', PublicationController::class);
     $router->resource('dashboard-s-m-s-intergrations', SMSIntergrationController::class);
+    $router->resource('ai-questions', AiQuestionController::class);
+    $router->resource('dynamics-apis', DynamicsApiController::class);
 });

@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\MainController;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Models\AiQuestion;
 use App\Models\Publication;
 use App\Models\Utils;
 use Illuminate\Http\Request;
@@ -75,7 +76,10 @@ Route::get('/get-tags', function (Request $request) {
     $query = "Create tags for publication seperated with ',': \"$pub->title.\", Only tags without any explanation.";
     $ai_answer =  null;
     try {
-        $ai_answer = Utils::get_ai_answer($query);
+        $resp = Utils::get_ai_answer($query);
+        if (isset($resp['message'])) {
+            $ai_answer = $resp['message'];
+        }
     } catch (\Throwable $th) {
         $ai_answer = null;
     }
@@ -86,7 +90,36 @@ Route::get('/get-tags', function (Request $request) {
     } else {
         die("No tags created");
     }
-})->name('make-books');
+})->name('get-tags');
+
+Route::get('/get-ai-answer', function (Request $request) {
+    $pub = AiQuestion::find($request->ai_question_id);
+    if ($pub == null) {
+        die('Publication not found');
+    }
+
+    $query = "\"$pub->question?\", In the answer, don't include \"M-Omulimisa\"";
+    $ai_answer =  null;
+    try {
+        $resp = Utils::get_ai_answer($query);
+        if (isset($resp['message'])) {
+            $ai_answer = $resp['message'];
+        }
+        $pub->answer = $ai_answer;
+
+        if (isset($resp['audio_url'])) {
+            $pub->url = $resp['audio_url'];
+        }
+    } catch (\Throwable $th) {
+        $ai_answer = null;
+    }
+    if ($ai_answer != null) {
+        $pub->save();
+        die("AI ANSWER: $ai_answer");
+    } else {
+        die("No ANSWER");
+    }
+})->name('get-ai-answer');
 Route::get('/make-books', function () {
 
     return;

@@ -75,11 +75,14 @@ class Utils extends Model
     public static function get_ai_answer($query)
     {
         if (strlen($query) < 3) {
-            return '';
+            return 'Invalid query.';
         }
-        $url = 'http://51.141.91.10:8080/ask';
+
+        $phone_number = '256783204665';
+        $url = 'https://manya-chat-akgvd0gjgvfpcvd0.canadacentral-01.azurewebsites.net/ask';
         $data = [
-            'prompt' => $query
+            'prompt' => $query,
+            'user_id' => $phone_number
         ];
 
         $guzzle = new \GuzzleHttp\Client();
@@ -100,22 +103,41 @@ class Utils extends Model
             return '';
         }
 
-        //check if not array
-        if (!is_array($data)) {
+        $conversation_id = $data->conversation_id;
+
+        if (!isset($data->results)) {
             return '';
         }
+
+        if (!is_array($data->results)) {
+            return '';
+        }
+        $_data = $data->results;
         //check if $data[0] is not set
-        if (!isset($data[0])) {
+        if (!isset($_data[0])) {
             return '';
         }
-        if (!isset($data[0]->message)) {
+        if (!isset($_data[0]->message)) {
             return '';
         }
-        if ($data[0]->message == null) {
+        if ($_data[0]->message == null) {
             return '';
         }
-        return $data[0]->message;
+        $audio_url = null;
+        if (isset($data->audio_url)) {
+            $audio_url = $data->audio_url;
+        }
+
+        $message =  $_data[0]->message;
+
+        //replace M-Omulimisa in the message by PELUM-KML
+        $message = str_replace('M-Omulimisa', 'PELUM-KML', $message);
+        return [
+            'message' => $message,
+            'audio_url' => $audio_url
+        ];
     }
+
 
     //mail sender
     public static function mail_sender($data)
@@ -578,7 +600,7 @@ class Utils extends Model
 
         return true;
     }
-    
+
 
 
     public static function prepare_phone_number($phone_number)

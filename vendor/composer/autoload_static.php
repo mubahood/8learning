@@ -547,6 +547,7 @@ class ComposerStaticInitda89eef54c810448a827ed04bb3da82f
     );
 
     public static $classMap = array (
+        'App\\Admin\\Controllers\\AiQuestionController' => __DIR__ . '/../..' . '/app/Admin/Controllers/AiQuestionController.php',
         'App\\Admin\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Admin/Controllers/AuthController.php',
         'App\\Admin\\Controllers\\CourseCategoryController' => __DIR__ . '/../..' . '/app/Admin/Controllers/CourseCategoryController.php',
         'App\\Admin\\Controllers\\CourseController' => __DIR__ . '/../..' . '/app/Admin/Controllers/CourseController.php',
@@ -575,10 +576,12 @@ class ComposerStaticInitda89eef54c810448a827ed04bb3da82f
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\AiQuestion' => __DIR__ . '/../..' . '/app/Models/AiQuestion.php',
         'App\\Models\\Course' => __DIR__ . '/../..' . '/app/Models/Course.php',
         'App\\Models\\CourseCategory' => __DIR__ . '/../..' . '/app/Models/CourseCategory.php',
         'App\\Models\\CourseChapter' => __DIR__ . '/../..' . '/app/Models/CourseChapter.php',
         'App\\Models\\CourseTopic' => __DIR__ . '/../..' . '/app/Models/CourseTopic.php',
+        'App\\Models\\DynamicsApi' => __DIR__ . '/../..' . '/app/Models/DynamicsApi.php',
         'App\\Models\\Participant' => __DIR__ . '/../..' . '/app/Models/Participant.php',
         'App\\Models\\Publication' => __DIR__ . '/../..' . '/app/Models/Publication.php',
         'App\\Models\\SMSIntergration' => __DIR__ . '/../..' . '/app/Models/SMSIntergration.php',

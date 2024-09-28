@@ -14,7 +14,7 @@ php artisan admin:make FormSr4Controller --model=App\FormSr4
 
  
 php artisan admin:make CourseController --model=App\\Models\\Course
-php artisan admin:make SMSIntergrationController --model=App\\Models\\SMSIntergration
+php artisan admin:make DynamicsApiController --model=App\\Models\\DynamicsApi
  
-php artisan make:model SMSIntergration -m
+php artisan make:model DynamicsApi -m
 
